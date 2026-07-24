@@ -1,0 +1,66 @@
+{
+  "format": "math_quiz_import_v1.1",
+  "courseFamily": "applications_interpretation",
+  "courseLevel": "HL",
+  "course": "IB Mathematics: Applications and Interpretation HL",
+  "source": "chatgpt",
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "syllabusCode": "SL 3.6",
+      "difficulty": "foundation",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 40,
+      "marksEstimate": 1,
+      "prompt": "In a Voronoi diagram, what does an edge between the cells for sites A and B represent?",
+      "choices": [
+        "Points equidistant from A and B",
+        "Points closer to A than every other site",
+        "The shortest path from A to B",
+        "A circle centred at A"
+      ],
+      "answer": "Points equidistant from A and B",
+      "explanation": "The edge lies on the perpendicular bisector of AB, so each point on it is equally distant from A and B.",
+      "tags": ["Voronoi diagrams", "perpendicular bisectors"]
+    },
+    {
+      "type": "numeric_answer",
+      "syllabusCode": "AHL 1.14",
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "prompt": "For A=[[2,1],[3,4]], find det(A).",
+      "answer": 5,
+      "tolerance": 0,
+      "explanation": "det(A)=2(4)-1(3)=5.",
+      "tags": ["matrices", "determinant"]
+    },
+    {
+      "type": "ordering",
+      "syllabusCode": "AHL 5.16",
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 3,
+      "prompt": "Order the steps for one Euler-method update from (x_n,y_n).",
+      "items": [
+        "Evaluate f(x_n,y_n)",
+        "Choose the step size h",
+        "Calculate y_(n+1)=y_n+h f(x_n,y_n)",
+        "Set x_(n+1)=x_n+h"
+      ],
+      "correctOrder": [
+        "Choose the step size h",
+        "Evaluate f(x_n,y_n)",
+        "Calculate y_(n+1)=y_n+h f(x_n,y_n)",
+        "Set x_(n+1)=x_n+h"
+      ],
+      "explanation": "Euler's method uses the current slope with step size h to update y, while x increases by h.",
+      "tags": ["Euler method", "differential equations"]
+    }
+  ]
+}

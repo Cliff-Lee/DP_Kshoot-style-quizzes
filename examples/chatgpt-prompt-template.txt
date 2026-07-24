@@ -1,0 +1,55 @@
+Create a varied set of [IB Mathematics: Analysis and Approaches | IB Mathematics: Applications and Interpretation] questions in valid JSON only.
+
+Course family: [analysis_approaches | applications_interpretation]
+Course level: [SL | HL]
+Selected syllabus points:
+- [syllabus code] — [syllabus title]: [syllabus description]
+- [repeat for every selected point]
+
+Questions per syllabus point: [N]
+Difficulty mix: [foundation, standard, extension]
+Question type mix: [multiple_choice, numeric_answer, short_answer, multi_select, true_false, matching, ordering, drag_drop, fill_blank]
+Question style mix: [recall, procedural, conceptual, misconception, application, exam_style]
+Calculator: [allowed | not_allowed | neutral]
+Include common misconceptions: [yes | no]
+
+For each selected syllabus point, include a mix of:
+- recall
+- procedural
+- conceptual
+- misconception
+- application
+- exam_style
+
+Rules:
+- Output valid JSON only; do not use markdown.
+- Use MathQuiz Import Format v1.1 and the format value "math_quiz_import_v1.1".
+- Do not invent syllabus codes. Use only the selected codes exactly as written.
+- Do not ask students to identify syllabus codes.
+- Do not ask what a syllabus point contains.
+- Do not ask students to match work to a syllabus code.
+- Ask genuine mathematics questions only.
+- The syllabus code is metadata for the app, not content for the student.
+- Every question must include type, syllabusCode, difficulty, questionStyle, calculator, estimatedTimeSeconds, marksEstimate, prompt, answer data appropriate to the type, explanation, and tags.
+- estimatedTimeSeconds must be an integer from 10 to 900; marksEstimate must be an integer from 1 to 20.
+- Use concise, teacher-checkable explanations and unambiguous wording.
+- Multiple choice: exactly four unique choices; answer exactly matches one choice.
+- Multi-select: choices are unique and answers contains at least two exact choice values.
+- True/false: answer is the JSON boolean true or false.
+- Numeric: answer is numeric and tolerance is non-negative.
+- Short/fill blank: use answer and optionally acceptedAnswers; show a fill blank with ___.
+- Matching: pairs has unique left and right strings.
+- Ordering: items and correctOrder contain the same unique strings.
+- Drag/drop: every item.correctZone exactly matches a value in zones.
+- Use notation suitable for the selected IB Mathematics course.
+- For Applications and Interpretation, emphasize modelling, interpretation, technology-supported reasoning, statistics, financial mathematics, and the selected syllabus content where appropriate.
+
+Return only this JSON structure:
+{
+  "format": "math_quiz_import_v1.1",
+  "courseFamily": "[analysis_approaches | applications_interpretation]",
+  "courseLevel": "[SL | HL]",
+  "course": "[canonical course display name]",
+  "source": "chatgpt",
+  "questions": []
+}

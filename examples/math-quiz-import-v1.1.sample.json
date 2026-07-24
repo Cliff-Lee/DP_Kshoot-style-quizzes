@@ -1,0 +1,127 @@
+{
+  "format": "math_quiz_import_v1.1",
+  "courseFamily": "analysis_approaches",
+  "courseLevel": "SL",
+  "course": "IB Mathematics: Analysis and Approaches SL",
+  "source": "chatgpt",
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "syllabusCode": "SL 2.5",
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 45,
+      "marksEstimate": 2,
+      "prompt": "If f(x)=2x+3 and g(x)=x^2, find (f∘g)(2).",
+      "choices": ["7", "8", "11", "14"],
+      "answer": "11",
+      "explanation": "g(2)=4, so f(g(2))=11.",
+      "tags": ["composite functions"]
+    },
+    {
+      "type": "numeric_answer",
+      "syllabusCode": "SL 1.2",
+      "difficulty": "foundation",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 45,
+      "marksEstimate": 2,
+      "prompt": "Find the 12th term of 7, 11, 15, …",
+      "answer": 51,
+      "tolerance": 0,
+      "explanation": "u₁₂=7+11(4)=51.",
+      "tags": ["arithmetic sequences"]
+    },
+    {
+      "type": "multi_select",
+      "syllabusCode": "SL 2.6",
+      "difficulty": "foundation",
+      "questionStyle": "conceptual",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 50,
+      "marksEstimate": 2,
+      "prompt": "Select every property of y=x².",
+      "choices": ["It has a minimum", "It has a maximum", "It is symmetric about the y-axis", "It is one-to-one"],
+      "answers": ["It has a minimum", "It is symmetric about the y-axis"],
+      "explanation": "The parabola opens upwards and is symmetric about the y-axis.",
+      "tags": ["quadratics", "graph properties"]
+    },
+    {
+      "type": "true_false",
+      "syllabusCode": "SL 1.1",
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 20,
+      "marksEstimate": 1,
+      "prompt": "The number 3.7 × 10⁻⁴ is equal to 0.00037.",
+      "answer": true,
+      "explanation": "Moving the decimal point four places to the left gives 0.00037.",
+      "tags": ["scientific notation", "place value"]
+    },
+    {
+      "type": "matching",
+      "syllabusCode": "SL 5.6",
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 3,
+      "prompt": "Match each function to its derivative.",
+      "pairs": [
+        {"left": "x³", "right": "3x²"},
+        {"left": "sin x", "right": "cos x"},
+        {"left": "eˣ", "right": "eˣ"}
+      ],
+      "explanation": "Use the power rule and standard derivatives.",
+      "tags": ["derivatives"]
+    },
+    {
+      "type": "ordering",
+      "syllabusCode": "SL 1.2",
+      "difficulty": "foundation",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 50,
+      "marksEstimate": 2,
+      "prompt": "Order the first four terms of uₙ=3n−1 from least to greatest.",
+      "items": ["8", "2", "11", "5"],
+      "correctOrder": ["2", "5", "8", "11"],
+      "explanation": "Substitute n=1,2,3,4 to get 2,5,8,11.",
+      "tags": ["sequences"]
+    },
+    {
+      "type": "drag_drop",
+      "syllabusCode": "SL 2.11",
+      "difficulty": "foundation",
+      "questionStyle": "conceptual",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 50,
+      "marksEstimate": 3,
+      "prompt": "Classify each graph transformation.",
+      "zones": ["Vertical translation", "Horizontal translation", "Vertical stretch"],
+      "items": [
+        {"text": "f(x)+4", "correctZone": "Vertical translation"},
+        {"text": "f(x−3)", "correctZone": "Horizontal translation"},
+        {"text": "2f(x)", "correctZone": "Vertical stretch"}
+      ],
+      "explanation": "Outside changes y-values; inside changes x-values.",
+      "tags": ["transformations"]
+    },
+    {
+      "type": "fill_blank",
+      "syllabusCode": "SL 3.4",
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 30,
+      "marksEstimate": 1,
+      "prompt": "Complete the arc-length formula: s=___.",
+      "answer": "rθ",
+      "acceptedAnswers": ["r theta", "r*theta"],
+      "explanation": "For an angle in radians, arc length is s=rθ.",
+      "tags": ["radians", "arc length"]
+    }
+  ]
+}

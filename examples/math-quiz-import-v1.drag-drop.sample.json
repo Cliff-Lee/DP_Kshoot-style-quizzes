@@ -1,0 +1,21 @@
+{
+  "format": "math_quiz_import_v1",
+  "course": "IB Mathematics: Analysis and Approaches SL",
+  "source": "chatgpt",
+  "questions": [
+    {
+      "type": "drag_drop",
+      "syllabusCode": "SL 2.11",
+      "difficulty": "foundation",
+      "prompt": "Drag each expression to the correct graph transformation.",
+      "zones": ["Vertical translation", "Horizontal translation", "Vertical stretch"],
+      "items": [
+        { "text": "f(x)+4", "correctZone": "Vertical translation" },
+        { "text": "f(x-3)", "correctZone": "Horizontal translation" },
+        { "text": "2f(x)", "correctZone": "Vertical stretch" }
+      ],
+      "explanation": "Changes outside f affect y-values; changes inside f affect x-values.",
+      "tags": ["transformations", "functions"]
+    }
+  ]
+}
