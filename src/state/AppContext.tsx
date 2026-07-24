@@ -26,7 +26,7 @@ interface AppActions {
   duplicateQuestion: (id: string) => void
   archiveQuestion: (id: string) => void
   submitQuestion: (id: string) => void
-  createQuiz: (input: CreateQuizInput) => Quiz
+  createQuiz: (input: CreateQuizInput) => Promise<Quiz>
   launchSession: (quizId: string, classId?: string) => Promise<QuizSession>
   updateSession: (id: string, patch: Partial<QuizSession>) => Promise<void>
   revealQuestion: (sessionId: string, questionId: string) => Promise<void>
@@ -122,8 +122,20 @@ export function AppProvider({ children }: { children: ReactNode }) {
     duplicateQuestion(id) { const source=state.questions.find(q=>q.id===id); if(!source)return; const copy={...source,id:crypto.randomUUID(),prompt:`${source.prompt} (copy)`,visibility:'private' as const,status:'draft' as const,createdBy:state.user?.id??source.createdBy,createdAt:new Date().toISOString(),updatedAt:new Date().toISOString(),options:source.options?.map(o=>({...o,id:crypto.randomUUID()}))}; mutate(current=>({...current,questions:[copy,...current.questions]})); void cloudSaveQuestions([copy]) },
     archiveQuestion(id) { mutate(current => ({ ...current, questions:current.questions.map(item => item.id===id ? {...item,status:'archived'} : item) })); void cloudPatchQuestion(id,{status:'archived'}) },
     submitQuestion(id) { mutate(current => ({ ...current, questions:current.questions.map(item => item.id===id ? {...item,visibility:'public',status:'pending_review'} : item) })); void cloudPatchQuestion(id,{visibility:'public',status:'pending_review'}) },
-    createQuiz(input) { const quiz:Quiz={id:crypto.randomUUID(),teacherId:state.user?.id ?? 'teacher-demo',createdAt:new Date().toISOString(),...input,settings:normalizeQuizSettings(input.settings)}; mutate(current=>({...current,quizzes:[quiz,...current.quizzes]})); void cloudCreateQuiz(quiz); return quiz },
+    async createQuiz(input) {
+      const quiz:Quiz={id:crypto.randomUUID(),teacherId:state.user?.id ?? 'teacher-demo',createdAt:new Date().toISOString(),...input,settings:normalizeQuizSettings(input.settings)}
+      if(isSupabaseConfigured)await cloudCreateQuiz(quiz)
+      mutate(current=>({...current,quizzes:[quiz,...current.quizzes]}))
+      return quiz
+    },
     async launchSession(quizId,classId) {
+      const quiz=state.quizzes.find(item=>item.id===quizId)
+      if(!quiz)throw new Error('Quiz not found. Return to the quiz builder and save it again.')
+      if(!quiz.questionIds.length)throw new Error('Add at least one question before launching this quiz.')
+      // Repair and verify older quizzes that may have been saved before their
+      // quiz_questions links completed. A live PIN is not created until the
+      // ordered question sequence is confirmed in Supabase.
+      if(isSupabaseConfigured)await cloudCreateQuiz(quiz)
       let session:QuizSession|undefined
       for(let attempt=0;attempt<5;attempt+=1){
         const candidate:QuizSession={id:crypto.randomUUID(),quizId,teacherId:state.user?.id ?? 'teacher-demo',classId,pin:String(Math.floor(100000+Math.random()*900000)),status:'waiting',currentQuestionIndex:-1,revealedQuestionIndex:-1,participants:[]}
@@ -140,7 +152,15 @@ export function AppProvider({ children }: { children: ReactNode }) {
       return session
     },
     async updateSession(id,patch) {
-      if(isSupabaseConfigured)await cloudPatchSession(id,patch)
+      if(isSupabaseConfigured){
+        const target=state.sessions.find(session=>session.id===id)
+        if(patch.status==='live'&&patch.currentQuestionIndex!==undefined&&target){
+          const quiz=state.quizzes.find(item=>item.id===target.quizId)
+          if(!quiz)throw new Error('The live session quiz is no longer available.')
+          await cloudCreateQuiz(quiz)
+        }
+        await cloudPatchSession(id,patch)
+      }
       mutate(current=>({...current,sessions:current.sessions.map(item=>{
         if(item.id!==id)return item
         let next={...item,...patch}
