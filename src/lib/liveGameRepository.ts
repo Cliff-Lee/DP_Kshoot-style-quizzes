@@ -10,6 +10,9 @@ export interface LiveGameSnapshot {
   session?:QuizSession
   quiz?:Quiz
   questions:Question[]
+  currentQuestionId?:string
+  questionCount?:number
+  snapshotError?:'quiz_has_no_question_at_index'
 }
 
 const emptyScoreDetail:ScoreBreakdown={basePoints:0,speedBonus:0,streakBonus:0,multiplier:1,total:0,effectiveResponseTimeMs:0,shieldUsed:false}
@@ -99,7 +102,20 @@ export function mapLiveSnapshot(value:unknown):LiveGameSnapshot{
     createdAt:String(raw.quiz.createdAt??new Date(0).toISOString()),questionIds:(raw.quiz.questionIds??[]).map(String),
   }
   const questions=raw.question?[mapQuestion(raw.question)]:[]
-  return {state,session,quiz,questions}
+  return {
+    state,
+    session,
+    quiz,
+    questions,
+    currentQuestionId:raw.currentQuestionId?String(raw.currentQuestionId):raw.session.currentQuestionId?String(raw.session.currentQuestionId):undefined,
+    questionCount:Number(raw.questionCount??quiz.questionIds.length),
+    snapshotError:raw.snapshotError==='quiz_has_no_question_at_index'?'quiz_has_no_question_at_index':undefined,
+  }
+}
+
+export function currentQuestionFromSnapshot(snapshot:LiveGameSnapshot|null|undefined):Question|undefined{
+  if(!snapshot)return undefined
+  return snapshot.questions.find(question=>question.id===snapshot.currentQuestionId)??snapshot.questions[0]
 }
 
 function mapParticipant(raw:any):LiveParticipant{

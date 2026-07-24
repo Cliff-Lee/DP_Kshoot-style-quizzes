@@ -1,5 +1,6 @@
 import { supabase } from './supabase'
 import type { AppState, ClassRoom, ImportBatch, Question, Quiz, QuizSession, UsageEvent } from '../types'
+import { courseIdsInScope } from '../data/courses'
 import { DEFAULT_POWERUPS, normalizeQuizSettings } from './gameLogic'
 import { reportSupabaseFailure } from './supabaseErrors'
 
@@ -52,7 +53,62 @@ export async function cloudSaveQuestions(items:Question[]){
   }
 }
 export async function cloudPatchQuestion(id:string,patch:Record<string,unknown>){if(!supabase)return;const {error}=await supabase.from('questions').update(patch).eq('id',id);warn('patch-question',error)}
-export async function cloudCreateQuiz(item:Quiz){if(!supabase)return;const {error}=await supabase.from('quizzes').insert({id:item.id,teacher_id:item.teacherId,title:item.title,course_id:item.courseId,mode:item.mode,settings:item.settings});warn('create-quiz',error);if(!error){const links=await supabase.from('quiz_questions').insert(item.questionIds.map((questionId,index)=>({quiz_id:item.id,question_id:questionId,sort_order:index,points:1000,time_limit_seconds:30})));warn('quiz-questions',links.error)}}
+export async function cloudCreateQuiz(item:Quiz){
+  if(!supabase)return
+  if(!item.questionIds.length)throw new Error('Add at least one question before saving this quiz.')
+
+  const {data:quizRow,error:quizError}=await supabase.from('quizzes').upsert({
+    id:item.id,
+    teacher_id:item.teacherId,
+    title:item.title,
+    course_id:item.courseId,
+    mode:item.mode,
+    settings:item.settings,
+  },{onConflict:'id'}).select('id').single()
+  if(quizError)throw reportSupabaseFailure('quiz:save',quizError,{quizId:item.id,questionCount:item.questionIds.length})
+  if(!quizRow||quizRow.id!==item.id)throw reportSupabaseFailure('quiz:save-verify',new Error('Saved quiz could not be verified'),{quizId:item.id})
+
+  const existing=await supabase.from('quiz_questions').select('question_id,sort_order').eq('quiz_id',item.id).order('sort_order',{ascending:true})
+  if(existing.error)throw reportSupabaseFailure('quiz:links-read',existing.error,{quizId:item.id})
+  const existingIds=(existing.data??[]).map(link=>String(link.question_id))
+  const linksMatch=existingIds.length===item.questionIds.length&&existingIds.every((id,index)=>id===item.questionIds[index])
+  if(!linksMatch){
+    const available=await supabase.from('questions').select('id,course_id').in('id',item.questionIds)
+    if(available.error)throw reportSupabaseFailure('quiz:questions-read',available.error,{quizId:item.id})
+    const availableById=new Map((available.data??[]).map(question=>[String(question.id),String(question.course_id)]))
+    const missing=item.questionIds.filter(questionId=>!availableById.has(questionId))
+    const courseScope=new Set(courseIdsInScope(item.courseId))
+    const wrongCourse=item.questionIds.filter(questionId=>!courseScope.has(availableById.get(questionId)??''))
+    if(missing.length||wrongCourse.length){
+      throw reportSupabaseFailure('quiz:questions-validate',new Error('Quiz contains missing questions or questions from another course'),{
+        quizId:item.id,
+        missingQuestionIds:missing,
+        wrongCourseQuestionIds:wrongCourse,
+      })
+    }
+    const removed=await supabase.from('quiz_questions').delete().eq('quiz_id',item.id)
+    if(removed.error)throw reportSupabaseFailure('quiz:links-reset',removed.error,{quizId:item.id})
+    const inserted=await supabase.from('quiz_questions').insert(item.questionIds.map((questionId,index)=>({
+      quiz_id:item.id,
+      question_id:questionId,
+      sort_order:index,
+      points:1000,
+      time_limit_seconds:item.settings.timeLimitSeconds,
+    })))
+    if(inserted.error)throw reportSupabaseFailure('quiz:links-save',inserted.error,{quizId:item.id,questionIds:item.questionIds})
+  }
+
+  const verified=await supabase.from('quiz_questions').select('question_id,sort_order').eq('quiz_id',item.id).order('sort_order',{ascending:true})
+  if(verified.error)throw reportSupabaseFailure('quiz:links-verify',verified.error,{quizId:item.id})
+  const verifiedIds=(verified.data??[]).map(link=>String(link.question_id))
+  if(verifiedIds.length!==item.questionIds.length||verifiedIds.some((id,index)=>id!==item.questionIds[index])){
+    throw reportSupabaseFailure('quiz:links-verify',new Error('Quiz questions were not persisted in playable order'),{
+      quizId:item.id,
+      expectedQuestionIds:item.questionIds,
+      actualQuestionIds:verifiedIds,
+    })
+  }
+}
 export async function cloudCreateSession(item:QuizSession){
   if(!supabase)return
   const {data,error}=await supabase.from('quiz_sessions').insert({id:item.id,quiz_id:item.quizId,teacher_id:item.teacherId,class_id:item.classId??null,pin:item.pin,status:item.status,current_question_index:item.currentQuestionIndex,revealed_question_index:item.revealedQuestionIndex??-1}).select('id,pin,status,quiz_id,teacher_id,class_id,created_at,updated_at').single()
