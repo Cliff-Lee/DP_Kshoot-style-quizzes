@@ -6,6 +6,7 @@ import { courseById, defaultCourseId } from '../data/courses'
 import { syllabusById, syllabusPoints } from '../data/syllabus'
 import { cloudCreateClass, cloudCreateQuiz, cloudCreateSession, cloudPatchQuestion, cloudPatchSession, cloudRecordUsage, cloudSaveImportBatch, cloudSaveQuestions, loadCloudWorkspace } from '../lib/cloudRepository'
 import { awardBadge, calculateScore, checkAnswer, DEFAULT_POWERUPS, initialParticipant, normalizeQuizSettings } from '../lib/gameLogic'
+import { joinCloudLiveGame, submitCloudLiveAnswer, useCloudLivePowerup, type LiveJoinCredentials } from '../lib/liveGameRepository'
 import { isSupabaseConfigured, supabase } from '../lib/supabase'
 import type { AppState, ClassRoom, ImportBatch, LiveParticipant, PowerupType, Question, Quiz, QuizSession, Role, UserProfile } from '../types'
 
@@ -26,12 +27,12 @@ interface AppActions {
   archiveQuestion: (id: string) => void
   submitQuestion: (id: string) => void
   createQuiz: (input: CreateQuizInput) => Quiz
-  launchSession: (quizId: string, classId?: string) => QuizSession
-  updateSession: (id: string, patch: Partial<QuizSession>) => void
-  revealQuestion: (sessionId: string, questionId: string) => void
-  joinSession: (pin: string, nickname: string) => { sessionId: string; participantId: string }
-  usePowerup: (sessionId: string, participantId: string, questionId: string, powerup: PowerupType) => boolean
-  submitLiveAnswer: (sessionId: string, participantId: string, questionId: string, answer: unknown, responseTimeMs: number) => void
+  launchSession: (quizId: string, classId?: string) => Promise<QuizSession>
+  updateSession: (id: string, patch: Partial<QuizSession>) => Promise<void>
+  revealQuestion: (sessionId: string, questionId: string) => Promise<void>
+  joinSession: (pin: string, nickname: string) => Promise<LiveJoinCredentials>
+  usePowerup: (sessionId: string, participantId: string, questionId: string, powerup: PowerupType, clientToken?:string) => Promise<boolean>
+  submitLiveAnswer: (sessionId: string, participantId: string, questionId: string, answer: unknown, responseTimeMs: number, clientToken?:string) => Promise<void>
   addImportBatch: (batch: ImportBatch, rawJson?: unknown) => void
   logUsage: (eventType: string, quantity?: number) => void
   refreshCloud: () => Promise<void>
@@ -122,8 +123,24 @@ export function AppProvider({ children }: { children: ReactNode }) {
     archiveQuestion(id) { mutate(current => ({ ...current, questions:current.questions.map(item => item.id===id ? {...item,status:'archived'} : item) })); void cloudPatchQuestion(id,{status:'archived'}) },
     submitQuestion(id) { mutate(current => ({ ...current, questions:current.questions.map(item => item.id===id ? {...item,visibility:'public',status:'pending_review'} : item) })); void cloudPatchQuestion(id,{visibility:'public',status:'pending_review'}) },
     createQuiz(input) { const quiz:Quiz={id:crypto.randomUUID(),teacherId:state.user?.id ?? 'teacher-demo',createdAt:new Date().toISOString(),...input,settings:normalizeQuizSettings(input.settings)}; mutate(current=>({...current,quizzes:[quiz,...current.quizzes]})); void cloudCreateQuiz(quiz); return quiz },
-    launchSession(quizId,classId) { const session:QuizSession={id:crypto.randomUUID(),quizId,teacherId:state.user?.id ?? 'teacher-demo',classId,pin:String(Math.floor(100000+Math.random()*900000)),status:'waiting',currentQuestionIndex:-1,revealedQuestionIndex:-1,participants:[]}; mutate(current=>({...current,sessions:[session,...current.sessions]})); void cloudCreateSession(session); return session },
-    updateSession(id,patch) {
+    async launchSession(quizId,classId) {
+      let session:QuizSession|undefined
+      for(let attempt=0;attempt<5;attempt+=1){
+        const candidate:QuizSession={id:crypto.randomUUID(),quizId,teacherId:state.user?.id ?? 'teacher-demo',classId,pin:String(Math.floor(100000+Math.random()*900000)),status:'waiting',currentQuestionIndex:-1,revealedQuestionIndex:-1,participants:[]}
+        try{
+          if(isSupabaseConfigured)await cloudCreateSession(candidate)
+          session=candidate
+          break
+        }catch(error){
+          if((error as {code?:string})?.code!=='23505')throw error
+        }
+      }
+      if(!session)throw new Error('Could not reserve a game PIN. Please try again.')
+      mutate(current=>({...current,sessions:[session!,...current.sessions.filter(item=>item.id!==session!.id)]}))
+      return session
+    },
+    async updateSession(id,patch) {
+      if(isSupabaseConfigured)await cloudPatchSession(id,patch)
       mutate(current=>({...current,sessions:current.sessions.map(item=>{
         if(item.id!==id)return item
         let next={...item,...patch}
@@ -132,30 +149,51 @@ export function AppProvider({ children }: { children: ReactNode }) {
           next={...next,participants:next.participants.map(participant=>quiz&&quiz.questionIds.length>0&&quiz.questionIds.every(questionId=>participant.answers[questionId]?.correct)?awardBadge(participant,'perfect_round'):participant)}
         }
         return next
-      })})); void cloudPatchSession(id,patch)
+      })}))
     },
-    revealQuestion(sessionId,questionId) {
+    async revealQuestion(sessionId,questionId) {
+      const target=state.sessions.find(session=>session.id===sessionId)
+      if(isSupabaseConfigured&&target)await cloudPatchSession(sessionId,{revealedQuestionIndex:target.currentQuestionIndex})
       mutate(current=>({...current,sessions:current.sessions.map(session=>{
         if(session.id!==sessionId)return session
         const correct=[...session.participants].filter(p=>p.answers[questionId]?.correct).sort((a,b)=>a.answers[questionId].responseTimeMs-b.answers[questionId].responseTimeMs)
         return {...session,revealedQuestionIndex:session.currentQuestionIndex,participants:session.participants.map(participant=>participant.id===correct[0]?.id?awardBadge(participant,'fastest_correct',questionId):participant)}
       })}))
     },
-    joinSession(pin,nickname) { const found=state.sessions.find(item=>item.pin===pin.trim()&&item.status!=='ended'); if(!found) throw new Error('That game PIN is not active.'); const participantId=crypto.randomUUID(); const quiz=state.quizzes.find(item=>item.id===found.quizId); mutate(current=>({...current,sessions:current.sessions.map(item=>item.id===found.id?{...item,participants:[...item.participants,initialParticipant(participantId,nickname,quiz?.settings.enablePowerups??true)]}:item)})); return {sessionId:found.id,participantId} },
-    usePowerup(sessionId,participantId,questionId,powerup) {
+    async joinSession(pin,nickname) {
+      if(isSupabaseConfigured)return joinCloudLiveGame(pin,nickname)
+      const normalized=pin.trim().toUpperCase()
+      const found=state.sessions.find(item=>item.pin.toUpperCase()===normalized&&item.status!=='ended')
+      if(!found)throw new Error('Game not found')
+      const participantId=crypto.randomUUID()
+      const quiz=state.quizzes.find(item=>item.id===found.quizId)
+      mutate(current=>({...current,sessions:current.sessions.map(item=>item.id===found.id?{...item,participants:[...item.participants,initialParticipant(participantId,nickname,quiz?.settings.enablePowerups??true)]}:item)}))
+      return {sessionId:found.id,participantId}
+    },
+    async usePowerup(sessionId,participantId,questionId,powerup,clientToken) {
+      if(isSupabaseConfigured){
+        await useCloudLivePowerup({sessionId,participantId,clientToken},questionId,powerup)
+        return true
+      }
       const session=state.sessions.find(item=>item.id===sessionId);const participant=session?.participants.find(item=>item.id===participantId);const quiz=state.quizzes.find(item=>item.id===session?.quizId)
       if(!session||!participant||!quiz?.settings.enablePowerups||participant.answers[questionId]||participant.activePowerup?.questionId===questionId||(participant.powerups[powerup]??0)<1)return false
       mutate(current=>({...current,sessions:current.sessions.map(item=>item.id===sessionId?{...item,participants:item.participants.map(p=>p.id===participantId?{...p,powerups:{...p.powerups,[powerup]:p.powerups[powerup]-1},activePowerup:{type:powerup,questionId},powerupEvents:[...p.powerupEvents,{type:powerup,questionId,usedAt:new Date().toISOString(),effect:powerupEffect(powerup)}]}:p)}:item)}))
       return true
     },
-    submitLiveAnswer(sessionId,participantId,questionId,answer,responseTimeMs) { mutate(current=>{ const question=current.questions.find(item=>item.id===questionId);const session=current.sessions.find(item=>item.id===sessionId);const quiz=current.quizzes.find(item=>item.id===session?.quizId);if(!question||!session||!quiz)return current;const settings=normalizeQuizSettings(quiz.settings);return {...current,sessions:current.sessions.map(item=>item.id===sessionId?{...item,participants:item.participants.map(participant=>{
+    async submitLiveAnswer(sessionId,participantId,questionId,answer,responseTimeMs,clientToken) {
+      if(isSupabaseConfigured){
+        await submitCloudLiveAnswer({sessionId,participantId,clientToken},questionId,answer,responseTimeMs)
+        return
+      }
+      mutate(current=>{ const question=current.questions.find(item=>item.id===questionId);const session=current.sessions.find(item=>item.id===sessionId);const quiz=current.quizzes.find(item=>item.id===session?.quizId);if(!question||!session||!quiz)return current;const settings=normalizeQuizSettings(quiz.settings);return {...current,sessions:current.sessions.map(item=>item.id===sessionId?{...item,participants:item.participants.map(participant=>{
       if(participant.id!==participantId||participant.answers[questionId])return participant
       const correct=checkAnswer(question,answer);const powerup=participant.activePowerup?.questionId===questionId?participant.activePowerup.type:undefined;const scoreDetail=calculateScore({correct,responseTimeMs,timeLimitSeconds:settings.timeLimitSeconds,pointsMode:settings.pointsMode,currentStreak:participant.currentStreak,streakBonusesEnabled:settings.enableStreakBonuses,powerup});const nextStreak=correct?participant.currentStreak+1:scoreDetail.shieldUsed?participant.currentStreak:0;let next:LiveParticipant={...participant,score:participant.score+scoreDetail.total,currentStreak:nextStreak,bestStreak:Math.max(participant.bestStreak,nextStreak),activePowerup:undefined,answers:{...participant.answers,[questionId]:{answer,correct,responseTimeMs,awardedPoints:scoreDetail.total,streakAfter:nextStreak,powerupUsed:powerup,scoreDetail}}}
       if(nextStreak>=3)next=awardBadge(next,'hot_streak',questionId)
       const previousAnswers=Object.values(participant.answers);if(correct&&previousAnswers.at(-1)?.correct===false)next=awardBadge(next,'comeback',questionId)
       const topic=syllabusPoints.find(point=>point.id===question.syllabusPointId)?.topicNumber;const topicCorrect=Object.entries(next.answers).filter(([,entry])=>entry.correct).filter(([id])=>syllabusPoints.find(point=>point.id===current.questions.find(q=>q.id===id)?.syllabusPointId)?.topicNumber===topic).length;if(topicCorrect>=3)next=awardBadge(next,'topic_master',questionId)
       return next
-    })}:item)}}) },
+    })}:item)}})
+    },
     addImportBatch(batch,rawJson) { mutate(current=>({...current,importBatches:[batch,...current.importBatches]})); void cloudSaveImportBatch(batch,rawJson??{}) },
     logUsage(eventType,quantity=1) { mutate(current=>({...current,usageEvents:[{id:crypto.randomUUID(),eventType,quantity,createdAt:new Date().toISOString()},...current.usageEvents]})); void cloudRecordUsage(eventType,quantity) },
     async refreshCloud(){if(state.user&&isSupabaseConfigured)await hydrateCloud(state.user)},
