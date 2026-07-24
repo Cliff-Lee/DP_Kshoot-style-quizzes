@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="260" viewBox="0 0 520 260">
+  <g fill="none" stroke="#fff" stroke-opacity=".13" stroke-width="1.5">
+    <path d="M24 216C75 188 90 82 146 66s84 103 140 102 82-91 128-107 69 31 84 54"/>
+    <circle cx="92" cy="82" r="33"/><path d="m70 102 48-38m-42 4 31 35"/>
+    <path d="M362 211h92m-46-46v92"/><path d="m445 205 9 6-9 6m-43-61 6 9 6-9"/>
+  </g>
+  <g fill="#fff" fill-opacity=".15" font-family="Georgia,serif" font-style="italic">
+    <text x="34" y="38" font-size="18">f′(x)</text><text x="186" y="92" font-size="16">Σ uₙ</text><text x="314" y="48" font-size="19">eⁱᶿ</text><text x="432" y="151" font-size="15">∫</text><text x="246" y="232" font-size="17">sin²θ + cos²θ</text>
+  </g>
+</svg>
