@@ -1,0 +1,5946 @@
+{
+  "format": "math_quiz_import_v1.1",
+  "courseFamily": "analysis_approaches",
+  "courseLevel": "HL",
+  "course": "IB Mathematics: Analysis and Approaches HL",
+  "source": "platform_seed",
+  "generatedBy": "scripts/generate-question-bank.mjs",
+  "questions": [
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Write 0.000562 in scientific notation.",
+      "choices": [
+        "5.62 × 10⁻⁴",
+        "5.62 × 10⁻³",
+        "56.2 × 10⁻⁴",
+        "0.562 × 10⁻³"
+      ],
+      "answer": "5.62 × 10⁻⁴",
+      "explanation": "Move the decimal four places right to obtain 5.62, so the power is −4.",
+      "tags": [
+        "scientific notation",
+        "recall"
+      ],
+      "syllabusCode": "SL 1.1",
+      "seedId": "aa-sl-1-1-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Evaluate (3 × 10⁵)(2 × 10⁻³).",
+      "answer": 600,
+      "tolerance": 0,
+      "explanation": "Multiply the coefficients and add the powers: 6 × 10²=600.",
+      "tags": [
+        "scientific notation",
+        "operations",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.1",
+      "seedId": "aa-sl-1-1-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "The sum 4 × 10³ + 7 × 10³ equals 1.1 × 10⁴.",
+      "answer": true,
+      "explanation": "The powers already match, so the coefficients add: 11 × 10³=1.1 × 10⁴.",
+      "tags": [
+        "scientific notation",
+        "addition",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 1.1",
+      "seedId": "aa-sl-1-1-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "The arithmetic sequence 5, 8, 11, … continues. Find its 10th term.",
+      "answer": 32,
+      "tolerance": 0,
+      "explanation": "u₁₀=5+9(3)=32.",
+      "tags": [
+        "arithmetic sequence",
+        "recall"
+      ],
+      "syllabusCode": "SL 1.2",
+      "seedId": "aa-sl-1-2-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Find the sum of the first 20 terms of 3, 7, 11, … .",
+      "answer": 820,
+      "tolerance": 0,
+      "explanation": "The 20th term is 79, so S₂₀=20(3+79)/2=820.",
+      "tags": [
+        "arithmetic series",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.2",
+      "seedId": "aa-sl-1-2-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "procedural",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "ordering",
+      "prompt": "Order the steps used to find the sum of an arithmetic series.",
+      "items": [
+        "Substitute into Sₙ=n(a+l)/2",
+        "Find the last term",
+        "Identify a, d and n",
+        "Evaluate the sum"
+      ],
+      "correctOrder": [
+        "Identify a, d and n",
+        "Find the last term",
+        "Substitute into Sₙ=n(a+l)/2",
+        "Evaluate the sum"
+      ],
+      "explanation": "The parameters determine the last term, after which the finite-sum formula can be used.",
+      "tags": [
+        "arithmetic series",
+        "method",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.2",
+      "seedId": "aa-sl-1-2-misconception"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "application",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 90,
+      "marksEstimate": 3,
+      "type": "multiple_choice",
+      "prompt": "A student saves $250 in month 1 and increases the amount by $40 each month. How much is saved over 12 months?",
+      "choices": [
+        "$3 000",
+        "$5 160",
+        "$5 640",
+        "$8 280"
+      ],
+      "answer": "$5 640",
+      "explanation": "S₁₂=12[2(250)+11(40)]/2=$5 640.",
+      "tags": [
+        "arithmetic series",
+        "finance",
+        "application"
+      ],
+      "syllabusCode": "SL 1.2",
+      "seedId": "aa-sl-1-2-extra-1"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "The 5th term of an arithmetic sequence is 18 and the 9th term is 34. Find the common difference.",
+      "answer": "4",
+      "acceptedAnswers": [
+        "4"
+      ],
+      "explanation": "Four term-steps increase the value by 16, so d=16/4=4.",
+      "tags": [
+        "arithmetic sequence",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.2",
+      "seedId": "aa-sl-1-2-extra-2"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A geometric sequence begins 3, 6, 12, … . Find its 6th term.",
+      "answer": 96,
+      "tolerance": 0,
+      "explanation": "u₆=3(2⁵)=96.",
+      "tags": [
+        "geometric sequence",
+        "recall"
+      ],
+      "syllabusCode": "SL 1.3",
+      "seedId": "aa-sl-1-3-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Find the sum of the first five terms of 2, 6, 18, … .",
+      "answer": 242,
+      "tolerance": 0,
+      "explanation": "S₅=2(3⁵−1)/(3−1)=242.",
+      "tags": [
+        "geometric series",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.3",
+      "seedId": "aa-sl-1-3-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "A geometric sequence has first term 8 and common ratio −0.5. Select all true statements.",
+      "choices": [
+        "Its terms alternate in sign.",
+        "Its term magnitudes decrease.",
+        "Its fourth term is −1.",
+        "Its common difference is −0.5."
+      ],
+      "answers": [
+        "Its terms alternate in sign.",
+        "Its term magnitudes decrease.",
+        "Its fourth term is −1."
+      ],
+      "explanation": "A negative ratio alternates signs; |r|<1 decreases magnitudes; u₄=8(−0.5)³=−1.",
+      "tags": [
+        "geometric sequence",
+        "common ratio",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 1.3",
+      "seedId": "aa-sl-1-3-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "application",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A deposit of $1000 earns 5% compound interest per year. Find its value after 2 years.",
+      "answer": 1102.5,
+      "tolerance": 0,
+      "explanation": "1000(1.05)²=1102.50.",
+      "tags": [
+        "compound interest",
+        "application"
+      ],
+      "syllabusCode": "SL 1.4",
+      "seedId": "aa-sl-1-4-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A car worth $20 000 depreciates by 20% each year. What is its value after 3 years?",
+      "choices": [
+        "$10 240",
+        "$12 000",
+        "$12 800",
+        "$16 000"
+      ],
+      "answer": "$10 240",
+      "explanation": "The annual multiplier is 0.8, so 20000(0.8)³=10240.",
+      "tags": [
+        "depreciation",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.4",
+      "seedId": "aa-sl-1-4-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "A 10% annual depreciation is modelled by multiplying the current value by 0.90 each year.",
+      "answer": true,
+      "explanation": "Depreciating by 10% leaves 90% of the current value.",
+      "tags": [
+        "financial models",
+        "depreciation",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 1.4",
+      "seedId": "aa-sl-1-4-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Evaluate log₁₀(1000).",
+      "choices": [
+        "2",
+        "3",
+        "10",
+        "100"
+      ],
+      "answer": "3",
+      "explanation": "10³=1000, so log₁₀(1000)=3.",
+      "tags": [
+        "logarithms",
+        "recall"
+      ],
+      "syllabusCode": "SL 1.5",
+      "seedId": "aa-sl-1-5-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Solve 2ˣ=32.",
+      "answer": 5,
+      "tolerance": 0,
+      "explanation": "32=2⁵, so x=5.",
+      "tags": [
+        "exponents",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.5",
+      "seedId": "aa-sl-1-5-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "matching",
+      "prompt": "Match each exponential equation to its logarithmic equivalent.",
+      "pairs": [
+        {
+          "left": "10²=100",
+          "right": "log₁₀(100)=2"
+        },
+        {
+          "left": "e³=k",
+          "right": "ln(k)=3"
+        },
+        {
+          "left": "2⁵=32",
+          "right": "log₂(32)=5"
+        }
+      ],
+      "explanation": "A logarithm states the exponent required to produce a given value.",
+      "tags": [
+        "exponential form",
+        "logarithmic form",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 1.5",
+      "seedId": "aa-sl-1-5-misconception"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "application",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 3,
+      "type": "numeric_answer",
+      "prompt": "A population doubles every 3 hours. The model gives 2^(t/3)=10. Find t in hours, correct to three decimal places.",
+      "answer": 9.966,
+      "tolerance": 0.001,
+      "explanation": "Taking logarithms gives t=3ln(10)/ln(2)≈9.966 hours.",
+      "tags": [
+        "logarithms",
+        "exponential models",
+        "application"
+      ],
+      "syllabusCode": "SL 1.5",
+      "seedId": "aa-sl-1-5-extra-1"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which expression proves that the sum of two odd integers is even?",
+      "choices": [
+        "(2m+1)+(2n+1)=2(m+n+1)",
+        "(2m+1)(2n+1)=2mn+1",
+        "m+n is even",
+        "Two examples are both even"
+      ],
+      "answer": "(2m+1)+(2n+1)=2(m+n+1)",
+      "explanation": "The result is twice an integer, which is the definition of even.",
+      "tags": [
+        "deductive proof",
+        "parity",
+        "recall"
+      ],
+      "syllabusCode": "SL 1.6",
+      "seedId": "aa-sl-1-6-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "ordering",
+      "prompt": "Order the algebraic steps proving (n+1)²−(n−1)²=4n.",
+      "items": [
+        "Expand both squares",
+        "Start with the left-hand side",
+        "Collect like terms",
+        "Conclude that the identity holds"
+      ],
+      "correctOrder": [
+        "Start with the left-hand side",
+        "Expand both squares",
+        "Collect like terms",
+        "Conclude that the identity holds"
+      ],
+      "explanation": "Work from one side: n²+2n+1−(n²−2n+1)=4n.",
+      "tags": [
+        "algebraic proof",
+        "identity",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.6",
+      "seedId": "aa-sl-1-6-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "Checking an identity for ten different integers proves it for every integer.",
+      "answer": false,
+      "explanation": "Examples can support a conjecture but do not prove a universal statement.",
+      "tags": [
+        "proof",
+        "counterexample",
+        "misconception"
+      ],
+      "syllabusCode": "SL 1.6",
+      "seedId": "aa-sl-1-6-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Evaluate 27^(2/3).",
+      "answer": 9,
+      "tolerance": 0,
+      "explanation": "The cube root of 27 is 3, and 3²=9.",
+      "tags": [
+        "rational exponents",
+        "recall"
+      ],
+      "syllabusCode": "SL 1.7",
+      "seedId": "aa-sl-1-7-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Evaluate log₂(32).",
+      "answer": 5,
+      "tolerance": 0,
+      "explanation": "2⁵=32.",
+      "tags": [
+        "logarithms",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.7",
+      "seedId": "aa-sl-1-7-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Solve 3^(x+1)=81.",
+      "choices": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "3",
+      "explanation": "Since 81=3⁴, x+1=4 and x=3.",
+      "tags": [
+        "exponential equations",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 1.7",
+      "seedId": "aa-sl-1-7-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Find the sum to infinity of 12+6+3+… .",
+      "answer": 24,
+      "tolerance": 0,
+      "explanation": "The ratio is 1/2, so S∞=12/(1−1/2)=24.",
+      "tags": [
+        "infinite geometric series",
+        "recall"
+      ],
+      "syllabusCode": "SL 1.8",
+      "seedId": "aa-sl-1-8-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "For which value of r does a geometric series have a finite sum to infinity?",
+      "choices": [
+        "r=1.2",
+        "r=−1",
+        "r=0.8",
+        "r=2"
+      ],
+      "answer": "r=0.8",
+      "explanation": "A geometric series converges when |r|<1.",
+      "tags": [
+        "convergence",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.8",
+      "seedId": "aa-sl-1-8-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select every convergent infinite geometric series.",
+      "choices": [
+        "5+2.5+1.25+…",
+        "3−6+12−…",
+        "8−4+2−…",
+        "1+1+1+…"
+      ],
+      "answers": [
+        "5+2.5+1.25+…",
+        "8−4+2−…"
+      ],
+      "explanation": "Their ratios are 0.5 and −0.5, both with magnitude below 1.",
+      "tags": [
+        "convergence",
+        "geometric series",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 1.8",
+      "seedId": "aa-sl-1-8-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which is the expansion of (1+x)³?",
+      "choices": [
+        "1+3x+3x²+x³",
+        "1+x+x²+x³",
+        "1+3x+6x²+x³",
+        "1+3x−3x²+x³"
+      ],
+      "answer": "1+3x+3x²+x³",
+      "explanation": "The coefficients are the third row of Pascal’s triangle: 1,3,3,1.",
+      "tags": [
+        "binomial theorem",
+        "expansion",
+        "recall"
+      ],
+      "syllabusCode": "SL 1.9",
+      "seedId": "aa-sl-1-9-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Find the coefficient of x³ in (2+x)⁴.",
+      "answer": 8,
+      "tolerance": 0,
+      "explanation": "The x³ term is C(4,3)2x³=8x³.",
+      "tags": [
+        "binomial expansion",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.9",
+      "seedId": "aa-sl-1-9-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "For the expansion of (x+2)⁴, select all true statements.",
+      "choices": [
+        "Its degree is 4.",
+        "Its constant term is 16.",
+        "The coefficient of x³ is 8.",
+        "It contains exactly four non-zero terms."
+      ],
+      "answers": [
+        "Its degree is 4.",
+        "Its constant term is 16.",
+        "The coefficient of x³ is 8."
+      ],
+      "explanation": "The expansion is x⁴+8x³+24x²+32x+16, which has five non-zero terms.",
+      "tags": [
+        "binomial theorem",
+        "interpretation",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 1.9",
+      "seedId": "aa-sl-1-9-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "How many ordered two-letter arrangements can be made from 7 distinct letters without repetition?",
+      "answer": 42,
+      "tolerance": 0,
+      "explanation": "There are 7P2=7×6=42 arrangements.",
+      "tags": [
+        "permutations",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.10",
+      "seedId": "aa-ahl-1-10-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Evaluate C(8,3).",
+      "answer": 56,
+      "tolerance": 0,
+      "explanation": "C(8,3)=8!/(3!5!)=56.",
+      "tags": [
+        "combinations",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 1.10",
+      "seedId": "aa-ahl-1-10-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "What is the coefficient of x² in the expansion of (1+x)⁻²?",
+      "choices": [
+        "−3",
+        "−2",
+        "2",
+        "3"
+      ],
+      "answer": "3",
+      "explanation": "The expansion begins 1−2x+3x²−4x³+… .",
+      "tags": [
+        "extended binomial theorem",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 1.10",
+      "seedId": "aa-ahl-1-10-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Decompose (5x+1)/(x(x+1)) as A/x+B/(x+1). What are A and B?",
+      "choices": [
+        "A=1, B=4",
+        "A=4, B=1",
+        "A=1, B=5",
+        "A=−1, B=6"
+      ],
+      "answer": "A=1, B=4",
+      "explanation": "5x+1=A(x+1)+Bx. Setting x=0 gives A=1, then A+B=5 gives B=4.",
+      "tags": [
+        "partial fractions",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.11",
+      "seedId": "aa-ahl-1-11-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "In (3x+5)/((x+1)(x+2))=A/(x+1)+B/(x+2), find A.",
+      "answer": 2,
+      "tolerance": 0,
+      "explanation": "Set x=−1: 2=A, so A=2.",
+      "tags": [
+        "partial fractions",
+        "cover-up",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 1.11",
+      "seedId": "aa-ahl-1-11-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "matching",
+      "prompt": "Match each denominator factor to the required partial-fraction terms.",
+      "pairs": [
+        {
+          "left": "(x−1)(x+2)",
+          "right": "A/(x−1)+B/(x+2)"
+        },
+        {
+          "left": "(x−1)²",
+          "right": "A/(x−1)+B/(x−1)²"
+        },
+        {
+          "left": "x(x²+1)",
+          "right": "A/x+(Bx+C)/(x²+1)"
+        }
+      ],
+      "explanation": "Linear repeated factors need a term for each power; irreducible quadratics need a linear numerator.",
+      "tags": [
+        "partial fractions",
+        "decomposition forms",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 1.11",
+      "seedId": "aa-ahl-1-11-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Find the modulus of 3+4i.",
+      "answer": 5,
+      "tolerance": 0,
+      "explanation": "|3+4i|=√(3²+4²)=5.",
+      "tags": [
+        "complex numbers",
+        "modulus",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.12",
+      "seedId": "aa-ahl-1-12-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Find the real part of (2+i)(1−3i).",
+      "answer": 5,
+      "tolerance": 0,
+      "explanation": "The product is 5−5i, so its real part is 5.",
+      "tags": [
+        "complex multiplication",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 1.12",
+      "seedId": "aa-ahl-1-12-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Let z=2−3i. Select all true statements.",
+      "choices": [
+        "z̄=2+3i",
+        "|z|=√13",
+        "z+z̄=4",
+        "Im(z)=3"
+      ],
+      "answers": [
+        "z̄=2+3i",
+        "|z|=√13",
+        "z+z̄=4"
+      ],
+      "explanation": "Conjugation changes the sign of the imaginary part; |z|=√(4+9), and z+z̄=4.",
+      "tags": [
+        "conjugate",
+        "modulus",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 1.12",
+      "seedId": "aa-ahl-1-12-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "If |z|=3 and |w|=4, what is |zw|?",
+      "choices": [
+        "1",
+        "7",
+        "12",
+        "24"
+      ],
+      "answer": "12",
+      "explanation": "Moduli multiply: |zw|=|z||w|=12.",
+      "tags": [
+        "polar form",
+        "modulus",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.13",
+      "seedId": "aa-ahl-1-13-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "What is the principal argument of 1+i?",
+      "choices": [
+        "π/6",
+        "π/4",
+        "π/2",
+        "3π/4"
+      ],
+      "answer": "π/4",
+      "explanation": "The point (1,1) lies at angle π/4 from the positive real axis.",
+      "tags": [
+        "argument",
+        "complex plane",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 1.13",
+      "seedId": "aa-ahl-1-13-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "recall",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "fill_blank",
+      "prompt": "Complete Euler’s identity: e^(iπ)=___.",
+      "answer": "−1",
+      "acceptedAnswers": [
+        "-1",
+        "−1"
+      ],
+      "explanation": "Euler’s formula gives e^(iπ)=cosπ+i sinπ=−1.",
+      "tags": [
+        "Euler form",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.13",
+      "seedId": "aa-ahl-1-13-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Using De Moivre’s theorem, (cos θ+i sin θ)³ equals which expression?",
+      "choices": [
+        "cos(3θ)+i sin(3θ)",
+        "3cos θ+3i sin θ",
+        "cos(θ³)+i sin(θ³)",
+        "cos(3θ)−i sin(3θ)"
+      ],
+      "answer": "cos(3θ)+i sin(3θ)",
+      "explanation": "De Moivre’s theorem multiplies the argument by the integer power.",
+      "tags": [
+        "De Moivre theorem",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.14",
+      "seedId": "aa-ahl-1-14-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Solve z²=−16.",
+      "choices": [
+        "z=±4",
+        "z=±4i",
+        "z=4i only",
+        "z=±8i"
+      ],
+      "answer": "z=±4i",
+      "explanation": "Since i²=−1, (±4i)²=−16.",
+      "tags": [
+        "complex roots",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 1.14",
+      "seedId": "aa-ahl-1-14-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements about the cube roots of 1.",
+      "choices": [
+        "There are three distinct roots.",
+        "They are equally spaced on the unit circle.",
+        "Their arguments differ by 2π/3.",
+        "They are all real."
+      ],
+      "answers": [
+        "There are three distinct roots.",
+        "They are equally spaced on the unit circle.",
+        "Their arguments differ by 2π/3."
+      ],
+      "explanation": "The cube roots lie at arguments 0, 2π/3 and 4π/3.",
+      "tags": [
+        "roots of unity",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 1.14",
+      "seedId": "aa-ahl-1-14-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which result is enough to disprove the claim “n²+n+41 is prime for every positive integer n”?",
+      "choices": [
+        "One value of n that gives a composite number",
+        "Ten values of n that give primes",
+        "An induction hypothesis",
+        "A graph of the expression"
+      ],
+      "answer": "One value of n that gives a composite number",
+      "explanation": "A single counterexample disproves a universal claim.",
+      "tags": [
+        "counterexample",
+        "proof",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.15",
+      "seedId": "aa-ahl-1-15-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "ordering",
+      "prompt": "Order the main steps in a proof by mathematical induction.",
+      "items": [
+        "Prove the statement for k+1",
+        "Assume the statement for k",
+        "Verify the base case",
+        "Conclude it holds for all required integers"
+      ],
+      "correctOrder": [
+        "Verify the base case",
+        "Assume the statement for k",
+        "Prove the statement for k+1",
+        "Conclude it holds for all required integers"
+      ],
+      "explanation": "Induction requires a base case and a valid implication from k to k+1.",
+      "tags": [
+        "mathematical induction",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 1.15",
+      "seedId": "aa-ahl-1-15-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "recall",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "In a proof by contradiction, one begins by assuming the negation of the statement to be proved.",
+      "answer": true,
+      "explanation": "The negated assumption is shown to lead to an impossibility.",
+      "tags": [
+        "proof by contradiction",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.15",
+      "seedId": "aa-ahl-1-15-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Solve x+y=5 and x−y=1. Find x.",
+      "answer": 3,
+      "tolerance": 0,
+      "explanation": "Adding the equations gives 2x=6, so x=3.",
+      "tags": [
+        "simultaneous equations",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.16",
+      "seedId": "aa-ahl-1-16-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "The equations x+2y=4 and 2x+4y=8 have how many solutions?",
+      "choices": [
+        "None",
+        "Exactly one",
+        "Exactly two",
+        "Infinitely many"
+      ],
+      "answer": "Infinitely many",
+      "explanation": "The second equation is twice the first, so both describe the same line.",
+      "tags": [
+        "linear systems",
+        "dependent equations",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 1.16",
+      "seedId": "aa-ahl-1-16-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "procedural",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "ordering",
+      "prompt": "Order these elimination steps for a three-equation linear system.",
+      "items": [
+        "Back-substitute to find the remaining variables",
+        "Eliminate one variable from two pairs of equations",
+        "Solve the resulting two-variable system",
+        "Write the equations in aligned form"
+      ],
+      "correctOrder": [
+        "Write the equations in aligned form",
+        "Eliminate one variable from two pairs of equations",
+        "Solve the resulting two-variable system",
+        "Back-substitute to find the remaining variables"
+      ],
+      "explanation": "Systematic elimination reduces the system before back-substitution.",
+      "tags": [
+        "linear systems",
+        "elimination",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 1.16",
+      "seedId": "aa-ahl-1-16-misconception"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 3,
+      "type": "matching",
+      "prompt": "Match each pair of equations to the number of solutions.",
+      "pairs": [
+        {
+          "left": "x+y=4 and 2x+2y=8",
+          "right": "Infinitely many solutions"
+        },
+        {
+          "left": "x+y=4 and 2x+2y=9",
+          "right": "No solution"
+        },
+        {
+          "left": "x+y=4 and x−y=2",
+          "right": "One unique solution"
+        }
+      ],
+      "explanation": "Equivalent equations describe the same line, inconsistent parallel equations never meet, and independent lines meet once.",
+      "tags": [
+        "linear systems",
+        "solution classification",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 1.16",
+      "seedId": "aa-ahl-1-16-extra-1"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Find the gradient of the line through (2,3) and (6,11).",
+      "answer": 2,
+      "tolerance": 0,
+      "explanation": "m=(11−3)/(6−2)=2.",
+      "tags": [
+        "straight lines",
+        "gradient",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.1",
+      "seedId": "aa-sl-2-1-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Which equation is perpendicular to y=2x+5 and passes through the origin?",
+      "choices": [
+        "y=−2x",
+        "y=−x/2",
+        "y=x/2",
+        "y=2x"
+      ],
+      "answer": "y=−x/2",
+      "explanation": "A perpendicular gradient is the negative reciprocal, −1/2.",
+      "tags": [
+        "perpendicular lines",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.1",
+      "seedId": "aa-sl-2-1-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "For the line 3x+2y=12, select all true statements.",
+      "choices": [
+        "Its y-intercept is 6.",
+        "Its x-intercept is 4.",
+        "Its gradient is −3/2.",
+        "It is parallel to y=3x−1."
+      ],
+      "answers": [
+        "Its y-intercept is 6.",
+        "Its x-intercept is 4.",
+        "Its gradient is −3/2."
+      ],
+      "explanation": "Rearranging gives y=−3x/2+6; setting y=0 gives x=4.",
+      "tags": [
+        "line features",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 2.1",
+      "seedId": "aa-sl-2-1-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "What is the domain of f(x)=1/(x−3)?",
+      "choices": [
+        "All real x",
+        "x>3",
+        "All real x except 3",
+        "x≠0"
+      ],
+      "answer": "All real x except 3",
+      "explanation": "The denominator cannot be zero, so x≠3.",
+      "tags": [
+        "domain",
+        "functions",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.2",
+      "seedId": "aa-sl-2-2-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Find f⁻¹(x) for f(x)=2x−3.",
+      "answer": "(x+3)/2",
+      "acceptedAnswers": [
+        "(x + 3)/2",
+        "0.5(x+3)",
+        "(x+3)÷2"
+      ],
+      "explanation": "Write y=2x−3, swap x and y, then solve for y.",
+      "tags": [
+        "inverse functions",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.2",
+      "seedId": "aa-sl-2-2-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "The function f(x)=x² has an inverse function on the unrestricted domain of all real numbers.",
+      "answer": false,
+      "explanation": "It is not one-to-one on all real numbers; a domain restriction such as x≥0 is needed.",
+      "tags": [
+        "inverse functions",
+        "one-to-one",
+        "misconception"
+      ],
+      "syllabusCode": "SL 2.2",
+      "seedId": "aa-sl-2-2-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "At x=2, f(2)=5 and g(2)=−3. Find (f+g)(2).",
+      "answer": 2,
+      "tolerance": 0,
+      "explanation": "(f+g)(2)=f(2)+g(2)=5−3=2.",
+      "tags": [
+        "function graphs",
+        "sum of functions",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.3",
+      "seedId": "aa-sl-2-3-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "The graph of h(x)=f(x)−g(x) crosses the x-axis when which condition holds?",
+      "choices": [
+        "f(x)=0",
+        "g(x)=0",
+        "f(x)=g(x)",
+        "f(x)=−g(x)"
+      ],
+      "answer": "f(x)=g(x)",
+      "explanation": "An x-intercept of h occurs when f(x)−g(x)=0.",
+      "tags": [
+        "difference of functions",
+        "intersections",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.3",
+      "seedId": "aa-sl-2-3-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "recall",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "matching",
+      "prompt": "Match each function to the key shape of its graph.",
+      "pairs": [
+        {
+          "left": "y=x²",
+          "right": "Upward-opening parabola"
+        },
+        {
+          "left": "y=|x|",
+          "right": "V-shape"
+        },
+        {
+          "left": "y=1/x",
+          "right": "Two reciprocal branches"
+        }
+      ],
+      "explanation": "Recognizing parent graphs supports accurate sketches and transformations.",
+      "tags": [
+        "parent graphs",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.3",
+      "seedId": "aa-sl-2-3-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "exam_style",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "The graphs y=x² and y=2x+3 intersect when x²=2x+3. Find the positive x-coordinate of intersection.",
+      "answer": 3,
+      "tolerance": 0,
+      "explanation": "x²−2x−3=(x−3)(x+1)=0, so the positive solution is 3.",
+      "tags": [
+        "intersections",
+        "exam_style"
+      ],
+      "syllabusCode": "SL 2.4",
+      "seedId": "aa-sl-2-4-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "For f(x)=−(x−2)²+7, what is the maximum value?",
+      "choices": [
+        "−2",
+        "2",
+        "7",
+        "9"
+      ],
+      "answer": "7",
+      "explanation": "The vertex is (2,7) and the parabola opens downward.",
+      "tags": [
+        "graph features",
+        "vertex",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.4",
+      "seedId": "aa-sl-2-4-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "A graph has a local minimum at (1,−4) and x-intercepts −1 and 3. Select all true statements.",
+      "choices": [
+        "Its minimum value is −4.",
+        "f(1)=−4.",
+        "f(−1)=0.",
+        "Its axis of symmetry must be x=0."
+      ],
+      "answers": [
+        "Its minimum value is −4.",
+        "f(1)=−4.",
+        "f(−1)=0."
+      ],
+      "explanation": "Coordinates of extrema and intercepts translate directly into function values.",
+      "tags": [
+        "graph interpretation",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 2.4",
+      "seedId": "aa-sl-2-4-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Let f(x)=2x+3 and g(x)=x². Find (f∘g)(2).",
+      "answer": 11,
+      "tolerance": 0,
+      "explanation": "g(2)=4 and f(4)=11.",
+      "tags": [
+        "composite functions",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.5",
+      "seedId": "aa-sl-2-5-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Find the inverse of f(x)=3x+6.",
+      "answer": "(x−6)/3",
+      "acceptedAnswers": [
+        "(x-6)/3",
+        "x/3-2",
+        "(x − 6)/3"
+      ],
+      "explanation": "Swap input and output in y=3x+6 and solve for y.",
+      "tags": [
+        "inverse functions",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.5",
+      "seedId": "aa-sl-2-5-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "For invertible functions f and g, (f∘g)⁻¹=f⁻¹∘g⁻¹.",
+      "answer": false,
+      "explanation": "The order reverses: (f∘g)⁻¹=g⁻¹∘f⁻¹.",
+      "tags": [
+        "inverse composition",
+        "misconception"
+      ],
+      "syllabusCode": "SL 2.5",
+      "seedId": "aa-sl-2-5-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "What is the vertex of y=(x−3)²−5?",
+      "choices": [
+        "(−3,−5)",
+        "(3,−5)",
+        "(3,5)",
+        "(−3,5)"
+      ],
+      "answer": "(3,−5)",
+      "explanation": "Vertex form y=(x−h)²+k has vertex (h,k).",
+      "tags": [
+        "quadratic functions",
+        "vertex",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.6",
+      "seedId": "aa-sl-2-6-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Find the y-intercept of y=2x²−5x+7.",
+      "answer": 7,
+      "tolerance": 0,
+      "explanation": "At the y-intercept x=0, so y=7.",
+      "tags": [
+        "quadratic functions",
+        "intercept",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.6",
+      "seedId": "aa-sl-2-6-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "For y=−2(x+1)²+8, select all true statements.",
+      "choices": [
+        "The axis is x=−1.",
+        "The maximum value is 8.",
+        "The graph opens downward.",
+        "The vertex is (1,8)."
+      ],
+      "answers": [
+        "The axis is x=−1.",
+        "The maximum value is 8.",
+        "The graph opens downward."
+      ],
+      "explanation": "The vertex is (−1,8) and the negative leading coefficient makes it open downward.",
+      "tags": [
+        "quadratic graph features",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 2.6",
+      "seedId": "aa-sl-2-6-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Find the discriminant of 2x²−3x+5=0.",
+      "answer": -31,
+      "tolerance": 0,
+      "explanation": "b²−4ac=9−40=−31.",
+      "tags": [
+        "discriminant",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.7",
+      "seedId": "aa-sl-2-7-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "How many distinct real roots does x²−6x+9=0 have?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": "1",
+      "explanation": "The discriminant is zero and the quadratic is (x−3)².",
+      "tags": [
+        "quadratic roots",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.7",
+      "seedId": "aa-sl-2-7-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "If b²−4ac<0, the quadratic equation ax²+bx+c=0 has two distinct real solutions.",
+      "answer": false,
+      "explanation": "A negative discriminant gives no real solutions.",
+      "tags": [
+        "discriminant",
+        "nature of roots",
+        "misconception"
+      ],
+      "syllabusCode": "SL 2.7",
+      "seedId": "aa-sl-2-7-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "What is the vertical asymptote of y=3/(x−2)+1?",
+      "choices": [
+        "x=−2",
+        "x=2",
+        "y=1",
+        "y=2"
+      ],
+      "answer": "x=2",
+      "explanation": "The denominator is zero at x=2.",
+      "tags": [
+        "reciprocal functions",
+        "asymptotes",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.8",
+      "seedId": "aa-sl-2-8-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "For y=(2x+1)/(x−3), what is the horizontal asymptote?",
+      "choices": [
+        "y=0",
+        "y=1",
+        "y=2",
+        "x=3"
+      ],
+      "answer": "y=2",
+      "explanation": "For equal-degree numerator and denominator, divide the leading coefficients: 2/1=2.",
+      "tags": [
+        "rational functions",
+        "asymptotes",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.8",
+      "seedId": "aa-sl-2-8-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "For y=1/x, select all true statements.",
+      "choices": [
+        "x=0 is a vertical asymptote.",
+        "y=0 is a horizontal asymptote.",
+        "The graph passes through (1,1).",
+        "The graph has a y-intercept."
+      ],
+      "answers": [
+        "x=0 is a vertical asymptote.",
+        "y=0 is a horizontal asymptote.",
+        "The graph passes through (1,1)."
+      ],
+      "explanation": "The function is undefined at x=0, so it has no y-intercept.",
+      "tags": [
+        "reciprocal graph",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 2.8",
+      "seedId": "aa-sl-2-8-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which point lies on y=2ˣ?",
+      "choices": [
+        "(0,0)",
+        "(0,1)",
+        "(1,1)",
+        "(2,2)"
+      ],
+      "answer": "(0,1)",
+      "explanation": "Any non-zero exponential satisfies a⁰=1.",
+      "tags": [
+        "exponential graphs",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.9",
+      "seedId": "aa-sl-2-9-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Solve ln x=2. Give x correct to three decimal places.",
+      "answer": 7.389,
+      "tolerance": 0.001,
+      "explanation": "Exponentiating gives x=e²≈7.389.",
+      "tags": [
+        "logarithmic equations",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.9",
+      "seedId": "aa-sl-2-9-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "The graph of y=ln x has domain x>0 and vertical asymptote x=0.",
+      "answer": true,
+      "explanation": "Natural logarithm is defined only for positive inputs and tends to −∞ as x approaches 0 from the right.",
+      "tags": [
+        "logarithmic graph",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 2.9",
+      "seedId": "aa-sl-2-9-misconception"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "application",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A population is modelled by N(t)=800e^(0.12t), where t is in hours. Find N(6), rounded to the nearest whole number.",
+      "answer": 1644,
+      "tolerance": 0.5,
+      "explanation": "N(6)=800e^0.72≈1643.55, which rounds to 1644.",
+      "tags": [
+        "exponential models",
+        "interpretation",
+        "application"
+      ],
+      "syllabusCode": "SL 2.9",
+      "seedId": "aa-sl-2-9-extra-1"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Solve 3x−7=11.",
+      "answer": 6,
+      "tolerance": 0,
+      "explanation": "3x=18, so x=6.",
+      "tags": [
+        "solving equations",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.10",
+      "seedId": "aa-sl-2-10-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "conceptual",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "The equation x³+x=1 is best solved in a live quiz using which method?",
+      "choices": [
+        "Factorising by grouping",
+        "Reading the intersection of y=x³+x and y=1",
+        "Taking square roots",
+        "Completing the square"
+      ],
+      "answer": "Reading the intersection of y=x³+x and y=1",
+      "explanation": "The equation has no simple factorization; a graph or numerical solver locates the root.",
+      "tags": [
+        "graphical solutions",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 2.10",
+      "seedId": "aa-sl-2-10-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "procedural",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "ordering",
+      "prompt": "Order the steps for solving 2^(x)=7 using logarithms.",
+      "items": [
+        "Divide by ln 2",
+        "Take natural logs of both sides",
+        "Write x ln 2=ln 7",
+        "State x=ln 7/ln 2"
+      ],
+      "correctOrder": [
+        "Take natural logs of both sides",
+        "Write x ln 2=ln 7",
+        "Divide by ln 2",
+        "State x=ln 7/ln 2"
+      ],
+      "explanation": "Logarithm laws bring the exponent down as a multiplier.",
+      "tags": [
+        "exponential equations",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.10",
+      "seedId": "aa-sl-2-10-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "The graph y=f(x−4)+2 is obtained from y=f(x) by which translations?",
+      "choices": [
+        "4 left and 2 up",
+        "4 right and 2 up",
+        "4 right and 2 down",
+        "2 right and 4 up"
+      ],
+      "answer": "4 right and 2 up",
+      "explanation": "A change inside f acts oppositely on x; +2 outside shifts upward.",
+      "tags": [
+        "graph transformations",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.11",
+      "seedId": "aa-sl-2-11-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "conceptual",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Let y=f(x) contain the point (2,5). Which statements are true for y=3f(x−4)−1?",
+      "choices": [
+        "The corresponding point is (6,14).",
+        "The corresponding point is (−2,14).",
+        "The graph is translated 4 units right.",
+        "The vertical scale factor is 3."
+      ],
+      "answers": [
+        "The corresponding point is (6,14).",
+        "The graph is translated 4 units right.",
+        "The vertical scale factor is 3."
+      ],
+      "explanation": "The x-coordinate becomes 2+4=6 and the y-coordinate becomes 3(5)−1=14.",
+      "tags": [
+        "graph transformations",
+        "coordinates",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 2.11",
+      "seedId": "aa-sl-2-11-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "procedural",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "drag_drop",
+      "prompt": "Classify each expression by its transformation of y=f(x).",
+      "zones": [
+        "Vertical translation",
+        "Horizontal translation",
+        "Vertical stretch"
+      ],
+      "items": [
+        {
+          "text": "f(x)+4",
+          "correctZone": "Vertical translation"
+        },
+        {
+          "text": "f(x−3)",
+          "correctZone": "Horizontal translation"
+        },
+        {
+          "text": "2f(x)",
+          "correctZone": "Vertical stretch"
+        }
+      ],
+      "explanation": "Changes outside f affect y-values; changes inside f affect x-values.",
+      "tags": [
+        "graph transformations",
+        "classification",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.11",
+      "seedId": "aa-sl-2-11-misconception"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "ordering",
+      "prompt": "For y=2f(x−3)+4, order these transformations from y=f(x).",
+      "items": [
+        "Translate up 4",
+        "Translate right 3",
+        "Stretch vertically by factor 2"
+      ],
+      "correctOrder": [
+        "Translate right 3",
+        "Stretch vertically by factor 2",
+        "Translate up 4"
+      ],
+      "explanation": "The inside change moves right; output values are then doubled and increased by 4.",
+      "tags": [
+        "graph transformations",
+        "order",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.11",
+      "seedId": "aa-sl-2-11-extra-1"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "exam_style",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "The point (1,5) lies on y=f(x). Give its image on y=f(x−2)+3.",
+      "answer": "(3,8)",
+      "acceptedAnswers": [
+        "(3, 8)",
+        "3,8",
+        "3, 8"
+      ],
+      "explanation": "Translate 2 right and 3 up, so (1,5) maps to (3,8).",
+      "tags": [
+        "graph transformations",
+        "coordinates",
+        "exam_style"
+      ],
+      "syllabusCode": "SL 2.11",
+      "seedId": "aa-sl-2-11-extra-2"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "The polynomial p(x)=x³−4x²+x+6 has x=2 as a root. Which factorisation is correct?",
+      "choices": [
+        "(x−2)(x²−2x−3)",
+        "(x+2)(x²−6x+3)",
+        "(x−2)(x²+2x+3)",
+        "(x−3)(x²−x−2)"
+      ],
+      "answer": "(x−2)(x²−2x−3)",
+      "explanation": "Dividing by x−2 gives x²−2x−3.",
+      "tags": [
+        "polynomials",
+        "factor theorem",
+        "recall"
+      ],
+      "syllabusCode": "AHL 2.12",
+      "seedId": "aa-ahl-2-12-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Find the remainder when p(x)=2x³−x+5 is divided by x−2.",
+      "answer": 19,
+      "tolerance": 0,
+      "explanation": "By the remainder theorem, the remainder is p(2)=16−2+5=19.",
+      "tags": [
+        "remainder theorem",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 2.12",
+      "seedId": "aa-ahl-2-12-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "A monic cubic has roots 1, 2 and −3. Select all true statements.",
+      "choices": [
+        "The sum of the roots is 0.",
+        "The product of the roots is −6.",
+        "x−1 is a factor.",
+        "Its constant term is −6."
+      ],
+      "answers": [
+        "The sum of the roots is 0.",
+        "The product of the roots is −6.",
+        "x−1 is a factor."
+      ],
+      "explanation": "The polynomial is (x−1)(x−2)(x+3); its constant term is +6.",
+      "tags": [
+        "roots",
+        "factors",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 2.12",
+      "seedId": "aa-ahl-2-12-misconception"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "exam_style",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "The polynomial p(x)=x³+ax²−5x+3 has x=1 as a root. Find a.",
+      "answer": 1,
+      "tolerance": 0,
+      "explanation": "By the factor theorem p(1)=0, so 1+a−5+3=0 and a=1.",
+      "tags": [
+        "polynomials",
+        "factor theorem",
+        "exam_style"
+      ],
+      "syllabusCode": "AHL 2.12",
+      "seedId": "aa-ahl-2-12-extra-1"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "For f(x)=(x+1)/(x²−4), which values are excluded from the domain?",
+      "choices": [
+        "x=−1 only",
+        "x=±2",
+        "x=2 only",
+        "x=0 and x=4"
+      ],
+      "answer": "x=±2",
+      "explanation": "x²−4=(x−2)(x+2), so the denominator is zero at ±2.",
+      "tags": [
+        "rational functions",
+        "domain",
+        "recall"
+      ],
+      "syllabusCode": "AHL 2.13",
+      "seedId": "aa-ahl-2-13-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "What is the horizontal asymptote of y=(3x²+1)/(x²−5)?",
+      "choices": [
+        "y=0",
+        "y=1",
+        "y=3",
+        "x=3"
+      ],
+      "answer": "y=3",
+      "explanation": "The numerator and denominator have equal degree; the leading-coefficient ratio is 3.",
+      "tags": [
+        "rational functions",
+        "asymptotes",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 2.13",
+      "seedId": "aa-ahl-2-13-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "The function (x²−1)/(x−1) has a vertical asymptote at x=1.",
+      "answer": false,
+      "explanation": "It simplifies to x+1 for x≠1, so x=1 is a removable hole, not a vertical asymptote.",
+      "tags": [
+        "holes",
+        "asymptotes",
+        "misconception"
+      ],
+      "syllabusCode": "AHL 2.13",
+      "seedId": "aa-ahl-2-13-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "true_false",
+      "prompt": "The function f(x)=x³ is odd.",
+      "answer": true,
+      "explanation": "f(−x)=−x³=−f(x).",
+      "tags": [
+        "odd functions",
+        "recall"
+      ],
+      "syllabusCode": "AHL 2.14",
+      "seedId": "aa-ahl-2-14-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Which domain restriction makes f(x)=x² invertible while keeping non-negative outputs?",
+      "choices": [
+        "x≤0 only",
+        "x≥0 only",
+        "all real x",
+        "x≠0"
+      ],
+      "answer": "x≥0 only",
+      "explanation": "On x≥0 the function is one-to-one and its inverse is √x.",
+      "tags": [
+        "domain restriction",
+        "inverse functions",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 2.14",
+      "seedId": "aa-ahl-2-14-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all self-inverse functions.",
+      "choices": [
+        "f(x)=−x",
+        "f(x)=1/x on x≠0",
+        "f(x)=x+2",
+        "f(x)=x³"
+      ],
+      "answers": [
+        "f(x)=−x",
+        "f(x)=1/x on x≠0"
+      ],
+      "explanation": "Applying −x twice or taking a reciprocal twice returns x.",
+      "tags": [
+        "self-inverse functions",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 2.14",
+      "seedId": "aa-ahl-2-14-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Solve x²≥4.",
+      "choices": [
+        "−2≤x≤2",
+        "x≤−2 or x≥2",
+        "x≥−2",
+        "x≤2"
+      ],
+      "answer": "x≤−2 or x≥2",
+      "explanation": "The parabola x²−4 is non-negative outside its roots −2 and 2.",
+      "tags": [
+        "quadratic inequalities",
+        "recall"
+      ],
+      "syllabusCode": "AHL 2.15",
+      "seedId": "aa-ahl-2-15-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "For f(x)=x² and g(x)=2x+3, select every interval on which f(x)≥g(x).",
+      "choices": [
+        "x≤−1",
+        "−1<x<3",
+        "x≥3",
+        "0≤x≤2"
+      ],
+      "answers": [
+        "x≤−1",
+        "x≥3"
+      ],
+      "explanation": "x²−2x−3=(x+1)(x−3) is non-negative outside [−1,3].",
+      "tags": [
+        "function inequalities",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 2.15",
+      "seedId": "aa-ahl-2-15-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "procedural",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "ordering",
+      "prompt": "Order the steps for solving (x−1)(x+4)<0.",
+      "items": [
+        "Choose the interval where the product is negative",
+        "Mark the critical values −4 and 1",
+        "Write the solution −4<x<1",
+        "Make a sign chart"
+      ],
+      "correctOrder": [
+        "Mark the critical values −4 and 1",
+        "Make a sign chart",
+        "Choose the interval where the product is negative",
+        "Write the solution −4<x<1"
+      ],
+      "explanation": "Critical values split the number line into intervals with fixed signs.",
+      "tags": [
+        "inequalities",
+        "sign chart",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 2.15",
+      "seedId": "aa-ahl-2-15-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Solve |x−3|=5.",
+      "choices": [
+        "x=8 only",
+        "x=−2 only",
+        "x=−2 or x=8",
+        "x=2 or x=8"
+      ],
+      "answer": "x=−2 or x=8",
+      "explanation": "x−3=±5, giving x=8 or x=−2.",
+      "tags": [
+        "modulus equations",
+        "recall"
+      ],
+      "syllabusCode": "AHL 2.16",
+      "seedId": "aa-ahl-2-16-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "conceptual",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "For y=|f(x)|, select all true statements.",
+      "choices": [
+        "Parts of y=f(x) below the x-axis reflect upward.",
+        "All y-values are non-negative.",
+        "The x-intercepts stay unchanged.",
+        "The graph always becomes one-to-one."
+      ],
+      "answers": [
+        "Parts of y=f(x) below the x-axis reflect upward.",
+        "All y-values are non-negative.",
+        "The x-intercepts stay unchanged."
+      ],
+      "explanation": "Absolute value changes negative outputs to positive but does not guarantee one-to-one behaviour.",
+      "tags": [
+        "modulus graphs",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 2.16",
+      "seedId": "aa-ahl-2-16-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Solve |2x−1|<3.",
+      "choices": [
+        "−1<x<2",
+        "x<−1 or x>2",
+        "−2<x<1",
+        "0<x<2"
+      ],
+      "answer": "−1<x<2",
+      "explanation": "−3<2x−1<3 gives −2<2x<4 and hence −1<x<2.",
+      "tags": [
+        "modulus inequalities",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 2.16",
+      "seedId": "aa-ahl-2-16-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Find the distance from (0,0,0) to (3,4,12).",
+      "answer": 13,
+      "tolerance": 0,
+      "explanation": "Distance=√(3²+4²+12²)=√169=13.",
+      "tags": [
+        "3D geometry",
+        "distance",
+        "recall"
+      ],
+      "syllabusCode": "SL 3.1",
+      "seedId": "aa-sl-3-1-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Find the midpoint of (2,−1,4) and (6,3,10).",
+      "answer": "(4,1,7)",
+      "acceptedAnswers": [
+        "(4, 1, 7)",
+        "4,1,7",
+        "4, 1, 7"
+      ],
+      "explanation": "Average corresponding coordinates.",
+      "tags": [
+        "3D geometry",
+        "midpoint",
+        "procedural"
+      ],
+      "syllabusCode": "SL 3.1",
+      "seedId": "aa-sl-3-1-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "If a line is perpendicular to a plane, it is perpendicular to every line lying in that plane.",
+      "answer": false,
+      "explanation": "It is perpendicular to every line in the plane that passes through the foot of the perpendicular, not every line anywhere in the plane.",
+      "tags": [
+        "lines and planes",
+        "misconception"
+      ],
+      "syllabusCode": "SL 3.1",
+      "seedId": "aa-sl-3-1-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A right triangle has legs 6 cm and 8 cm. Find its hypotenuse.",
+      "answer": 10,
+      "tolerance": 0,
+      "explanation": "By Pythagoras, c=√(6²+8²)=10.",
+      "tags": [
+        "right triangles",
+        "recall"
+      ],
+      "syllabusCode": "SL 3.2",
+      "seedId": "aa-sl-3-2-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "exam_style",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Two sides of a triangle are 5 cm and 7 cm with included angle 60°. Find the area in cm².",
+      "answer": 15.155,
+      "tolerance": 0.001,
+      "explanation": "Area=½(5)(7)sin60°≈15.155.",
+      "tags": [
+        "triangle area",
+        "exam_style"
+      ],
+      "syllabusCode": "SL 3.2",
+      "seedId": "aa-sl-3-2-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Which rule should be used first when three side lengths of a non-right triangle are known and one angle is required?",
+      "choices": [
+        "Sine rule",
+        "Cosine rule",
+        "Tangent ratio",
+        "Pythagoras only"
+      ],
+      "answer": "Cosine rule",
+      "explanation": "The cosine rule relates three sides directly to an angle.",
+      "tags": [
+        "cosine rule",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 3.2",
+      "seedId": "aa-sl-3-2-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "application",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "From a point 20 m from a vertical tower, the angle of elevation to its top is 45°. Find the tower height in metres.",
+      "answer": 20,
+      "tolerance": 0,
+      "explanation": "tan45°=h/20=1, so h=20.",
+      "tags": [
+        "angle of elevation",
+        "application"
+      ],
+      "syllabusCode": "SL 3.3",
+      "seedId": "aa-sl-3-3-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A bearing of 135° is measured from which direction and in which sense?",
+      "choices": [
+        "From north, clockwise",
+        "From north, anticlockwise",
+        "From east, clockwise",
+        "From south, clockwise"
+      ],
+      "answer": "From north, clockwise",
+      "explanation": "Three-figure bearings are measured clockwise from north.",
+      "tags": [
+        "bearings",
+        "procedural"
+      ],
+      "syllabusCode": "SL 3.3",
+      "seedId": "aa-sl-3-3-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "An angle of depression from a horizontal line equals the corresponding angle of elevation because the horizontal lines are parallel.",
+      "answer": true,
+      "explanation": "Alternate interior angles are equal.",
+      "tags": [
+        "elevation",
+        "depression",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 3.3",
+      "seedId": "aa-sl-3-3-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A sector has radius 6 cm and angle 1.2 radians. Find its arc length in centimetres.",
+      "answer": 7.2,
+      "tolerance": 0,
+      "explanation": "s=rθ=6(1.2)=7.2.",
+      "tags": [
+        "radians",
+        "arc length",
+        "recall"
+      ],
+      "syllabusCode": "SL 3.4",
+      "seedId": "aa-sl-3-4-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A sector has radius 4 m and angle 1.5 radians. Find its area in m².",
+      "answer": 12,
+      "tolerance": 0,
+      "explanation": "Area=½r²θ=½(16)(1.5)=12.",
+      "tags": [
+        "radians",
+        "sector area",
+        "procedural"
+      ],
+      "syllabusCode": "SL 3.4",
+      "seedId": "aa-sl-3-4-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "procedural",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "fill_blank",
+      "prompt": "Complete the conversion: 150°=___ radians.",
+      "answer": "5π/6",
+      "acceptedAnswers": [
+        "5pi/6",
+        "5π/6",
+        "(5π)/6"
+      ],
+      "explanation": "Multiply degrees by π/180: 150π/180=5π/6.",
+      "tags": [
+        "radian conversion",
+        "procedural"
+      ],
+      "syllabusCode": "SL 3.4",
+      "seedId": "aa-sl-3-4-misconception"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "conceptual",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "matching",
+      "prompt": "Match each expression to its meaning.",
+      "pairs": [
+        {
+          "left": "rθ",
+          "right": "Arc length"
+        },
+        {
+          "left": "½r²θ",
+          "right": "Sector area"
+        },
+        {
+          "left": "π radians",
+          "right": "180°"
+        }
+      ],
+      "explanation": "In radian measure, s=rθ and A=½r²θ.",
+      "tags": [
+        "radians",
+        "formulae",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 3.4",
+      "seedId": "aa-sl-3-4-extra-1"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "application",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A wheel of radius 0.4 m turns through 15 radians. How far does a point on its rim travel?",
+      "choices": [
+        "3.75 m",
+        "6 m",
+        "15.4 m",
+        "37.5 m"
+      ],
+      "answer": "6 m",
+      "explanation": "Arc length s=rθ=0.4(15)=6 m.",
+      "tags": [
+        "radians",
+        "arc length",
+        "application"
+      ],
+      "syllabusCode": "SL 3.4",
+      "seedId": "aa-sl-3-4-extra-2"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Find the exact value of sin(π/6).",
+      "choices": [
+        "0",
+        "1/2",
+        "√2/2",
+        "√3/2"
+      ],
+      "answer": "1/2",
+      "explanation": "The unit-circle point at π/6 has y-coordinate 1/2.",
+      "tags": [
+        "unit circle",
+        "exact values",
+        "recall"
+      ],
+      "syllabusCode": "SL 3.5",
+      "seedId": "aa-sl-3-5-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all angles θ in 0≤θ≤2π for which cosθ=0.",
+      "choices": [
+        "0",
+        "π/2",
+        "π",
+        "3π/2"
+      ],
+      "answers": [
+        "π/2",
+        "3π/2"
+      ],
+      "explanation": "Cosine is the x-coordinate on the unit circle and is zero on the vertical axis.",
+      "tags": [
+        "unit circle",
+        "cosine",
+        "procedural"
+      ],
+      "syllabusCode": "SL 3.5",
+      "seedId": "aa-sl-3-5-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "Using the sine rule with two sides and a non-included angle can sometimes produce two possible triangles.",
+      "answer": true,
+      "explanation": "The ambiguous case occurs because sinθ=sin(π−θ).",
+      "tags": [
+        "ambiguous case",
+        "sine rule",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 3.5",
+      "seedId": "aa-sl-3-5-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "fill_blank",
+      "prompt": "Complete the identity: sin²θ+cos²θ=___.",
+      "answer": "1",
+      "acceptedAnswers": [
+        "1"
+      ],
+      "explanation": "This is the fundamental Pythagorean identity.",
+      "tags": [
+        "trigonometric identities",
+        "recall"
+      ],
+      "syllabusCode": "SL 3.6",
+      "seedId": "aa-sl-3-6-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Which expression is equal to sin(2θ)?",
+      "choices": [
+        "2sinθ cosθ",
+        "sin²θ−cos²θ",
+        "2sinθ",
+        "sinθ+cosθ"
+      ],
+      "answer": "2sinθ cosθ",
+      "explanation": "The sine double-angle identity is sin2θ=2sinθcosθ.",
+      "tags": [
+        "double-angle identities",
+        "procedural"
+      ],
+      "syllabusCode": "SL 3.6",
+      "seedId": "aa-sl-3-6-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "If tanθ=3/4 and θ is acute, find sinθ.",
+      "choices": [
+        "3/4",
+        "4/5",
+        "3/5",
+        "5/3"
+      ],
+      "answer": "3/5",
+      "explanation": "A 3-4-5 triangle gives opposite/hypotenuse=3/5.",
+      "tags": [
+        "trigonometric ratios",
+        "identity",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 3.6",
+      "seedId": "aa-sl-3-6-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "For y=3sin(2x)−1, what is the amplitude?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "3",
+      "explanation": "Amplitude is the absolute value of the coefficient of sine.",
+      "tags": [
+        "circular functions",
+        "amplitude",
+        "recall"
+      ],
+      "syllabusCode": "SL 3.7",
+      "seedId": "aa-sl-3-7-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "What is the period of y=cos(3x)?",
+      "choices": [
+        "2π",
+        "3π",
+        "2π/3",
+        "π/3"
+      ],
+      "answer": "2π/3",
+      "explanation": "For cos(bx), period=2π/|b|.",
+      "tags": [
+        "circular functions",
+        "period",
+        "procedural"
+      ],
+      "syllabusCode": "SL 3.7",
+      "seedId": "aa-sl-3-7-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "For h(t)=2sin(πt/6)+5, select all true statements.",
+      "choices": [
+        "The midline is h=5.",
+        "The amplitude is 2.",
+        "The period is 12.",
+        "The maximum value is 5."
+      ],
+      "answers": [
+        "The midline is h=5.",
+        "The amplitude is 2.",
+        "The period is 12."
+      ],
+      "explanation": "The maximum is 7; period=2π/(π/6)=12.",
+      "tags": [
+        "sinusoidal models",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 3.7",
+      "seedId": "aa-sl-3-7-misconception"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "application",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 3,
+      "type": "multi_select",
+      "prompt": "The temperature in a greenhouse is modelled by T(t)=18+6cos(πt/12), where t is measured in hours. Select all true statements.",
+      "choices": [
+        "The midline temperature is 18°C.",
+        "The period is 24 hours.",
+        "The minimum temperature is 12°C.",
+        "At t=0 the temperature is 18°C."
+      ],
+      "answers": [
+        "The midline temperature is 18°C.",
+        "The period is 24 hours.",
+        "The minimum temperature is 12°C."
+      ],
+      "explanation": "The vertical shift is 18, the amplitude is 6, and the period is 2π÷(π/12)=24. At t=0, T=24°C.",
+      "tags": [
+        "sinusoidal models",
+        "parameter interpretation",
+        "application"
+      ],
+      "syllabusCode": "SL 3.7",
+      "seedId": "aa-sl-3-7-extra-1"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multi_select",
+      "prompt": "Solve sinx=1/2 for 0≤x≤2π.",
+      "choices": [
+        "π/6",
+        "5π/6",
+        "7π/6",
+        "11π/6"
+      ],
+      "answers": [
+        "π/6",
+        "5π/6"
+      ],
+      "explanation": "Sine is positive in quadrants I and II with reference angle π/6.",
+      "tags": [
+        "trigonometric equations",
+        "recall"
+      ],
+      "syllabusCode": "SL 3.8",
+      "seedId": "aa-sl-3-8-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Solve 2cos²x−1=0 for 0≤x≤π.",
+      "choices": [
+        "x=π/4 only",
+        "x=3π/4 only",
+        "x=π/4 or 3π/4",
+        "x=0 or π"
+      ],
+      "answer": "x=π/4 or 3π/4",
+      "explanation": "cos²x=1/2, so cosx=±√2/2.",
+      "tags": [
+        "quadratic trigonometric equations",
+        "procedural"
+      ],
+      "syllabusCode": "SL 3.8",
+      "seedId": "aa-sl-3-8-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "If tanx=1, then every solution is x=π/4+2kπ.",
+      "answer": false,
+      "explanation": "Tangent has period π, so x=π/4+kπ.",
+      "tags": [
+        "trigonometric equations",
+        "periodicity",
+        "misconception"
+      ],
+      "syllabusCode": "SL 3.8",
+      "seedId": "aa-sl-3-8-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "If cosθ=4/5, what is secθ?",
+      "choices": [
+        "4/5",
+        "5/4",
+        "3/5",
+        "5/3"
+      ],
+      "answer": "5/4",
+      "explanation": "secθ=1/cosθ.",
+      "tags": [
+        "reciprocal trigonometry",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.9",
+      "seedId": "aa-ahl-3-9-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "What is the principal range of arccos x?",
+      "choices": [
+        "[−π/2,π/2]",
+        "[0,π]",
+        "[0,2π]",
+        "(−π,π)"
+      ],
+      "answer": "[0,π]",
+      "explanation": "Restricting cosine to [0,π] makes it one-to-one.",
+      "tags": [
+        "inverse trigonometry",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.9",
+      "seedId": "aa-ahl-3-9-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all identities that are true wherever defined.",
+      "choices": [
+        "1+tan²x=sec²x",
+        "1+cot²x=csc²x",
+        "secx=1/sinx",
+        "cotx=cosx/sinx"
+      ],
+      "answers": [
+        "1+tan²x=sec²x",
+        "1+cot²x=csc²x",
+        "cotx=cosx/sinx"
+      ],
+      "explanation": "secx=1/cosx, not 1/sinx.",
+      "tags": [
+        "reciprocal identities",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.9",
+      "seedId": "aa-ahl-3-9-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which expression equals sin(A+B)?",
+      "choices": [
+        "sinA cosB+cosA sinB",
+        "sinA sinB+cosA cosB",
+        "sinA cosB−cosA sinB",
+        "cosA cosB−sinA sinB"
+      ],
+      "answer": "sinA cosB+cosA sinB",
+      "explanation": "This is the sine compound-angle identity.",
+      "tags": [
+        "compound-angle identities",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.10",
+      "seedId": "aa-ahl-3-10-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Given tanA=1/2 and tanB=1/3, find tan(A+B).",
+      "answer": 1,
+      "tolerance": 0,
+      "explanation": "tan(A+B)=(1/2+1/3)/(1−1/6)=(5/6)/(5/6)=1.",
+      "tags": [
+        "tangent compound angle",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.10",
+      "seedId": "aa-ahl-3-10-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "cos(A−B)=cosA cosB−sinA sinB.",
+      "answer": false,
+      "explanation": "cos(A−B)=cosAcosB+sinAsinB; the minus sign belongs to cos(A+B).",
+      "tags": [
+        "compound-angle identities",
+        "misconception"
+      ],
+      "syllabusCode": "AHL 3.10",
+      "seedId": "aa-ahl-3-10-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which identity expresses the odd symmetry of sine?",
+      "choices": [
+        "sin(−x)=sinx",
+        "sin(−x)=−sinx",
+        "sin(π−x)=−sinx",
+        "sin(x+π)=sinx"
+      ],
+      "answer": "sin(−x)=−sinx",
+      "explanation": "Sine is an odd function.",
+      "tags": [
+        "trigonometric symmetry",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.11",
+      "seedId": "aa-ahl-3-11-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true symmetry relationships.",
+      "choices": [
+        "cos(−x)=cosx",
+        "sin(π−x)=sinx",
+        "cos(π−x)=−cosx",
+        "tan(−x)=tanx"
+      ],
+      "answers": [
+        "cos(−x)=cosx",
+        "sin(π−x)=sinx",
+        "cos(π−x)=−cosx"
+      ],
+      "explanation": "Tangent is odd, so tan(−x)=−tanx.",
+      "tags": [
+        "trigonometric symmetry",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.11",
+      "seedId": "aa-ahl-3-11-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "matching",
+      "prompt": "Match each function to a distinguishing symmetry property.",
+      "pairs": [
+        {
+          "left": "sinx",
+          "right": "Odd with period 2π"
+        },
+        {
+          "left": "cosx",
+          "right": "Even with y-axis symmetry"
+        },
+        {
+          "left": "tanx",
+          "right": "Odd with period π"
+        }
+      ],
+      "explanation": "Sine and tangent are odd, cosine is even, and tangent has the shorter period.",
+      "tags": [
+        "odd and even trig functions",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.11",
+      "seedId": "aa-ahl-3-11-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "short_answer",
+      "prompt": "Find the displacement vector from A(1,2,−1) to B(4,−2,5).",
+      "answer": "(3,−4,6)",
+      "acceptedAnswers": [
+        "(3,-4,6)",
+        "(3, −4, 6)",
+        "3,-4,6"
+      ],
+      "explanation": "B−A=(4−1,−2−2,5−(−1))=(3,−4,6).",
+      "tags": [
+        "vectors",
+        "displacement",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.12",
+      "seedId": "aa-ahl-3-12-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Find the magnitude of vector (2,−3,6).",
+      "answer": 7,
+      "tolerance": 0,
+      "explanation": "Magnitude=√(4+9+36)=7.",
+      "tags": [
+        "vectors",
+        "magnitude",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.12",
+      "seedId": "aa-ahl-3-12-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Let a=(1,2) and b=(−3,4). Select all true statements.",
+      "choices": [
+        "a+b=(−2,6)",
+        "2a=(2,4)",
+        "a−b=(4,−2)",
+        "b−a=(−2,2)"
+      ],
+      "answers": [
+        "a+b=(−2,6)",
+        "2a=(2,4)",
+        "a−b=(4,−2)"
+      ],
+      "explanation": "Vector operations are performed component by component.",
+      "tags": [
+        "vector operations",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.12",
+      "seedId": "aa-ahl-3-12-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Find (2,−1,3)·(4,2,0).",
+      "answer": 6,
+      "tolerance": 0,
+      "explanation": "The scalar product is 2(4)+(−1)(2)+3(0)=6.",
+      "tags": [
+        "scalar product",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.13",
+      "seedId": "aa-ahl-3-13-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "If non-zero vectors a and b satisfy a·b=0, what follows?",
+      "choices": [
+        "They are parallel",
+        "They are perpendicular",
+        "They have equal magnitude",
+        "They point in opposite directions"
+      ],
+      "answer": "They are perpendicular",
+      "explanation": "a·b=|a||b|cosθ=0 implies cosθ=0.",
+      "tags": [
+        "scalar product",
+        "perpendicular vectors",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.13",
+      "seedId": "aa-ahl-3-13-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Find the angle in degrees between (1,0) and (1,1).",
+      "answer": 45,
+      "tolerance": 0.01,
+      "explanation": "cosθ=1/(1·√2)=1/√2, so θ=45°.",
+      "tags": [
+        "angle between vectors",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.13",
+      "seedId": "aa-ahl-3-13-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which vector equation describes the line through (1,2,3) parallel to (2,−1,4)?",
+      "choices": [
+        "r=(1,2,3)+λ(2,−1,4)",
+        "r=(2,−1,4)+λ(1,2,3)",
+        "r=λ(3,1,7)",
+        "r=(1,2,3)·(2,−1,4)"
+      ],
+      "answer": "r=(1,2,3)+λ(2,−1,4)",
+      "explanation": "A line is a fixed position vector plus a scalar multiple of its direction.",
+      "tags": [
+        "vector line equations",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.14",
+      "seedId": "aa-ahl-3-14-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A particle has r=(1,2)+t(3,−1). Find its x-coordinate when t=4.",
+      "answer": 13,
+      "tolerance": 0,
+      "explanation": "x=1+3(4)=13.",
+      "tags": [
+        "vector kinematics",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.14",
+      "seedId": "aa-ahl-3-14-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "Multiplying a line’s direction vector by −2 changes the geometric line.",
+      "answer": false,
+      "explanation": "Any non-zero scalar multiple gives the same direction line.",
+      "tags": [
+        "vector lines",
+        "direction vectors",
+        "misconception"
+      ],
+      "syllabusCode": "AHL 3.14",
+      "seedId": "aa-ahl-3-14-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Two lines have direction vectors (1,2,−1) and (−2,−4,2). What is their directional relationship?",
+      "choices": [
+        "Perpendicular",
+        "Parallel",
+        "Skew",
+        "Intersecting at the origin"
+      ],
+      "answer": "Parallel",
+      "explanation": "The second direction vector is −2 times the first.",
+      "tags": [
+        "relationships between lines",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.15",
+      "seedId": "aa-ahl-3-15-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "Two non-parallel lines in three dimensions must intersect.",
+      "answer": false,
+      "explanation": "Non-parallel lines in 3D can be skew.",
+      "tags": [
+        "skew lines",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.15",
+      "seedId": "aa-ahl-3-15-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "procedural",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "ordering",
+      "prompt": "Order the steps for testing whether two vector lines intersect.",
+      "items": [
+        "Check the third coordinate for consistency",
+        "Equate corresponding coordinates",
+        "Solve two equations for the parameters",
+        "State whether a common point exists"
+      ],
+      "correctOrder": [
+        "Equate corresponding coordinates",
+        "Solve two equations for the parameters",
+        "Check the third coordinate for consistency",
+        "State whether a common point exists"
+      ],
+      "explanation": "All three coordinate equations must hold for the same parameter values.",
+      "tags": [
+        "line intersections",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.15",
+      "seedId": "aa-ahl-3-15-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "short_answer",
+      "prompt": "Find i×j.",
+      "answer": "k",
+      "acceptedAnswers": [
+        "k",
+        "(0,0,1)",
+        "(0, 0, 1)"
+      ],
+      "explanation": "The standard right-handed basis satisfies i×j=k.",
+      "tags": [
+        "vector product",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.16",
+      "seedId": "aa-ahl-3-16-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Find the magnitude of (1,0,0)×(0,3,0).",
+      "answer": 3,
+      "tolerance": 0,
+      "explanation": "The vectors are perpendicular, so |a×b|=|a||b|=3.",
+      "tags": [
+        "vector product",
+        "area",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.16",
+      "seedId": "aa-ahl-3-16-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements about a×b.",
+      "choices": [
+        "It is perpendicular to a.",
+        "It is perpendicular to b.",
+        "Its magnitude is |a||b|sinθ.",
+        "a×b=b×a."
+      ],
+      "answers": [
+        "It is perpendicular to a.",
+        "It is perpendicular to b.",
+        "Its magnitude is |a||b|sinθ."
+      ],
+      "explanation": "The vector product is anti-commutative: b×a=−a×b.",
+      "tags": [
+        "vector product",
+        "properties",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.16",
+      "seedId": "aa-ahl-3-16-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which is a normal vector to the plane 2x−3y+z=7?",
+      "choices": [
+        "(2,−3,1)",
+        "(2,3,1)",
+        "(7,0,0)",
+        "(1,1,1)"
+      ],
+      "answer": "(2,−3,1)",
+      "explanation": "The Cartesian coefficients give a normal vector.",
+      "tags": [
+        "plane equations",
+        "normal vector",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.17",
+      "seedId": "aa-ahl-3-17-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Does the point (1,2,3) lie on x+2y−z=2? Enter 1 for yes or 0 for no.",
+      "answer": 1,
+      "tolerance": 0,
+      "explanation": "1+2(2)−3=2, so the point lies on the plane.",
+      "tags": [
+        "planes",
+        "point test",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.17",
+      "seedId": "aa-ahl-3-17-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "matching",
+      "prompt": "Match each plane form to its characteristic data.",
+      "pairs": [
+        {
+          "left": "r=a+λu+μv",
+          "right": "Point and two directions"
+        },
+        {
+          "left": "r·n=d",
+          "right": "Normal vector"
+        },
+        {
+          "left": "Ax+By+Cz=D",
+          "right": "Cartesian coefficients"
+        }
+      ],
+      "explanation": "Each form exposes different geometric information about the plane.",
+      "tags": [
+        "plane equations",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.17",
+      "seedId": "aa-ahl-3-17-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A line has direction d and a plane has normal n. The line is parallel to the plane when which condition holds?",
+      "choices": [
+        "d·n=0",
+        "d×n=0",
+        "d=n",
+        "|d|=|n|"
+      ],
+      "answer": "d·n=0",
+      "explanation": "A direction parallel to a plane is perpendicular to its normal.",
+      "tags": [
+        "line-plane angle",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.18",
+      "seedId": "aa-ahl-3-18-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "exam_style",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Find the acute angle in degrees between planes with normals (1,0,0) and (1,1,0).",
+      "answer": 45,
+      "tolerance": 0.01,
+      "explanation": "The angle between planes is the acute angle between normals: cosθ=1/√2.",
+      "tags": [
+        "angle between planes",
+        "exam_style"
+      ],
+      "syllabusCode": "AHL 3.18",
+      "seedId": "aa-ahl-3-18-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "The direction of the line of intersection of two non-parallel planes is parallel to the cross product of their normals.",
+      "answer": true,
+      "explanation": "n₁×n₂ is perpendicular to both normals and therefore lies in both planes.",
+      "tags": [
+        "plane intersections",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.18",
+      "seedId": "aa-ahl-3-18-misconception"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "exam_style",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 90,
+      "marksEstimate": 3,
+      "type": "numeric_answer",
+      "prompt": "A line has direction vector (1,2,2) and a plane has normal vector (2,−1,2). Find the acute angle between the line and the plane, in degrees, correct to one decimal place.",
+      "answer": 26.4,
+      "tolerance": 0.1,
+      "explanation": "The angle α between the direction and normal satisfies cosα=4/9, so α≈63.6°. The line-plane angle is 90°−α≈26.4°.",
+      "tags": [
+        "vectors",
+        "line-plane angle",
+        "exam_style"
+      ],
+      "syllabusCode": "AHL 3.18",
+      "seedId": "aa-ahl-3-18-extra-1"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A school wants opinions from every year group. Which method best ensures each year is represented?",
+      "choices": [
+        "Convenience sampling",
+        "Stratified sampling by year group",
+        "Voluntary response sampling",
+        "Sampling only the oldest year"
+      ],
+      "answer": "Stratified sampling by year group",
+      "explanation": "Stratification samples from each relevant subgroup.",
+      "tags": [
+        "sampling",
+        "stratified sampling",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.1",
+      "seedId": "aa-sl-4-1-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Which variables are quantitative?",
+      "choices": [
+        "Student height",
+        "Favourite subject",
+        "Number of siblings",
+        "Eye colour"
+      ],
+      "answers": [
+        "Student height",
+        "Number of siblings"
+      ],
+      "explanation": "Height and counts are numerical; subject and eye colour are categorical.",
+      "tags": [
+        "data types",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.1",
+      "seedId": "aa-sl-4-1-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "A large sample automatically removes bias caused by a poorly chosen sampling method.",
+      "answer": false,
+      "explanation": "Increasing sample size reduces random variation but does not correct systematic selection bias.",
+      "tags": [
+        "sampling bias",
+        "misconception"
+      ],
+      "syllabusCode": "SL 4.1",
+      "seedId": "aa-sl-4-1-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "The lower quartile is 18 and the upper quartile is 31. Find the interquartile range.",
+      "answer": 13,
+      "tolerance": 0,
+      "explanation": "IQR=Q₃−Q₁=31−18=13.",
+      "tags": [
+        "interquartile range",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.2",
+      "seedId": "aa-sl-4-2-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Which graph is most appropriate for comparing medians and spread across several groups?",
+      "choices": [
+        "Pie chart",
+        "Box plot",
+        "Scatter diagram",
+        "Tree diagram"
+      ],
+      "answer": "Box plot",
+      "explanation": "Box plots display median, quartiles, range and potential outliers compactly.",
+      "tags": [
+        "box plots",
+        "data presentation",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.2",
+      "seedId": "aa-sl-4-2-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "In a histogram with unequal class widths, bar height should represent frequency rather than frequency density.",
+      "answer": false,
+      "explanation": "For unequal widths, area represents frequency, so height must be frequency density.",
+      "tags": [
+        "histograms",
+        "frequency density",
+        "misconception"
+      ],
+      "syllabusCode": "SL 4.2",
+      "seedId": "aa-sl-4-2-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Find the mean of 4, 6, 6, 9, 10.",
+      "answer": 7,
+      "tolerance": 0,
+      "explanation": "The total is 35 and 35/5=7.",
+      "tags": [
+        "mean",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.3",
+      "seedId": "aa-sl-4-3-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A dataset has mean 20. Every value is increased by 3. What is the new mean?",
+      "choices": [
+        "20",
+        "23",
+        "60",
+        "Cannot be determined"
+      ],
+      "answer": "23",
+      "explanation": "Adding 3 to every observation adds 3 to the mean.",
+      "tags": [
+        "summary statistics",
+        "transformations",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.3",
+      "seedId": "aa-sl-4-3-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all statistics that are resistant to a single extreme outlier.",
+      "choices": [
+        "Median",
+        "Mean",
+        "Interquartile range",
+        "Range"
+      ],
+      "answers": [
+        "Median",
+        "Interquartile range"
+      ],
+      "explanation": "Median and IQR depend on ranks and central positions rather than extreme magnitudes.",
+      "tags": [
+        "outliers",
+        "dispersion",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 4.3",
+      "seedId": "aa-sl-4-3-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A Pearson correlation coefficient of r=−0.92 indicates what?",
+      "choices": [
+        "Strong positive linear association",
+        "Strong negative linear association",
+        "Weak negative association",
+        "No association"
+      ],
+      "answer": "Strong negative linear association",
+      "explanation": "The magnitude is close to 1 and the sign is negative.",
+      "tags": [
+        "correlation",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.4",
+      "seedId": "aa-sl-4-4-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A regression line is y=1.8x+4. Predict y when x=10.",
+      "answer": 22,
+      "tolerance": 0,
+      "explanation": "Substitute x=10: y=18+4=22.",
+      "tags": [
+        "regression",
+        "prediction",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.4",
+      "seedId": "aa-sl-4-4-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "A strong correlation between two variables proves that one causes the other.",
+      "answer": false,
+      "explanation": "Correlation alone does not establish causation; lurking variables may explain the association.",
+      "tags": [
+        "correlation",
+        "causation",
+        "misconception"
+      ],
+      "syllabusCode": "SL 4.4",
+      "seedId": "aa-sl-4-4-misconception"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 3,
+      "type": "multi_select",
+      "prompt": "For a dataset, Pearson’s correlation coefficient is r=0.82 and the y-on-x regression line is used for prediction. Select all justified statements.",
+      "choices": [
+        "There is a strong positive linear association.",
+        "The value of r proves that increasing x causes y to increase.",
+        "A prediction inside the observed x-range is generally safer than a distant extrapolation.",
+        "The x-on-y regression line should be used to predict y from x."
+      ],
+      "answers": [
+        "There is a strong positive linear association.",
+        "A prediction inside the observed x-range is generally safer than a distant extrapolation."
+      ],
+      "explanation": "A large positive r indicates strong positive linear association, not causation. Predict y from x with the y-on-x line and avoid unsupported extrapolation.",
+      "tags": [
+        "correlation",
+        "regression",
+        "extrapolation",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 4.4",
+      "seedId": "aa-sl-4-4-extra-1"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A fair die is rolled 60 times. Find the expected number of sixes.",
+      "answer": 10,
+      "tolerance": 0,
+      "explanation": "The expected count is 60(1/6)=10.",
+      "tags": [
+        "expected occurrences",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.5",
+      "seedId": "aa-sl-4-5-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "If P(A)=0.37, find P(Aᶜ).",
+      "choices": [
+        "0.37",
+        "0.63",
+        "1.37",
+        "Cannot be determined"
+      ],
+      "answer": "0.63",
+      "explanation": "Complementary probabilities sum to 1.",
+      "tags": [
+        "complements",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.5",
+      "seedId": "aa-sl-4-5-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "recall",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "matching",
+      "prompt": "Match each experiment to the size of its equally likely sample space.",
+      "pairs": [
+        {
+          "left": "One fair coin toss",
+          "right": "2 outcomes"
+        },
+        {
+          "left": "Two fair coin tosses",
+          "right": "4 outcomes"
+        },
+        {
+          "left": "One fair die roll",
+          "right": "6 outcomes"
+        }
+      ],
+      "explanation": "List all possible outcomes or multiply independent stage counts.",
+      "tags": [
+        "sample spaces",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.5",
+      "seedId": "aa-sl-4-5-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Events A and B satisfy P(A)=0.6, P(B)=0.5 and P(A∩B)=0.2. Find P(A∪B).",
+      "choices": [
+        "0.3",
+        "0.7",
+        "0.9",
+        "1.3"
+      ],
+      "answer": "0.9",
+      "explanation": "P(A∪B)=0.6+0.5−0.2=0.9.",
+      "tags": [
+        "probability rules",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.6",
+      "seedId": "aa-sl-4-6-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Given P(A∩B)=0.18 and P(B)=0.30, find P(A|B).",
+      "answer": 0.6,
+      "tolerance": 0,
+      "explanation": "P(A|B)=0.18/0.30=0.6.",
+      "tags": [
+        "conditional probability",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.6",
+      "seedId": "aa-sl-4-6-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "P(A)=0.4, P(B)=0.5 and P(A∩B)=0.2. Select all true statements.",
+      "choices": [
+        "A and B are independent.",
+        "A and B are mutually exclusive.",
+        "P(A∪B)=0.7.",
+        "P(A|B)=0.4."
+      ],
+      "answers": [
+        "A and B are independent.",
+        "P(A∪B)=0.7.",
+        "P(A|B)=0.4."
+      ],
+      "explanation": "P(A)P(B)=0.2, the union is 0.7, and P(A|B)=0.2/0.5=0.4.",
+      "tags": [
+        "independence",
+        "conditional probability",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 4.6",
+      "seedId": "aa-sl-4-6-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "matching",
+      "prompt": "Match each probability expression to its interpretation.",
+      "pairs": [
+        {
+          "left": "P(A∩B)",
+          "right": "A and B both occur"
+        },
+        {
+          "left": "P(A∪B)",
+          "right": "A or B or both occur"
+        },
+        {
+          "left": "P(A|B)",
+          "right": "A occurs given B"
+        }
+      ],
+      "explanation": "Intersection means both, union means at least one, and the vertical bar means given.",
+      "tags": [
+        "probability notation",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.6",
+      "seedId": "aa-sl-4-6-extra-1"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "application",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A bag contains 3 red and 2 blue counters. Two are drawn without replacement. Find the probability both are red.",
+      "answer": 0.3,
+      "tolerance": 0.001,
+      "explanation": "P(RR)=3/5×2/4=6/20=0.3.",
+      "tags": [
+        "tree diagrams",
+        "without replacement",
+        "application"
+      ],
+      "syllabusCode": "SL 4.6",
+      "seedId": "aa-sl-4-6-extra-2"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A discrete random variable X has P(X=0)=0.2, P(X=1)=0.5 and P(X=2)=0.3. Find E(X).",
+      "answer": 1.1,
+      "tolerance": 0,
+      "explanation": "E(X)=0(0.2)+1(0.5)+2(0.3)=1.1.",
+      "tags": [
+        "discrete random variables",
+        "expected value",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.7",
+      "seedId": "aa-sl-4-7-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A probability distribution lists probabilities 0.15, 0.35, k and 0.20. Find k.",
+      "choices": [
+        "0.20",
+        "0.25",
+        "0.30",
+        "0.70"
+      ],
+      "answer": "0.30",
+      "explanation": "Probabilities sum to 1, so k=1−0.70=0.30.",
+      "tags": [
+        "probability distributions",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.7",
+      "seedId": "aa-sl-4-7-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "The expected value of a discrete random variable must be one of its possible observed values.",
+      "answer": false,
+      "explanation": "An expectation is a weighted long-run average and need not be attainable in one trial.",
+      "tags": [
+        "expected value",
+        "misconception"
+      ],
+      "syllabusCode": "SL 4.7",
+      "seedId": "aa-sl-4-7-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which conditions define a binomial model?",
+      "choices": [
+        "Fixed trials, two outcomes, constant p, independent trials",
+        "Any repeated experiment with a mean",
+        "Sampling without replacement from a small group",
+        "Outcomes with changing probabilities"
+      ],
+      "answer": "Fixed trials, two outcomes, constant p, independent trials",
+      "explanation": "These are the four binomial assumptions.",
+      "tags": [
+        "binomial distribution",
+        "conditions",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.8",
+      "seedId": "aa-sl-4-8-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "For X~B(20,0.3), find E(X).",
+      "answer": 6,
+      "tolerance": 0,
+      "explanation": "The binomial mean is np=20(0.3)=6.",
+      "tags": [
+        "binomial mean",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.8",
+      "seedId": "aa-sl-4-8-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "For X~B(10,0.4), find Var(X).",
+      "answer": 2.4,
+      "tolerance": 0,
+      "explanation": "Variance=np(1−p)=10(0.4)(0.6)=2.4.",
+      "tags": [
+        "binomial variance",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 4.8",
+      "seedId": "aa-sl-4-8-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "In a normal distribution, approximately what percentage lies within one standard deviation of the mean?",
+      "choices": [
+        "50%",
+        "68%",
+        "95%",
+        "99.7%"
+      ],
+      "answer": "68%",
+      "explanation": "The empirical 68–95–99.7 rule gives about 68%.",
+      "tags": [
+        "normal distribution",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.9",
+      "seedId": "aa-sl-4-9-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "For X~N(80,12²), find the z-score when X=104.",
+      "answer": 2,
+      "tolerance": 0,
+      "explanation": "z=(104−80)/12=2.",
+      "tags": [
+        "normal distribution",
+        "standardization",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.9",
+      "seedId": "aa-sl-4-9-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "For any normal distribution, the mean, median and mode are equal.",
+      "answer": true,
+      "explanation": "A normal density is symmetric and unimodal about its mean.",
+      "tags": [
+        "normal distribution",
+        "symmetry",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 4.9",
+      "seedId": "aa-sl-4-9-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "To predict x from a measured value of y, which regression line should be used?",
+      "choices": [
+        "The y-on-x line",
+        "The x-on-y line",
+        "Either line always gives the same result",
+        "The line y=x"
+      ],
+      "answer": "The x-on-y line",
+      "explanation": "Regression direction must match the variable being predicted.",
+      "tags": [
+        "x-on-y regression",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.10",
+      "seedId": "aa-sl-4-10-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "An x-on-y regression line is x=0.5y+8. Predict x when y=20.",
+      "answer": 18,
+      "tolerance": 0,
+      "explanation": "x=0.5(20)+8=18.",
+      "tags": [
+        "regression prediction",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.10",
+      "seedId": "aa-sl-4-10-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "The x-on-y regression line is generally obtained by algebraically rearranging the y-on-x regression line.",
+      "answer": false,
+      "explanation": "The two least-squares regressions minimize different residuals and are not generally rearrangements.",
+      "tags": [
+        "regression direction",
+        "misconception"
+      ],
+      "syllabusCode": "SL 4.10",
+      "seedId": "aa-sl-4-10-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Given P(A∩B)=0.12 and P(B)=0.30, find P(A|B).",
+      "answer": 0.4,
+      "tolerance": 0,
+      "explanation": "P(A|B)=P(A∩B)/P(B)=0.12/0.30=0.4.",
+      "tags": [
+        "conditional probability",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.11",
+      "seedId": "aa-sl-4-11-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Events A and B are independent with P(A)=0.7 and P(B)=0.2. Find P(A∩B).",
+      "choices": [
+        "0.09",
+        "0.14",
+        "0.50",
+        "0.90"
+      ],
+      "answer": "0.14",
+      "explanation": "For independent events, multiply probabilities: 0.7(0.2)=0.14.",
+      "tags": [
+        "independence",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.11",
+      "seedId": "aa-sl-4-11-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "If events A and B are mutually exclusive and both have positive probability, then they are independent.",
+      "answer": false,
+      "explanation": "Mutually exclusive events have P(A∩B)=0, while independence would require P(A)P(B)>0.",
+      "tags": [
+        "independence",
+        "mutual exclusivity",
+        "misconception"
+      ],
+      "syllabusCode": "SL 4.11",
+      "seedId": "aa-sl-4-11-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A score of 74 comes from a distribution with mean 62 and standard deviation 6. Find its z-score.",
+      "answer": 2,
+      "tolerance": 0,
+      "explanation": "z=(74−62)/6=2.",
+      "tags": [
+        "z-scores",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.12",
+      "seedId": "aa-sl-4-12-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A value has z=−1.5. What does this mean?",
+      "choices": [
+        "It is 1.5 standard deviations below the mean.",
+        "It is 1.5 units below zero.",
+        "It is 1.5 standard deviations above the mean.",
+        "Its probability is −1.5."
+      ],
+      "answer": "It is 1.5 standard deviations below the mean.",
+      "explanation": "A negative z-score lies below the mean by that many standard deviations.",
+      "tags": [
+        "standardization",
+        "interpretation",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.12",
+      "seedId": "aa-sl-4-12-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A normal variable has standard deviation 4. The value 30 has z=2. Find the mean.",
+      "answer": 22,
+      "tolerance": 0,
+      "explanation": "2=(30−μ)/4, so 30−μ=8 and μ=22.",
+      "tags": [
+        "unknown mean",
+        "z-scores",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 4.12",
+      "seedId": "aa-sl-4-12-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A disease affects 1% of people. A test is 90% sensitive and has a 5% false-positive rate. Which information is needed for P(disease|positive)?",
+      "choices": [
+        "Bayes’ theorem using both positive pathways",
+        "Only the sensitivity",
+        "Only the prevalence",
+        "The sample mean"
+      ],
+      "answer": "Bayes’ theorem using both positive pathways",
+      "explanation": "The posterior compares true positives with all positive results.",
+      "tags": [
+        "Bayes theorem",
+        "recall"
+      ],
+      "syllabusCode": "AHL 4.13",
+      "seedId": "aa-ahl-4-13-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "application",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Machines A and B make 60% and 40% of items. Their defect rates are 2% and 5%. Find P(B|defect).",
+      "answer": 0.625,
+      "tolerance": 0.001,
+      "explanation": "P(B|D)=0.4(0.05)/[0.6(0.02)+0.4(0.05)]=0.02/0.032=0.625.",
+      "tags": [
+        "Bayes theorem",
+        "conditional probability",
+        "application"
+      ],
+      "syllabusCode": "AHL 4.13",
+      "seedId": "aa-ahl-4-13-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "procedural",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "ordering",
+      "prompt": "Order the steps in a Bayes calculation.",
+      "items": [
+        "Divide the chosen joint probability by the total evidence probability",
+        "Compute each pathway joint probability",
+        "Identify the prior and conditional probabilities",
+        "Add pathways that produce the evidence"
+      ],
+      "correctOrder": [
+        "Identify the prior and conditional probabilities",
+        "Compute each pathway joint probability",
+        "Add pathways that produce the evidence",
+        "Divide the chosen joint probability by the total evidence probability"
+      ],
+      "explanation": "Bayes’ theorem normalizes the desired pathway by all pathways producing the evidence.",
+      "tags": [
+        "Bayes theorem",
+        "method",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 4.13",
+      "seedId": "aa-ahl-4-13-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A continuous density is f(x)=kx on 0≤x≤2 and 0 otherwise. Find k.",
+      "answer": 0.5,
+      "tolerance": 0,
+      "explanation": "Total area is ∫₀²kx dx=2k=1, so k=0.5.",
+      "tags": [
+        "probability density functions",
+        "recall"
+      ],
+      "syllabusCode": "AHL 4.14",
+      "seedId": "aa-ahl-4-14-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "For a continuous random variable X, what is P(X=3)?",
+      "choices": [
+        "0",
+        "f(3)",
+        "1",
+        "Cannot be determined"
+      ],
+      "answer": "0",
+      "explanation": "A single point has zero area under a continuous density.",
+      "tags": [
+        "continuous random variables",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 4.14",
+      "seedId": "aa-ahl-4-14-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "If E(X)=4 and Var(X)=9, find Var(2X−5).",
+      "answer": 36,
+      "tolerance": 0,
+      "explanation": "Var(aX+b)=a²Var(X), so Var(2X−5)=4(9)=36.",
+      "tags": [
+        "variance",
+        "linear transformations",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 4.14",
+      "seedId": "aa-ahl-4-14-misconception"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "exam_style",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 3,
+      "type": "numeric_answer",
+      "prompt": "A continuous random variable has density f(x)=2x for 0≤x≤1. Find its median, correct to three decimal places.",
+      "answer": 0.707,
+      "tolerance": 0.001,
+      "explanation": "The median m satisfies ∫₀ᵐ2x dx=m²=0.5, so m=√0.5≈0.707.",
+      "tags": [
+        "probability density",
+        "median",
+        "exam_style"
+      ],
+      "syllabusCode": "AHL 4.14",
+      "seedId": "aa-ahl-4-14-extra-1"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Evaluate lim(x→2) (x²−4)/(x−2).",
+      "answer": 4,
+      "tolerance": 0,
+      "explanation": "Factor to x+2 for x≠2, then substitute x=2.",
+      "tags": [
+        "limits",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.1",
+      "seedId": "aa-sl-5-1-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "What does f′(3) represent?",
+      "choices": [
+        "The y-intercept of f",
+        "The gradient of the tangent to y=f(x) at x=3",
+        "The area under f from 0 to 3",
+        "The value f(3)"
+      ],
+      "answer": "The gradient of the tangent to y=f(x) at x=3",
+      "explanation": "A derivative is the instantaneous rate of change or tangent gradient.",
+      "tags": [
+        "derivative",
+        "gradient",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.1",
+      "seedId": "aa-sl-5-1-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "A function can have a finite limit at x=a even if it is not defined at x=a.",
+      "answer": true,
+      "explanation": "A removable hole can have matching one-sided limits despite no function value.",
+      "tags": [
+        "limits",
+        "continuity",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 5.1",
+      "seedId": "aa-sl-5-1-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "If f′(x)>0 throughout an interval, what is f doing there?",
+      "choices": [
+        "Increasing",
+        "Decreasing",
+        "Constant",
+        "Undefined"
+      ],
+      "answer": "Increasing",
+      "explanation": "A positive derivative means positive local gradient.",
+      "tags": [
+        "increasing functions",
+        "derivative sign",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.2",
+      "seedId": "aa-sl-5-2-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "A graph of f′ crosses from positive to negative at x=2. Select all valid conclusions.",
+      "choices": [
+        "f has a local maximum at x=2.",
+        "f is increasing just before x=2.",
+        "f is decreasing just after x=2.",
+        "f has a local minimum at x=2."
+      ],
+      "answers": [
+        "f has a local maximum at x=2.",
+        "f is increasing just before x=2.",
+        "f is decreasing just after x=2."
+      ],
+      "explanation": "The sign change + to − makes f rise then fall.",
+      "tags": [
+        "stationary points",
+        "derivative sign",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.2",
+      "seedId": "aa-sl-5-2-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "If f′(a)=0, then f must have a local maximum or minimum at x=a.",
+      "answer": false,
+      "explanation": "A stationary point can be an inflexion, such as f(x)=x³ at x=0.",
+      "tags": [
+        "stationary points",
+        "misconception"
+      ],
+      "syllabusCode": "SL 5.2",
+      "seedId": "aa-sl-5-2-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "fill_blank",
+      "prompt": "If f(x)=5x⁴−3x²+7, then f′(x)=___.",
+      "answer": "20x³−6x",
+      "acceptedAnswers": [
+        "20x^3-6x",
+        "20*x^3-6*x",
+        "20x³ - 6x"
+      ],
+      "explanation": "Differentiate term by term using the power rule.",
+      "tags": [
+        "power rule",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.3",
+      "seedId": "aa-sl-5-3-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Differentiate f(x)=6x⁴−2x²+9.",
+      "answer": "24x³−4x",
+      "acceptedAnswers": [
+        "24x^3-4x",
+        "24x³−4x",
+        "24x³ - 4x"
+      ],
+      "explanation": "The derivative is 24x³−4x.",
+      "tags": [
+        "polynomial differentiation",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.3",
+      "seedId": "aa-sl-5-3-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Which is the derivative of x⁻²?",
+      "choices": [
+        "−2x⁻³",
+        "2x⁻¹",
+        "−x⁻¹",
+        "x⁻³"
+      ],
+      "answer": "−2x⁻³",
+      "explanation": "Use d(xⁿ)/dx=nxⁿ⁻¹ with n=−2.",
+      "tags": [
+        "power rule",
+        "negative exponents",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 5.3",
+      "seedId": "aa-sl-5-3-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "For f(x)=x², find the gradient of the tangent at x=3.",
+      "answer": 6,
+      "tolerance": 0,
+      "explanation": "f′(x)=2x, so f′(3)=6.",
+      "tags": [
+        "tangents",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.4",
+      "seedId": "aa-sl-5-4-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "The tangent to y=x² at x=1 has equation which?",
+      "choices": [
+        "y=2x−1",
+        "y=x+1",
+        "y=−2x+3",
+        "y=2x+1"
+      ],
+      "answer": "y=2x−1",
+      "explanation": "The point is (1,1), gradient 2, so y−1=2(x−1).",
+      "tags": [
+        "tangent equations",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.4",
+      "seedId": "aa-sl-5-4-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Find the equation of the normal to y=x² at x=1.",
+      "answer": "y=−x/2+3/2",
+      "acceptedAnswers": [
+        "y=-x/2+3/2",
+        "y=−0.5x+1.5",
+        "y = -0.5x + 1.5"
+      ],
+      "explanation": "The tangent gradient is 2, so the normal gradient is −1/2 through (1,1).",
+      "tags": [
+        "normal equations",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 5.4",
+      "seedId": "aa-sl-5-4-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "fill_blank",
+      "prompt": "Complete the antiderivative: ∫6x² dx=___+C.",
+      "answer": "2x³",
+      "acceptedAnswers": [
+        "2x^3",
+        "2x³"
+      ],
+      "explanation": "Increase the power to 3 and divide by 3.",
+      "tags": [
+        "antidifferentiation",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.5",
+      "seedId": "aa-sl-5-5-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Evaluate ∫₀² 3x² dx.",
+      "answer": 8,
+      "tolerance": 0,
+      "explanation": "An antiderivative is x³; x³ evaluated from 0 to 2 is 8.",
+      "tags": [
+        "definite integrals",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.5",
+      "seedId": "aa-sl-5-5-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "Every antiderivative of 2x is exactly x².",
+      "answer": false,
+      "explanation": "The family is x²+C, where C is any constant.",
+      "tags": [
+        "constant of integration",
+        "misconception"
+      ],
+      "syllabusCode": "SL 5.5",
+      "seedId": "aa-sl-5-5-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Differentiate y=(3x+1)⁵.",
+      "choices": [
+        "5(3x+1)⁴",
+        "15(3x+1)⁴",
+        "15(3x+1)⁵",
+        "(3x+1)⁴"
+      ],
+      "answer": "15(3x+1)⁴",
+      "explanation": "The chain rule multiplies by the inner derivative 3.",
+      "tags": [
+        "chain rule",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.6",
+      "seedId": "aa-sl-5-6-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Differentiate y=x²sinx.",
+      "answer": "2x sinx+x² cosx",
+      "acceptedAnswers": [
+        "2xsinx+x^2cosx",
+        "2x sin x + x² cos x",
+        "2*x*sin(x)+x^2*cos(x)"
+      ],
+      "explanation": "Apply the product rule u′v+uv′.",
+      "tags": [
+        "product rule",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.6",
+      "seedId": "aa-sl-5-6-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Which is d/dx [ln(x²+1)]?",
+      "choices": [
+        "1/(x²+1)",
+        "2x/(x²+1)",
+        "2/(x²+1)",
+        "ln(2x)"
+      ],
+      "answer": "2x/(x²+1)",
+      "explanation": "Use the chain rule: derivative of ln u is u′/u.",
+      "tags": [
+        "chain rule",
+        "logarithmic derivative",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 5.6",
+      "seedId": "aa-sl-5-6-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "At x=a, f′(a)=0 and f″(a)>0. What is indicated?",
+      "choices": [
+        "A local maximum",
+        "A local minimum",
+        "A vertical asymptote",
+        "No stationary point"
+      ],
+      "answer": "A local minimum",
+      "explanation": "Positive second derivative means concave up at the stationary point.",
+      "tags": [
+        "second derivative",
+        "stationary points",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.7",
+      "seedId": "aa-sl-5-7-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "On an interval f′(x)>0 and f″(x)<0. Select all true statements.",
+      "choices": [
+        "f is increasing.",
+        "f is concave down.",
+        "The gradient is decreasing.",
+        "f is decreasing."
+      ],
+      "answers": [
+        "f is increasing.",
+        "f is concave down.",
+        "The gradient is decreasing."
+      ],
+      "explanation": "Positive first derivative means increasing; negative second derivative means slopes decrease.",
+      "tags": [
+        "graph behaviour",
+        "derivatives",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.7",
+      "seedId": "aa-sl-5-7-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "If f″(a)=0, then x=a must be a point of inflexion.",
+      "answer": false,
+      "explanation": "A sign change in concavity is required; f″(a)=0 alone is insufficient.",
+      "tags": [
+        "points of inflexion",
+        "misconception"
+      ],
+      "syllabusCode": "SL 5.7",
+      "seedId": "aa-sl-5-7-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "At x=a, f′(a)=0 and f″(a)<0. What can be concluded?",
+      "choices": [
+        "f has a local minimum at x=a",
+        "f has a local maximum at x=a",
+        "x=a must be a point of inflexion",
+        "No conclusion is possible"
+      ],
+      "answer": "f has a local maximum at x=a",
+      "explanation": "A negative second derivative means the graph is concave down.",
+      "tags": [
+        "optimization",
+        "second derivative test",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.8",
+      "seedId": "aa-sl-5-8-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "ordering",
+      "prompt": "Order the main steps in a one-variable optimization problem.",
+      "items": [
+        "Check the solution in context",
+        "Differentiate the objective",
+        "Define an objective function",
+        "Solve for stationary points"
+      ],
+      "correctOrder": [
+        "Define an objective function",
+        "Differentiate the objective",
+        "Solve for stationary points",
+        "Check the solution in context"
+      ],
+      "explanation": "Model, differentiate, solve, then interpret and verify.",
+      "tags": [
+        "optimization",
+        "method",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.8",
+      "seedId": "aa-sl-5-8-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "application",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A rectangle has perimeter 20 m. Find its maximum possible area in m².",
+      "answer": 25,
+      "tolerance": 0,
+      "explanation": "With sides x and 10−x, A=x(10−x), maximized at x=5.",
+      "tags": [
+        "optimization",
+        "application",
+        "application"
+      ],
+      "syllabusCode": "SL 5.8",
+      "seedId": "aa-sl-5-8-misconception"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "conceptual",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "matching",
+      "prompt": "Match each derivative sign pattern to the stationary-point classification.",
+      "pairs": [
+        {
+          "left": "f′ changes + to −",
+          "right": "Local maximum"
+        },
+        {
+          "left": "f′ changes − to +",
+          "right": "Local minimum"
+        },
+        {
+          "left": "f′ does not change sign",
+          "right": "Stationary inflexion possible"
+        }
+      ],
+      "explanation": "The first-derivative sign change determines local behaviour.",
+      "tags": [
+        "stationary points",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 5.8",
+      "seedId": "aa-sl-5-8-extra-1"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "application",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 120,
+      "marksEstimate": 4,
+      "type": "numeric_answer",
+      "prompt": "A closed square-based box has volume 32 cm³. Its surface area is S(x)=2x²+128/x, where x is the base side. Find the positive stationary value of x.",
+      "answer": 3.174802,
+      "tolerance": 0.00001,
+      "explanation": "S′(x)=4x−128/x²=0 gives x³=32 and x=∛32≈3.174802.",
+      "tags": [
+        "optimization",
+        "surface area",
+        "application"
+      ],
+      "syllabusCode": "SL 5.8",
+      "seedId": "aa-sl-5-8-extra-2"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A particle has displacement s(t)=t³−3t² metres. Find its velocity at t=2.",
+      "answer": 0,
+      "tolerance": 0,
+      "explanation": "v=ds/dt=3t²−6t, so v(2)=0.",
+      "tags": [
+        "kinematics",
+        "velocity",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.9",
+      "seedId": "aa-sl-5-9-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "If velocity is negative while acceleration is positive, which statement must be true at that instant?",
+      "choices": [
+        "The particle moves in the positive direction.",
+        "The particle moves in the negative direction and is slowing down.",
+        "The particle is stationary.",
+        "Its displacement is negative."
+      ],
+      "answer": "The particle moves in the negative direction and is slowing down.",
+      "explanation": "Velocity gives direction; acceleration opposite to velocity reduces speed.",
+      "tags": [
+        "kinematics",
+        "sign interpretation",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.9",
+      "seedId": "aa-sl-5-9-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "Total distance travelled over an interval always equals the magnitude of the displacement.",
+      "answer": false,
+      "explanation": "Direction changes make total distance larger than the magnitude of net displacement.",
+      "tags": [
+        "distance",
+        "displacement",
+        "misconception"
+      ],
+      "syllabusCode": "SL 5.9",
+      "seedId": "aa-sl-5-9-misconception"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "exam_style",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 90,
+      "marksEstimate": 4,
+      "type": "numeric_answer",
+      "prompt": "A particle has displacement s(t)=t³−3t² metres for 0≤t≤4. Find the total distance travelled in metres.",
+      "answer": 24,
+      "tolerance": 0,
+      "explanation": "The velocity 3t(t−2) changes sign at t=2. Since s(0)=0, s(2)=−4 and s(4)=16, the distance is 4+20=24 m.",
+      "tags": [
+        "kinematics",
+        "total distance",
+        "exam_style"
+      ],
+      "syllabusCode": "SL 5.9",
+      "seedId": "aa-sl-5-9-extra-1"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "fill_blank",
+      "prompt": "Complete: ∫(3x²+4) dx=___.",
+      "answer": "x³+4x+C",
+      "acceptedAnswers": [
+        "x^3+4x+C",
+        "x³+4x+C",
+        "x³ + 4x + C"
+      ],
+      "explanation": "Integrate each term and include the constant of integration.",
+      "tags": [
+        "indefinite integration",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.10",
+      "seedId": "aa-sl-5-10-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Evaluate ∫2x(x²+1)⁴ dx.",
+      "answer": "(x²+1)⁵/5+C",
+      "acceptedAnswers": [
+        "(x^2+1)^5/5+C",
+        "1/5(x²+1)⁵+C",
+        "((x²+1)⁵)/5 + C"
+      ],
+      "explanation": "Let u=x²+1, du=2x dx, then integrate u⁴.",
+      "tags": [
+        "substitution",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.10",
+      "seedId": "aa-sl-5-10-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Which antiderivative differentiates to cos(3x)?",
+      "choices": [
+        "sin(3x)",
+        "3sin(3x)",
+        "(1/3)sin(3x)",
+        "−(1/3)sin(3x)"
+      ],
+      "answer": "(1/3)sin(3x)",
+      "explanation": "Differentiating (1/3)sin(3x) gives cos(3x).",
+      "tags": [
+        "linear composites",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 5.10",
+      "seedId": "aa-sl-5-10-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Evaluate ∫₁³ 2x dx.",
+      "answer": 8,
+      "tolerance": 0,
+      "explanation": "[x²]₁³=9−1=8.",
+      "tags": [
+        "definite integration",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.11",
+      "seedId": "aa-sl-5-11-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "The integral ∫₀²(x−1) dx equals 0. What does this mean geometrically?",
+      "choices": [
+        "There is no area between the graph and axis.",
+        "Positive and negative signed areas cancel.",
+        "The graph never crosses the axis.",
+        "The total area is negative."
+      ],
+      "answer": "Positive and negative signed areas cancel.",
+      "explanation": "A definite integral is signed area; geometric area would be positive.",
+      "tags": [
+        "signed area",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.11",
+      "seedId": "aa-sl-5-11-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "exam_style",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Find the area between y=x and y=x² on 0≤x≤1.",
+      "answer": 0.166667,
+      "tolerance": 0.00001,
+      "explanation": "Area=∫₀¹(x−x²)dx=1/2−1/3=1/6.",
+      "tags": [
+        "area between curves",
+        "exam_style"
+      ],
+      "syllabusCode": "SL 5.11",
+      "seedId": "aa-sl-5-11-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which condition is required for f to be continuous at x=a?",
+      "choices": [
+        "f(a) exists only",
+        "lim(x→a)f(x) exists only",
+        "lim(x→a)f(x)=f(a)",
+        "f′(a)=0"
+      ],
+      "answer": "lim(x→a)f(x)=f(a)",
+      "explanation": "Continuity requires the limit to exist and equal the function value.",
+      "tags": [
+        "continuity",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.12",
+      "seedId": "aa-ahl-5-12-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "exam_style",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Using first principles, the derivative of f(x)=x² at x=3 is what value?",
+      "answer": 6,
+      "tolerance": 0,
+      "explanation": "[(3+h)²−9]/h=6+h, whose limit is 6.",
+      "tags": [
+        "first principles",
+        "derivative",
+        "exam_style"
+      ],
+      "syllabusCode": "AHL 5.12",
+      "seedId": "aa-ahl-5-12-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "Every differentiable function is continuous at the point of differentiability.",
+      "answer": true,
+      "explanation": "Differentiability implies continuity, though the converse is false.",
+      "tags": [
+        "differentiability",
+        "continuity",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 5.12",
+      "seedId": "aa-ahl-5-12-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Evaluate lim(x→0) sinx/x.",
+      "answer": 1,
+      "tolerance": 0,
+      "explanation": "This standard limit equals 1.",
+      "tags": [
+        "limits",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.13",
+      "seedId": "aa-ahl-5-13-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Using l’Hôpital’s rule, lim(x→∞)(3x²+1)/(2x²−5) equals what?",
+      "choices": [
+        "0",
+        "1",
+        "3/2",
+        "∞"
+      ],
+      "answer": "3/2",
+      "explanation": "Differentiate numerator and denominator or compare leading coefficients.",
+      "tags": [
+        "L’Hopital rule",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.13",
+      "seedId": "aa-ahl-5-13-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "l’Hôpital’s rule may be applied directly to any quotient limit, including one whose substitution gives 2/3.",
+      "answer": false,
+      "explanation": "It is intended for indeterminate forms such as 0/0 or ∞/∞.",
+      "tags": [
+        "L’Hopital rule",
+        "indeterminate forms",
+        "misconception"
+      ],
+      "syllabusCode": "AHL 5.13",
+      "seedId": "aa-ahl-5-13-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "short_answer",
+      "prompt": "For x²+y²=25, find dy/dx.",
+      "answer": "−x/y",
+      "acceptedAnswers": [
+        "-x/y",
+        "−x/y",
+        "-(x/y)"
+      ],
+      "explanation": "Implicit differentiation gives 2x+2y(dy/dx)=0.",
+      "tags": [
+        "implicit differentiation",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.14",
+      "seedId": "aa-ahl-5-14-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "application",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A circle’s radius increases at 2 cm/s. Find dA/dt when r=3 cm, in terms of π by entering the coefficient of π.",
+      "answer": 12,
+      "tolerance": 0,
+      "explanation": "A=πr², so dA/dt=2πr(dr/dt)=12π.",
+      "tags": [
+        "related rates",
+        "application"
+      ],
+      "syllabusCode": "AHL 5.14",
+      "seedId": "aa-ahl-5-14-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "At the point (3,4) on x²+y²=25, what is the tangent gradient?",
+      "choices": [
+        "−4/3",
+        "−3/4",
+        "3/4",
+        "4/3"
+      ],
+      "answer": "−3/4",
+      "explanation": "dy/dx=−x/y=−3/4.",
+      "tags": [
+        "implicit differentiation",
+        "tangent",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 5.14",
+      "seedId": "aa-ahl-5-14-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Differentiate y=arctan x.",
+      "choices": [
+        "1/(1+x²)",
+        "−1/(1+x²)",
+        "1/√(1−x²)",
+        "sec²x"
+      ],
+      "answer": "1/(1+x²)",
+      "explanation": "This is the standard derivative of arctan x.",
+      "tags": [
+        "inverse trigonometric derivatives",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.15",
+      "seedId": "aa-ahl-5-15-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Differentiate y=x ln x.",
+      "answer": "lnx+1",
+      "acceptedAnswers": [
+        "ln x + 1",
+        "ln(x)+1",
+        "1+lnx"
+      ],
+      "explanation": "The product rule gives 1·lnx+x(1/x)=lnx+1.",
+      "tags": [
+        "logarithmic derivatives",
+        "product rule",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.15",
+      "seedId": "aa-ahl-5-15-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Evaluate ∫1/(1+x²) dx.",
+      "choices": [
+        "ln|1+x²|+C",
+        "arctanx+C",
+        "arcsinx+C",
+        "−1/(1+x)+C"
+      ],
+      "answer": "arctanx+C",
+      "explanation": "The derivative of arctanx is 1/(1+x²).",
+      "tags": [
+        "inverse trigonometric integrals",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 5.15",
+      "seedId": "aa-ahl-5-15-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which method is most direct for ∫x eˣ dx?",
+      "choices": [
+        "Integration by parts",
+        "Partial fractions",
+        "Trigonometric substitution",
+        "Long division"
+      ],
+      "answer": "Integration by parts",
+      "explanation": "The integrand is a product of an algebraic and exponential factor.",
+      "tags": [
+        "integration by parts",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.16",
+      "seedId": "aa-ahl-5-16-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Evaluate ∫2x cos(x²) dx.",
+      "answer": "sin(x²)+C",
+      "acceptedAnswers": [
+        "sin(x^2)+C",
+        "sin(x²) + C",
+        "sin(x²)+C"
+      ],
+      "explanation": "Let u=x², so du=2x dx.",
+      "tags": [
+        "integration by substitution",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.16",
+      "seedId": "aa-ahl-5-16-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "procedural",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "ordering",
+      "prompt": "Order the steps for integration by parts.",
+      "items": [
+        "Substitute into ∫u dv=uv−∫v du",
+        "Choose u and dv",
+        "Integrate dv to find v",
+        "Differentiate u to find du"
+      ],
+      "correctOrder": [
+        "Choose u and dv",
+        "Differentiate u to find du",
+        "Integrate dv to find v",
+        "Substitute into ∫u dv=uv−∫v du"
+      ],
+      "explanation": "Choose factors, form du and v, then apply the formula.",
+      "tags": [
+        "integration by parts",
+        "method",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.16",
+      "seedId": "aa-ahl-5-16-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "application",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "The region under y=x from x=0 to x=2 is revolved about the x-axis. Find the volume as a coefficient of π.",
+      "answer": 2.666667,
+      "tolerance": 0.00001,
+      "explanation": "V=π∫₀²x²dx=8π/3.",
+      "tags": [
+        "volume of revolution",
+        "application"
+      ],
+      "syllabusCode": "AHL 5.17",
+      "seedId": "aa-ahl-5-17-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "To find the area between x=y² and x=2y for 0≤y≤2, which integral is correct?",
+      "choices": [
+        "∫₀²(2y−y²)dy",
+        "∫₀²(y²−2y)dy",
+        "∫₀²(2y−y²)dx",
+        "∫₀²(y−y²)dy"
+      ],
+      "answer": "∫₀²(2y−y²)dy",
+      "explanation": "Against the y-axis, integrate right x minus left x with respect to y.",
+      "tags": [
+        "area against y-axis",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.17",
+      "seedId": "aa-ahl-5-17-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "When a region is revolved about the y-axis and x is given as a function of y, the disc method uses V=π∫x² dy.",
+      "answer": true,
+      "explanation": "The radius is the horizontal distance x from the y-axis.",
+      "tags": [
+        "volume of revolution",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 5.17",
+      "seedId": "aa-ahl-5-17-misconception"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Solve dy/dx=3y by separation. Which general solution is correct?",
+      "choices": [
+        "y=3x+C",
+        "y=Ce^(3x)",
+        "y=Cx³",
+        "y=e^x+3"
+      ],
+      "answer": "y=Ce^(3x)",
+      "explanation": "dy/y=3dx gives lny=3x+C and hence y=Ce^(3x).",
+      "tags": [
+        "differential equations",
+        "separation",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.18",
+      "seedId": "aa-ahl-5-18-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Euler’s method uses yₙ₊₁=yₙ+h f(xₙ,yₙ). If y₀=1, h=0.1 and f=2y, find y₁.",
+      "answer": 1.2,
+      "tolerance": 0,
+      "explanation": "y₁=1+0.1(2·1)=1.2.",
+      "tags": [
+        "Euler method",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.18",
+      "seedId": "aa-ahl-5-18-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "procedural",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "ordering",
+      "prompt": "Order the steps for solving a first-order linear differential equation y′+P(x)y=Q(x).",
+      "items": [
+        "Multiply through by the integrating factor",
+        "Integrate both sides",
+        "Find μ=e^(∫P dx)",
+        "Recognize the left side as (μy)′"
+      ],
+      "correctOrder": [
+        "Find μ=e^(∫P dx)",
+        "Multiply through by the integrating factor",
+        "Recognize the left side as (μy)′",
+        "Integrate both sides"
+      ],
+      "explanation": "The integrating factor converts the left side to a product derivative.",
+      "tags": [
+        "integrating factors",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.18",
+      "seedId": "aa-ahl-5-18-misconception"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "application",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 3,
+      "type": "numeric_answer",
+      "prompt": "A quantity satisfies dy/dx=−0.4y with y(0)=100. Find y(5), correct to three decimal places.",
+      "answer": 13.534,
+      "tolerance": 0.001,
+      "explanation": "The solution is y=100e^(−0.4x), so y(5)=100e^(−2)≈13.534.",
+      "tags": [
+        "differential equations",
+        "exponential decay",
+        "application"
+      ],
+      "syllabusCode": "AHL 5.18",
+      "seedId": "aa-ahl-5-18-extra-1"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which is the Maclaurin expansion of eˣ up to x³?",
+      "choices": [
+        "1+x+x²/2+x³/6",
+        "1−x+x²−x³",
+        "x−x³/6",
+        "1+x²/2"
+      ],
+      "answer": "1+x+x²/2+x³/6",
+      "explanation": "eˣ=Σxⁿ/n!.",
+      "tags": [
+        "Maclaurin series",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.19",
+      "seedId": "aa-ahl-5-19-recall"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "fill_blank",
+      "prompt": "Complete the Maclaurin expansion: sinx=x−___+… .",
+      "answer": "x³/6",
+      "acceptedAnswers": [
+        "x^3/6",
+        "x³/6",
+        "(x³)/6"
+      ],
+      "explanation": "sinx=x−x³/3!+x⁵/5!−… .",
+      "tags": [
+        "Maclaurin series",
+        "sine",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.19",
+      "seedId": "aa-ahl-5-19-concept"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "application",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Using 1/(1−x)=1+x+x²+…, approximate 1/0.9 with terms through x² by setting x=0.1.",
+      "answer": 1.11,
+      "tolerance": 0.001,
+      "explanation": "1+0.1+0.01=1.11.",
+      "tags": [
+        "Maclaurin series",
+        "approximation",
+        "application"
+      ],
+      "syllabusCode": "AHL 5.19",
+      "seedId": "aa-ahl-5-19-misconception"
+    }
+  ]
+}

@@ -1,0 +1,5780 @@
+{
+  "format": "math_quiz_import_v1.1",
+  "courseFamily": "applications_interpretation",
+  "courseLevel": "HL",
+  "course": "IB Mathematics: Applications and Interpretation HL",
+  "source": "platform_seed",
+  "generatedBy": "scripts/generate-ai-question-bank.mjs",
+  "questions": [
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Write 0.0000725 in scientific notation.",
+      "choices": [
+        "7.25 × 10⁻⁵",
+        "7.25 × 10⁻⁴",
+        "72.5 × 10⁻⁵",
+        "0.725 × 10⁻⁴"
+      ],
+      "answer": "7.25 × 10⁻⁵",
+      "explanation": "Move the decimal five places right to obtain 7.25, so the exponent is −5.",
+      "tags": [
+        "scientific notation",
+        "recall"
+      ],
+      "syllabusCode": "SL 1.1",
+      "seedId": "ai-sl-1-1-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Evaluate (4 × 10⁶)(3 × 10⁻²).",
+      "answer": 120000,
+      "tolerance": 0,
+      "explanation": "Multiply 4 by 3 and add the exponents: 12×10⁴=1.2×10⁵=120000.",
+      "tags": [
+        "scientific notation",
+        "operations",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.1",
+      "seedId": "ai-sl-1-1-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all quantities written in valid scientific notation.",
+      "choices": [
+        "6.2 × 10⁷",
+        "0.45 × 10³",
+        "9.01 × 10⁻⁴",
+        "12 × 10²"
+      ],
+      "answers": [
+        "6.2 × 10⁷",
+        "9.01 × 10⁻⁴"
+      ],
+      "explanation": "The leading number must be at least 1 and less than 10.",
+      "tags": [
+        "scientific notation",
+        "form",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 1.1",
+      "seedId": "ai-sl-1-1-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "The arithmetic sequence 14, 19, 24, … continues. Find its 18th term.",
+      "answer": 99,
+      "tolerance": 0,
+      "explanation": "u₁₈=14+17(5)=99.",
+      "tags": [
+        "arithmetic sequences",
+        "recall"
+      ],
+      "syllabusCode": "SL 1.2",
+      "seedId": "ai-sl-1-2-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "application",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A theatre has 22 seats in the first row and 3 more seats in each later row. Find the total number of seats in the first 15 rows.",
+      "answer": 645,
+      "tolerance": 0,
+      "explanation": "The last row has 22+14(3)=64 seats, so S₁₅=15(22+64)/2=645.",
+      "tags": [
+        "arithmetic series",
+        "modelling",
+        "application"
+      ],
+      "syllabusCode": "SL 1.2",
+      "seedId": "ai-sl-1-2-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "procedural",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "ordering",
+      "prompt": "A set of measurements is modelled by an arithmetic sequence. Order the steps used to predict the 20th value.",
+      "items": [
+        "Substitute n=20",
+        "Estimate the common difference",
+        "Identify the first value",
+        "Evaluate a+19d"
+      ],
+      "correctOrder": [
+        "Identify the first value",
+        "Estimate the common difference",
+        "Substitute n=20",
+        "Evaluate a+19d"
+      ],
+      "explanation": "An arithmetic prediction uses uₙ=a+(n−1)d after estimating a and d.",
+      "tags": [
+        "arithmetic model",
+        "prediction",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.2",
+      "seedId": "ai-sl-1-2-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A geometric sequence begins 160, 80, 40, … . Find its sixth term.",
+      "answer": 5,
+      "tolerance": 0,
+      "explanation": "The ratio is 1/2, so u₆=160(1/2)⁵=5.",
+      "tags": [
+        "geometric sequences",
+        "recall"
+      ],
+      "syllabusCode": "SL 1.3",
+      "seedId": "ai-sl-1-3-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Find the sum of the first six terms of 3, 6, 12, … .",
+      "answer": 189,
+      "tolerance": 0,
+      "explanation": "S₆=3(2⁶−1)/(2−1)=189.",
+      "tags": [
+        "geometric series",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.3",
+      "seedId": "ai-sl-1-3-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "A population model has first value 500 and common ratio 1.08. Select all true statements.",
+      "choices": [
+        "It represents 8% growth per step.",
+        "The values form a geometric sequence.",
+        "The third value is 583.2.",
+        "The population increases by exactly 40 each step."
+      ],
+      "answers": [
+        "It represents 8% growth per step.",
+        "The values form a geometric sequence.",
+        "The third value is 583.2."
+      ],
+      "explanation": "A constant multiplier of 1.08 gives geometric growth; 500(1.08)²=583.2.",
+      "tags": [
+        "geometric models",
+        "growth",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 1.3",
+      "seedId": "ai-sl-1-3-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "application",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "An investment of $2400 earns 3.5% compound interest annually. Find its value after 4 years, to the nearest cent.",
+      "answer": 2754.06,
+      "tolerance": 0.01,
+      "explanation": "2400(1.035)⁴≈2754.06.",
+      "tags": [
+        "compound interest",
+        "application"
+      ],
+      "syllabusCode": "SL 1.4",
+      "seedId": "ai-sl-1-4-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A machine worth $18 000 depreciates by 12% per year. Which expression gives its value after 5 years?",
+      "choices": [
+        "18000(1.12)⁵",
+        "18000(0.88)⁵",
+        "18000−5(0.12)",
+        "18000(0.12)⁵"
+      ],
+      "answer": "18000(0.88)⁵",
+      "explanation": "A 12% depreciation leaves a multiplier of 0.88 each year.",
+      "tags": [
+        "depreciation",
+        "model",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.4",
+      "seedId": "ai-sl-1-4-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all changes that increase the future value of a fixed investment.",
+      "choices": [
+        "A higher positive interest rate",
+        "More compounding periods at the same nominal annual rate",
+        "A longer investment time",
+        "A higher annual depreciation rate"
+      ],
+      "answers": [
+        "A higher positive interest rate",
+        "More compounding periods at the same nominal annual rate",
+        "A longer investment time"
+      ],
+      "explanation": "Higher growth, more frequent compounding and more time increase the future value; depreciation reduces it.",
+      "tags": [
+        "financial mathematics",
+        "interpretation",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 1.4",
+      "seedId": "ai-sl-1-4-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Evaluate ln(e⁴).",
+      "choices": [
+        "1",
+        "4",
+        "e⁴",
+        "4e"
+      ],
+      "answer": "4",
+      "explanation": "The natural logarithm and exponential functions are inverses.",
+      "tags": [
+        "logarithms",
+        "recall"
+      ],
+      "syllabusCode": "SL 1.5",
+      "seedId": "ai-sl-1-5-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Solve 10ˣ=250, giving x correct to three decimal places.",
+      "answer": 2.398,
+      "tolerance": 0.001,
+      "explanation": "x=log₁₀(250)≈2.398.",
+      "tags": [
+        "logarithmic equations",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.5",
+      "seedId": "ai-sl-1-5-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "matching",
+      "prompt": "Match each expression to an equivalent value.",
+      "pairs": [
+        {
+          "left": "log₁₀(100)",
+          "right": "2"
+        },
+        {
+          "left": "ln(e⁻³)",
+          "right": "−3"
+        },
+        {
+          "left": "5⁰",
+          "right": "1"
+        }
+      ],
+      "explanation": "Logarithms return exponents, and every non-zero base raised to zero is 1.",
+      "tags": [
+        "exponents",
+        "logarithms",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 1.5",
+      "seedId": "ai-sl-1-5-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A length is recorded as 8.4 cm correct to the nearest 0.1 cm. Enter its upper bound.",
+      "answer": 8.45,
+      "tolerance": 0,
+      "explanation": "Values from 8.35 up to but not including 8.45 round to 8.4.",
+      "tags": [
+        "upper bounds",
+        "rounding",
+        "recall"
+      ],
+      "syllabusCode": "SL 1.6",
+      "seedId": "ai-sl-1-6-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A mass is measured as 48 g instead of its true value 50 g. Find the percentage error.",
+      "answer": 4,
+      "tolerance": 0,
+      "explanation": "Percentage error=|48−50|/50×100=4%.",
+      "tags": [
+        "percentage error",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.6",
+      "seedId": "ai-sl-1-6-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "A radius is 2.5 cm correct to the nearest 0.1 cm. Select all true statements.",
+      "choices": [
+        "The lower bound is 2.45 cm.",
+        "The upper bound is 2.55 cm.",
+        "The maximum possible area uses radius 2.55 cm.",
+        "Every possible radius is at least 2.50 cm."
+      ],
+      "answers": [
+        "The lower bound is 2.45 cm.",
+        "The upper bound is 2.55 cm.",
+        "The maximum possible area uses radius 2.55 cm."
+      ],
+      "explanation": "The interval is 2.45≤r<2.55; the largest possible area is approached using the upper bound.",
+      "tags": [
+        "bounds",
+        "measurement",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 1.6",
+      "seedId": "ai-sl-1-6-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "application",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A loan statement shows a balance of $12 480 immediately before a $520 payment. What is the balance immediately after the payment?",
+      "choices": [
+        "$11 960",
+        "$12 000",
+        "$12 480",
+        "$13 000"
+      ],
+      "answer": "$11 960",
+      "explanation": "Subtract the payment: 12480−520=11960.",
+      "tags": [
+        "amortization",
+        "loan balance",
+        "application"
+      ],
+      "syllabusCode": "SL 1.7",
+      "seedId": "ai-sl-1-7-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "application",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A financial calculator gives an annuity future value of $18 742 after deposits totalling $16 800. How much interest was earned?",
+      "answer": 1942,
+      "tolerance": 0,
+      "explanation": "Interest earned is future value minus deposits: 18742−16800=1942.",
+      "tags": [
+        "annuities",
+        "technology output",
+        "application"
+      ],
+      "syllabusCode": "SL 1.7",
+      "seedId": "ai-sl-1-7-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "For a fixed-rate repayment loan, select all changes that generally reduce the total interest paid.",
+      "choices": [
+        "Increase each repayment.",
+        "Make repayments more frequently.",
+        "Extend the loan term.",
+        "Make an extra early repayment."
+      ],
+      "answers": [
+        "Increase each repayment.",
+        "Make repayments more frequently.",
+        "Make an extra early repayment."
+      ],
+      "explanation": "Faster principal reduction lowers later interest; extending the term usually increases total interest.",
+      "tags": [
+        "amortization",
+        "financial decisions",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 1.7",
+      "seedId": "ai-sl-1-7-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Technology solves x+y=11 and 2x−y=4. Find x.",
+      "answer": 5,
+      "tolerance": 0,
+      "explanation": "Adding the equations gives 3x=15, so x=5.",
+      "tags": [
+        "linear systems",
+        "recall"
+      ],
+      "syllabusCode": "SL 1.8",
+      "seedId": "ai-sl-1-8-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A graphing tool shows that x³−4x=0 has x-intercepts at −2, 0 and 2. How many real roots does the equation have?",
+      "choices": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": "3",
+      "explanation": "Each x-intercept represents a real root.",
+      "tags": [
+        "polynomial equations",
+        "graphical solutions",
+        "procedural"
+      ],
+      "syllabusCode": "SL 1.8",
+      "seedId": "ai-sl-1-8-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "If two curves intersect at exactly two points, the equation formed by setting their y-values equal has exactly two displayed real solutions.",
+      "answer": true,
+      "explanation": "Solutions of f(x)=g(x) are the x-coordinates of the intersections.",
+      "tags": [
+        "technology",
+        "intersections",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 1.8",
+      "seedId": "ai-sl-1-8-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "fill_blank",
+      "prompt": "Complete the logarithm law: ln(xy)=___ for x,y>0.",
+      "answer": "lnx+lny",
+      "acceptedAnswers": [
+        "ln x + ln y",
+        "ln(x)+ln(y)",
+        "lnx + lny"
+      ],
+      "explanation": "The logarithm of a product is the sum of the logarithms.",
+      "tags": [
+        "logarithm laws",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.9",
+      "seedId": "ai-ahl-1-9-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Given ln x=2 and ln y=5, find ln(x²/y).",
+      "answer": -1,
+      "tolerance": 0,
+      "explanation": "ln(x²/y)=2lnx−lny=4−5=−1.",
+      "tags": [
+        "logarithm laws",
+        "evaluation",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 1.9",
+      "seedId": "ai-ahl-1-9-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all expressions equal to 3ln x for x>0.",
+      "choices": [
+        "ln(x³)",
+        "lnx+lnx+lnx",
+        "ln(3x)",
+        "lnx³"
+      ],
+      "answers": [
+        "ln(x³)",
+        "lnx+lnx+lnx",
+        "lnx³"
+      ],
+      "explanation": "The power law gives ln(x³)=3lnx; ln(3x)=ln3+lnx.",
+      "tags": [
+        "logarithm laws",
+        "equivalence",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 1.9",
+      "seedId": "ai-ahl-1-9-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Evaluate 81^(3/4).",
+      "answer": 27,
+      "tolerance": 0,
+      "explanation": "The fourth root of 81 is 3, and 3³=27.",
+      "tags": [
+        "rational exponents",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.10",
+      "seedId": "ai-ahl-1-10-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Simplify x^(5/2)÷x^(1/2), for x>0.",
+      "answer": "x²",
+      "acceptedAnswers": [
+        "x^2",
+        "x²"
+      ],
+      "explanation": "Subtract the exponents: x^(5/2−1/2)=x².",
+      "tags": [
+        "rational exponents",
+        "simplification",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 1.10",
+      "seedId": "ai-ahl-1-10-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Which expression is equal to x^(−3/2) for x>0?",
+      "choices": [
+        "1/(x√x)",
+        "1/x³",
+        "√x/x",
+        "−x√x"
+      ],
+      "answer": "1/(x√x)",
+      "explanation": "x^(3/2)=x√x, and a negative exponent takes the reciprocal.",
+      "tags": [
+        "negative rational exponents",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 1.10",
+      "seedId": "ai-ahl-1-10-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Find the sum to infinity of 18−6+2−… .",
+      "answer": 13.5,
+      "tolerance": 0,
+      "explanation": "The common ratio is −1/3, so S∞=18/[1−(−1/3)]=13.5.",
+      "tags": [
+        "infinite geometric series",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.11",
+      "seedId": "ai-ahl-1-11-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "application",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A ball rebounds to 60% of its previous height. Starting from 5 m, find the total upward distance after the first bounce and all later bounces.",
+      "answer": 7.5,
+      "tolerance": 0,
+      "explanation": "The upward heights form 3+1.8+… with sum 3/(1−0.6)=7.5 m.",
+      "tags": [
+        "geometric series",
+        "bouncing ball",
+        "application"
+      ],
+      "syllabusCode": "AHL 1.11",
+      "seedId": "ai-ahl-1-11-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all infinite geometric series that converge.",
+      "choices": [
+        "4+2+1+…",
+        "5−6+7.2−…",
+        "9−3+1−…",
+        "2+2+2+…"
+      ],
+      "answers": [
+        "4+2+1+…",
+        "9−3+1−…"
+      ],
+      "explanation": "Their ratios have magnitude below 1: 0.5 and −1/3.",
+      "tags": [
+        "convergence",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 1.11",
+      "seedId": "ai-ahl-1-11-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Find the modulus of z=5−12i.",
+      "answer": 13,
+      "tolerance": 0,
+      "explanation": "|z|=√(5²+12²)=13.",
+      "tags": [
+        "complex numbers",
+        "modulus",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.12",
+      "seedId": "ai-ahl-1-12-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Write (3+2i)(1−i) in Cartesian form.",
+      "answer": "5−i",
+      "acceptedAnswers": [
+        "5-i",
+        "5 − i",
+        "5-i"
+      ],
+      "explanation": "Expanding gives 3−3i+2i−2i²=5−i.",
+      "tags": [
+        "complex multiplication",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 1.12",
+      "seedId": "ai-ahl-1-12-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Let z=−2+3i. Select all true statements.",
+      "choices": [
+        "z̄=−2−3i",
+        "|z|=√13",
+        "Re(z)=−2",
+        "Arg(z) lies in quadrant IV."
+      ],
+      "answers": [
+        "z̄=−2−3i",
+        "|z|=√13",
+        "Re(z)=−2"
+      ],
+      "explanation": "The point (−2,3) lies in quadrant II, not quadrant IV.",
+      "tags": [
+        "conjugate",
+        "Argand diagram",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 1.12",
+      "seedId": "ai-ahl-1-12-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "What is the principal argument of −1+i?",
+      "choices": [
+        "π/4",
+        "3π/4",
+        "−3π/4",
+        "5π/4"
+      ],
+      "answer": "3π/4",
+      "explanation": "The point (−1,1) is in quadrant II with reference angle π/4.",
+      "tags": [
+        "polar form",
+        "argument",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.13",
+      "seedId": "ai-ahl-1-13-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "If |z|=4 and |w|=2.5, find |zw|.",
+      "answer": 10,
+      "tolerance": 0,
+      "explanation": "Moduli multiply, so |zw|=4(2.5)=10.",
+      "tags": [
+        "complex products",
+        "modulus",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 1.13",
+      "seedId": "ai-ahl-1-13-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "matching",
+      "prompt": "Match the complex operation to its geometric effect.",
+      "pairs": [
+        {
+          "left": "Multiply by 2",
+          "right": "Stretch from the origin by factor 2"
+        },
+        {
+          "left": "Multiply by i",
+          "right": "Rotate anticlockwise by π/2"
+        },
+        {
+          "left": "Take the conjugate",
+          "right": "Reflect in the real axis"
+        }
+      ],
+      "explanation": "Complex multiplication changes modulus and argument; conjugation reverses the argument.",
+      "tags": [
+        "complex geometry",
+        "transformations",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 1.13",
+      "seedId": "ai-ahl-1-13-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Let A be 2×3 and B be 3×4. What is the order of AB?",
+      "choices": [
+        "2×4",
+        "3×3",
+        "3×4",
+        "AB is undefined"
+      ],
+      "answer": "2×4",
+      "explanation": "The inner dimensions match and the outer dimensions give 2×4.",
+      "tags": [
+        "matrix multiplication",
+        "order",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.14",
+      "seedId": "ai-ahl-1-14-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Find the determinant of the matrix [[4,1],[2,3]].",
+      "answer": 10,
+      "tolerance": 0,
+      "explanation": "The determinant is 4(3)−1(2)=10.",
+      "tags": [
+        "matrices",
+        "determinant",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 1.14",
+      "seedId": "ai-ahl-1-14-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements about square matrices.",
+      "choices": [
+        "AI=IA=A.",
+        "Matrix multiplication is generally non-commutative.",
+        "A matrix with determinant 0 has no inverse.",
+        "Every square matrix has an inverse."
+      ],
+      "answers": [
+        "AI=IA=A.",
+        "Matrix multiplication is generally non-commutative.",
+        "A matrix with determinant 0 has no inverse."
+      ],
+      "explanation": "Only non-singular square matrices are invertible.",
+      "tags": [
+        "matrix properties",
+        "inverse",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 1.14",
+      "seedId": "ai-ahl-1-14-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Find the larger eigenvalue of the diagonal matrix [[3,0],[0,−2]].",
+      "answer": 3,
+      "tolerance": 0,
+      "explanation": "The eigenvalues of a diagonal matrix are its diagonal entries, 3 and −2.",
+      "tags": [
+        "eigenvalues",
+        "recall"
+      ],
+      "syllabusCode": "AHL 1.15",
+      "seedId": "ai-ahl-1-15-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "For A=[[2,0],[0,5]], give an eigenvector corresponding to eigenvalue 2.",
+      "answer": "(1,0)",
+      "acceptedAnswers": [
+        "(1,0)",
+        "(1, 0)",
+        "[1,0]",
+        "[1, 0]"
+      ],
+      "explanation": "A(1,0)=(2,0)=2(1,0). Any non-zero multiple is also an eigenvector.",
+      "tags": [
+        "eigenvectors",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 1.15",
+      "seedId": "ai-ahl-1-15-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements about an eigenvector v with Av=λv.",
+      "choices": [
+        "The direction of v is unchanged by A.",
+        "Its magnitude may be scaled by |λ|.",
+        "v must be the zero vector.",
+        "If λ<0, its direction is reversed."
+      ],
+      "answers": [
+        "The direction of v is unchanged by A.",
+        "Its magnitude may be scaled by |λ|.",
+        "If λ<0, its direction is reversed."
+      ],
+      "explanation": "Eigenvectors are non-zero invariant directions; a negative eigenvalue reverses orientation.",
+      "tags": [
+        "eigenvectors",
+        "interpretation",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 1.15",
+      "seedId": "ai-ahl-1-15-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Find the gradient of the line through (−2,5) and (4,−1).",
+      "answer": -1,
+      "tolerance": 0,
+      "explanation": "m=(−1−5)/(4−(−2))=−6/6=−1.",
+      "tags": [
+        "straight lines",
+        "gradient",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.1",
+      "seedId": "ai-sl-2-1-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Find the equation of the line with gradient 3 through (2,−1).",
+      "answer": "y=3x−7",
+      "acceptedAnswers": [
+        "y=3x-7",
+        "y = 3x − 7",
+        "3x-y=7"
+      ],
+      "explanation": "Using y+1=3(x−2) gives y=3x−7.",
+      "tags": [
+        "straight lines",
+        "equations",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.1",
+      "seedId": "ai-sl-2-1-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "For the line 2x−5y=10, select all true statements.",
+      "choices": [
+        "Its gradient is 2/5.",
+        "Its y-intercept is −2.",
+        "Its x-intercept is 5.",
+        "It is perpendicular to y=(2/5)x+1."
+      ],
+      "answers": [
+        "Its gradient is 2/5.",
+        "Its y-intercept is −2.",
+        "Its x-intercept is 5."
+      ],
+      "explanation": "Rearranging gives y=(2/5)x−2; a perpendicular line would have gradient −5/2.",
+      "tags": [
+        "line features",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 2.1",
+      "seedId": "ai-sl-2-1-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "What is the domain of f(x)=√(x−4)?",
+      "choices": [
+        "x≥4",
+        "x>0",
+        "x≤4",
+        "All real x"
+      ],
+      "answer": "x≥4",
+      "explanation": "The expression under the square root must be non-negative.",
+      "tags": [
+        "functions",
+        "domain",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.2",
+      "seedId": "ai-sl-2-2-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Find f⁻¹(x) for f(x)=5x−2.",
+      "answer": "(x+2)/5",
+      "acceptedAnswers": [
+        "(x+2)/5",
+        "(x + 2) / 5",
+        "0.2(x+2)"
+      ],
+      "explanation": "Swap x and y in y=5x−2 and solve for y.",
+      "tags": [
+        "inverse functions",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.2",
+      "seedId": "ai-sl-2-2-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "The inverse of a one-to-one function is its reflection in the line y=x.",
+      "answer": true,
+      "explanation": "Swapping input and output coordinates reflects the graph in y=x.",
+      "tags": [
+        "inverse functions",
+        "graphs",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 2.2",
+      "seedId": "ai-sl-2-2-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A graphing tool displays y=−2x²+8. What is the y-intercept?",
+      "choices": [
+        "−2",
+        "0",
+        "4",
+        "8"
+      ],
+      "answer": "8",
+      "explanation": "Set x=0 to obtain y=8.",
+      "tags": [
+        "graphing",
+        "intercepts",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.3",
+      "seedId": "ai-sl-2-3-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "For f(x)=x³−4x, find f(2).",
+      "answer": 0,
+      "tolerance": 0,
+      "explanation": "f(2)=8−8=0.",
+      "tags": [
+        "function values",
+        "graphs",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.3",
+      "seedId": "ai-sl-2-3-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "matching",
+      "prompt": "Match each function to its characteristic graph shape.",
+      "pairs": [
+        {
+          "left": "y=3ˣ",
+          "right": "Increasing exponential curve"
+        },
+        {
+          "left": "y=1/x",
+          "right": "Two reciprocal branches"
+        },
+        {
+          "left": "y=|x|",
+          "right": "V-shaped graph"
+        }
+      ],
+      "explanation": "Parent-function shapes support graph identification and modelling.",
+      "tags": [
+        "parent functions",
+        "graph shape",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 2.3",
+      "seedId": "ai-sl-2-3-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "The graphs y=x² and y=3x+4 intersect when x²−3x−4=0. Find the positive x-coordinate of intersection.",
+      "answer": 4,
+      "tolerance": 0,
+      "explanation": "x²−3x−4=(x−4)(x+1), so the positive solution is 4.",
+      "tags": [
+        "graph intersections",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.4",
+      "seedId": "ai-sl-2-4-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "For y=−(x−5)²+12, what is the maximum value?",
+      "choices": [
+        "−5",
+        "5",
+        "12",
+        "17"
+      ],
+      "answer": "12",
+      "explanation": "The vertex is (5,12) and the graph opens downward.",
+      "tags": [
+        "graph features",
+        "maximum",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.4",
+      "seedId": "ai-sl-2-4-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "A graph has x-intercepts −2 and 6 and a local minimum at (2,−9). Select all true statements.",
+      "choices": [
+        "f(−2)=0.",
+        "f(6)=0.",
+        "The minimum value is −9.",
+        "The y-intercept must be 0."
+      ],
+      "answers": [
+        "f(−2)=0.",
+        "f(6)=0.",
+        "The minimum value is −9."
+      ],
+      "explanation": "Intercepts and extrema give function values; the y-intercept is not determined by this information alone.",
+      "tags": [
+        "graph interpretation",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 2.4",
+      "seedId": "ai-sl-2-4-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Data increase by approximately the same percentage in each time interval. Which model is most appropriate?",
+      "choices": [
+        "Linear",
+        "Quadratic",
+        "Exponential",
+        "Inverse variation"
+      ],
+      "answer": "Exponential",
+      "explanation": "A nearly constant multiplicative change indicates exponential behaviour.",
+      "tags": [
+        "model selection",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.5",
+      "seedId": "ai-sl-2-5-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "application",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A taxi fare is modelled by C(d)=4.5+1.8d, where d is distance in km. Find the cost of a 12 km trip.",
+      "answer": 26.1,
+      "tolerance": 0,
+      "explanation": "C(12)=4.5+1.8(12)=26.1.",
+      "tags": [
+        "linear models",
+        "interpretation",
+        "application"
+      ],
+      "syllabusCode": "SL 2.5",
+      "seedId": "ai-sl-2-5-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "matching",
+      "prompt": "Match each model feature to the most suitable family.",
+      "pairs": [
+        {
+          "left": "Constant first differences",
+          "right": "Linear model"
+        },
+        {
+          "left": "Constant second differences",
+          "right": "Quadratic model"
+        },
+        {
+          "left": "Constant ratios",
+          "right": "Exponential model"
+        }
+      ],
+      "explanation": "Differences and ratios help distinguish common model families.",
+      "tags": [
+        "model selection",
+        "data patterns",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 2.5",
+      "seedId": "ai-sl-2-5-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A height model is fitted using data for children aged 5 to 15. Which prediction is the least reliable?",
+      "choices": [
+        "Height at age 10",
+        "Height at age 12",
+        "Height at age 14",
+        "Height at age 35"
+      ],
+      "answer": "Height at age 35",
+      "explanation": "Age 35 is far outside the observed domain, so this is unsupported extrapolation.",
+      "tags": [
+        "modelling",
+        "extrapolation",
+        "recall"
+      ],
+      "syllabusCode": "SL 2.6",
+      "seedId": "ai-sl-2-6-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A linear model y=ax+b passes through (2,7) and (6,19). Find a.",
+      "answer": 3,
+      "tolerance": 0,
+      "explanation": "a=(19−7)/(6−2)=3.",
+      "tags": [
+        "model parameters",
+        "procedural"
+      ],
+      "syllabusCode": "SL 2.6",
+      "seedId": "ai-sl-2-6-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all questions that should be checked before accepting a model.",
+      "choices": [
+        "Does its domain make sense in context?",
+        "Are the residuals reasonably small and pattern-free?",
+        "Does it predict impossible values?",
+        "Does it have the longest formula?"
+      ],
+      "answers": [
+        "Does its domain make sense in context?",
+        "Are the residuals reasonably small and pattern-free?",
+        "Does it predict impossible values?"
+      ],
+      "explanation": "Model quality depends on fit, domain and contextual reasonableness, not formula length.",
+      "tags": [
+        "model validation",
+        "residuals",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 2.6",
+      "seedId": "ai-sl-2-6-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Let f(x)=x+4 and g(x)=x². Find (g∘f)(3).",
+      "answer": 49,
+      "tolerance": 0,
+      "explanation": "f(3)=7, then g(7)=49.",
+      "tags": [
+        "composite functions",
+        "recall"
+      ],
+      "syllabusCode": "AHL 2.7",
+      "seedId": "ai-ahl-2-7-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Find the inverse of f(x)=(x−1)/3.",
+      "answer": "3x+1",
+      "acceptedAnswers": [
+        "3x+1",
+        "3x + 1"
+      ],
+      "explanation": "From y=(x−1)/3, swap x and y and solve: y=3x+1.",
+      "tags": [
+        "inverse functions",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 2.7",
+      "seedId": "ai-ahl-2-7-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "For invertible f and g, (f∘g)⁻¹=g⁻¹∘f⁻¹.",
+      "answer": true,
+      "explanation": "Inverse operations undo the composition in reverse order.",
+      "tags": [
+        "inverse composition",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 2.7",
+      "seedId": "ai-ahl-2-7-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "The graph y=f(x+3)−2 is obtained from y=f(x) by which translation?",
+      "choices": [
+        "3 right and 2 up",
+        "3 left and 2 down",
+        "3 right and 2 down",
+        "2 left and 3 down"
+      ],
+      "answer": "3 left and 2 down",
+      "explanation": "The inside +3 shifts left; −2 outside shifts down.",
+      "tags": [
+        "graph transformations",
+        "recall"
+      ],
+      "syllabusCode": "AHL 2.8",
+      "seedId": "ai-ahl-2-8-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "The point (4,−1) lies on y=f(x). Give its image on y=2f(x−3)+5.",
+      "answer": "(7,3)",
+      "acceptedAnswers": [
+        "(7,3)",
+        "(7, 3)",
+        "7,3"
+      ],
+      "explanation": "The x-coordinate shifts right to 7 and the y-coordinate becomes 2(−1)+5=3.",
+      "tags": [
+        "graph transformations",
+        "coordinates",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 2.8",
+      "seedId": "ai-ahl-2-8-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "For y=−f(2x)+4, select all true statements.",
+      "choices": [
+        "There is a reflection in the x-axis.",
+        "There is a horizontal compression by factor 1/2.",
+        "There is a translation up 4.",
+        "There is a vertical stretch by factor 2."
+      ],
+      "answers": [
+        "There is a reflection in the x-axis.",
+        "There is a horizontal compression by factor 1/2.",
+        "There is a translation up 4."
+      ],
+      "explanation": "The coefficient inside f changes horizontal scale; the outside minus reflects outputs.",
+      "tags": [
+        "combined transformations",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 2.8",
+      "seedId": "ai-ahl-2-8-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A population approaches a limiting value as time increases. Which model is most appropriate?",
+      "choices": [
+        "Linear",
+        "Logistic",
+        "Quadratic",
+        "Direct variation"
+      ],
+      "answer": "Logistic",
+      "explanation": "A logistic model levels off at its carrying capacity.",
+      "tags": [
+        "logistic models",
+        "model selection",
+        "recall"
+      ],
+      "syllabusCode": "AHL 2.9",
+      "seedId": "ai-ahl-2-9-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "application",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A radioactive sample follows M(t)=80(0.5)^(t/6). Find M after 18 hours.",
+      "answer": 10,
+      "tolerance": 0,
+      "explanation": "After three half-lives, M=80(0.5)³=10.",
+      "tags": [
+        "half-life",
+        "exponential models",
+        "application"
+      ],
+      "syllabusCode": "AHL 2.9",
+      "seedId": "ai-ahl-2-9-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "For L(t)=500/(1+9e^(−0.4t)), select all true statements.",
+      "choices": [
+        "The carrying capacity is 500.",
+        "The initial value is 50.",
+        "The model is logistic.",
+        "The population grows without bound."
+      ],
+      "answers": [
+        "The carrying capacity is 500.",
+        "The initial value is 50.",
+        "The model is logistic."
+      ],
+      "explanation": "L(0)=500/(1+9)=50, and the horizontal limiting value is 500.",
+      "tags": [
+        "logistic models",
+        "parameters",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 2.9",
+      "seedId": "ai-ahl-2-9-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "If y=abˣ, which plot is linear?",
+      "choices": [
+        "y against x²",
+        "ln y against x",
+        "y against ln x",
+        "1/y against x"
+      ],
+      "answer": "ln y against x",
+      "explanation": "Taking logarithms gives ln y=ln a+x ln b, a straight line.",
+      "tags": [
+        "linearization",
+        "semi-log plots",
+        "recall"
+      ],
+      "syllabusCode": "AHL 2.10",
+      "seedId": "ai-ahl-2-10-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A plot of ln y against x has gradient 0.7. For y=abˣ, find b correct to three decimal places.",
+      "answer": 2.014,
+      "tolerance": 0.001,
+      "explanation": "The gradient is ln b, so b=e^0.7≈2.014.",
+      "tags": [
+        "linearization",
+        "parameter estimation",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 2.10",
+      "seedId": "ai-ahl-2-10-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements about a log-log plot of y=axᵏ.",
+      "choices": [
+        "Its gradient is k.",
+        "Its vertical intercept is log a.",
+        "A straight line supports a power model.",
+        "Its gradient is always a."
+      ],
+      "answers": [
+        "Its gradient is k.",
+        "Its vertical intercept is log a.",
+        "A straight line supports a power model."
+      ],
+      "explanation": "Taking logs gives log y=log a+k log x.",
+      "tags": [
+        "log-log plots",
+        "power models",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 2.10",
+      "seedId": "ai-ahl-2-10-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Find the distance between (1,2,3) and (4,6,3).",
+      "answer": 5,
+      "tolerance": 0,
+      "explanation": "Distance=√[(4−1)²+(6−2)²+(3−3)²]=5.",
+      "tags": [
+        "3D geometry",
+        "distance",
+        "recall"
+      ],
+      "syllabusCode": "SL 3.1",
+      "seedId": "ai-sl-3-1-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Find the midpoint of (−2,4,6) and (8,0,−2).",
+      "answer": "(3,2,2)",
+      "acceptedAnswers": [
+        "(3,2,2)",
+        "(3, 2, 2)",
+        "3,2,2"
+      ],
+      "explanation": "Average corresponding coordinates to get (3,2,2).",
+      "tags": [
+        "3D geometry",
+        "midpoint",
+        "procedural"
+      ],
+      "syllabusCode": "SL 3.1",
+      "seedId": "ai-sl-3-1-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "application",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A closed cylinder has radius 3 cm and height 10 cm. Which expression gives its total surface area?",
+      "choices": [
+        "30π",
+        "60π",
+        "78π",
+        "90π"
+      ],
+      "answer": "78π",
+      "explanation": "Total surface area=2πr²+2πrh=18π+60π=78π.",
+      "tags": [
+        "surface area",
+        "cylinder",
+        "application"
+      ],
+      "syllabusCode": "SL 3.1",
+      "seedId": "ai-sl-3-1-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A right triangle has hypotenuse 13 cm and one leg 5 cm. Find the other leg.",
+      "answer": 12,
+      "tolerance": 0,
+      "explanation": "By Pythagoras, the other leg is √(13²−5²)=12.",
+      "tags": [
+        "Pythagoras",
+        "recall"
+      ],
+      "syllabusCode": "SL 3.2",
+      "seedId": "ai-sl-3-2-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Two sides of a triangle are 8 cm and 11 cm with included angle 50°. Find its area in cm², correct to one decimal place.",
+      "answer": 33.7,
+      "tolerance": 0.1,
+      "explanation": "Area=½(8)(11)sin50°≈33.7 cm².",
+      "tags": [
+        "triangle area",
+        "procedural"
+      ],
+      "syllabusCode": "SL 3.2",
+      "seedId": "ai-sl-3-2-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A triangle has sides 7, 9 and 12. Which rule directly finds the angle opposite side 12?",
+      "choices": [
+        "Sine rule",
+        "Cosine rule",
+        "Tangent ratio",
+        "Arc-length formula"
+      ],
+      "answer": "Cosine rule",
+      "explanation": "All three sides are known, so the cosine rule directly finds an angle.",
+      "tags": [
+        "cosine rule",
+        "method selection",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 3.2",
+      "seedId": "ai-sl-3-2-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "application",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "From a point 30 m from a tower, the angle of elevation to the top is 38°. Find the tower height, to one decimal place.",
+      "answer": 23.4,
+      "tolerance": 0.1,
+      "explanation": "h=30tan38°≈23.4 m.",
+      "tags": [
+        "angle of elevation",
+        "application"
+      ],
+      "syllabusCode": "SL 3.3",
+      "seedId": "ai-sl-3-3-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A ship travels on a bearing of 225°. In which general direction is it moving?",
+      "choices": [
+        "North-east",
+        "South-east",
+        "South-west",
+        "North-west"
+      ],
+      "answer": "South-west",
+      "explanation": "Bearings are measured clockwise from north; 225° points south-west.",
+      "tags": [
+        "bearings",
+        "procedural"
+      ],
+      "syllabusCode": "SL 3.3",
+      "seedId": "ai-sl-3-3-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "The angle of depression from a horizontal line equals the corresponding angle of elevation because the horizontals are parallel.",
+      "answer": true,
+      "explanation": "The two angles are alternate interior angles.",
+      "tags": [
+        "elevation",
+        "depression",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 3.3",
+      "seedId": "ai-sl-3-3-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A circle has radius 9 cm. Find the arc length subtended by 80°, correct to two decimal places.",
+      "answer": 12.57,
+      "tolerance": 0.01,
+      "explanation": "Arc length=(80/360)(2π·9)=4π≈12.57 cm.",
+      "tags": [
+        "arc length",
+        "degrees",
+        "recall"
+      ],
+      "syllabusCode": "SL 3.4",
+      "seedId": "ai-sl-3-4-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A sector has radius 6 m and central angle 120°. Find its area as a coefficient of π.",
+      "answer": 12,
+      "tolerance": 0,
+      "explanation": "Area=(120/360)π(6²)=12π, so the coefficient is 12.",
+      "tags": [
+        "sector area",
+        "degrees",
+        "procedural"
+      ],
+      "syllabusCode": "SL 3.4",
+      "seedId": "ai-sl-3-4-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "matching",
+      "prompt": "Match each central angle to its fraction of a full circle.",
+      "pairs": [
+        {
+          "left": "90°",
+          "right": "1/4"
+        },
+        {
+          "left": "120°",
+          "right": "1/3"
+        },
+        {
+          "left": "225°",
+          "right": "5/8"
+        }
+      ],
+      "explanation": "Divide each angle by 360°.",
+      "tags": [
+        "sectors",
+        "angle fractions",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 3.4",
+      "seedId": "ai-sl-3-4-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "What is the gradient of the perpendicular bisector of the segment joining (0,0) and (4,2)?",
+      "choices": [
+        "2",
+        "1/2",
+        "−2",
+        "−1/2"
+      ],
+      "answer": "−2",
+      "explanation": "The segment gradient is 1/2, so the perpendicular gradient is −2.",
+      "tags": [
+        "perpendicular bisectors",
+        "recall"
+      ],
+      "syllabusCode": "SL 3.5",
+      "seedId": "ai-sl-3-5-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Find the equation of the perpendicular bisector of the segment from (0,0) to (6,0).",
+      "answer": "x=3",
+      "acceptedAnswers": [
+        "x=3",
+        "x = 3"
+      ],
+      "explanation": "The midpoint is (3,0) and the segment is horizontal, so its perpendicular bisector is vertical.",
+      "tags": [
+        "perpendicular bisectors",
+        "equations",
+        "procedural"
+      ],
+      "syllabusCode": "SL 3.5",
+      "seedId": "ai-sl-3-5-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Point P lies on the perpendicular bisector of AB. Select all statements that must be true.",
+      "choices": [
+        "PA=PB.",
+        "P is the midpoint of AB.",
+        "P is equidistant from A and B.",
+        "∠APB=90° in every case."
+      ],
+      "answers": [
+        "PA=PB.",
+        "P is equidistant from A and B."
+      ],
+      "explanation": "The perpendicular bisector is the locus of points equidistant from the segment endpoints.",
+      "tags": [
+        "loci",
+        "perpendicular bisectors",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 3.5",
+      "seedId": "ai-sl-3-5-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Sites A=(0,0) and B=(8,0) share a Voronoi edge. Which point lies on their boundary?",
+      "choices": [
+        "(2,0)",
+        "(4,3)",
+        "(6,0)",
+        "(8,4)"
+      ],
+      "answer": "(4,3)",
+      "explanation": "The boundary is the perpendicular bisector x=4; every point on it is equally distant from A and B.",
+      "tags": [
+        "Voronoi diagrams",
+        "boundaries",
+        "recall"
+      ],
+      "syllabusCode": "SL 3.6",
+      "seedId": "ai-sl-3-6-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Two Voronoi sites are (2,1) and (10,1). Enter the x-coordinate of their perpendicular-bisector boundary.",
+      "answer": 6,
+      "tolerance": 0,
+      "explanation": "The midpoint x-coordinate is (2+10)/2=6, and the boundary is x=6.",
+      "tags": [
+        "Voronoi diagrams",
+        "perpendicular bisector",
+        "procedural"
+      ],
+      "syllabusCode": "SL 3.6",
+      "seedId": "ai-sl-3-6-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements about a Voronoi diagram.",
+      "choices": [
+        "Every point in a cell is closest to that cell’s site.",
+        "An edge contains points equidistant from two neighbouring sites.",
+        "A vertex can be equidistant from three or more sites.",
+        "Every cell must be a triangle."
+      ],
+      "answers": [
+        "Every point in a cell is closest to that cell’s site.",
+        "An edge contains points equidistant from two neighbouring sites.",
+        "A vertex can be equidistant from three or more sites."
+      ],
+      "explanation": "Voronoi cells can have many polygonal shapes; edges and vertices represent equal-distance boundaries.",
+      "tags": [
+        "Voronoi diagrams",
+        "interpretation",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 3.6",
+      "seedId": "ai-sl-3-6-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Convert 210° to radians by entering the coefficient of π.",
+      "answer": 1.166667,
+      "tolerance": 0.00001,
+      "explanation": "210°×π/180°=7π/6, whose coefficient is 7/6≈1.166667.",
+      "tags": [
+        "radians",
+        "conversion",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.7",
+      "seedId": "ai-ahl-3-7-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A wheel of radius 0.75 m turns through 8 radians. How far does a point on its rim travel?",
+      "answer": 6,
+      "tolerance": 0,
+      "explanation": "Arc length=rθ=0.75(8)=6 m.",
+      "tags": [
+        "radians",
+        "arc length",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.7",
+      "seedId": "ai-ahl-3-7-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A sector has radius r and angle θ radians. Which expression gives its area?",
+      "choices": [
+        "rθ",
+        "2rθ",
+        "½r²θ",
+        "πr²θ"
+      ],
+      "answer": "½r²θ",
+      "explanation": "For θ in radians, sector area is ½r²θ.",
+      "tags": [
+        "radians",
+        "sector area",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.7",
+      "seedId": "ai-ahl-3-7-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Find the exact value of cos(2π/3).",
+      "choices": [
+        "−1",
+        "−1/2",
+        "1/2",
+        "√3/2"
+      ],
+      "answer": "−1/2",
+      "explanation": "The unit-circle x-coordinate at 120° is −1/2.",
+      "tags": [
+        "unit circle",
+        "exact values",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.8",
+      "seedId": "ai-ahl-3-8-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Solve sinx=−√2/2 for 0≤x<2π.",
+      "choices": [
+        "π/4",
+        "3π/4",
+        "5π/4",
+        "7π/4"
+      ],
+      "answers": [
+        "5π/4",
+        "7π/4"
+      ],
+      "explanation": "Sine is negative in quadrants III and IV with reference angle π/4.",
+      "tags": [
+        "trigonometric equations",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.8",
+      "seedId": "ai-ahl-3-8-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "The equation cosx=cos(−x) illustrates that cosine is an even function.",
+      "answer": true,
+      "explanation": "Cosine is symmetric about the y-axis, so cos(−x)=cosx.",
+      "tags": [
+        "trigonometric symmetry",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.8",
+      "seedId": "ai-ahl-3-8-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which matrix represents a reflection in the y-axis?",
+      "choices": [
+        "[[−1,0],[0,1]]",
+        "[[1,0],[0,−1]]",
+        "[[0,−1],[1,0]]",
+        "[[2,0],[0,2]]"
+      ],
+      "answer": "[[−1,0],[0,1]]",
+      "explanation": "A y-axis reflection changes x to −x and leaves y unchanged.",
+      "tags": [
+        "matrix transformations",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.9",
+      "seedId": "ai-ahl-3-9-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Apply the transformation matrix [[0,−1],[1,0]] to the point (3,1).",
+      "answer": "(−1,3)",
+      "acceptedAnswers": [
+        "(-1,3)",
+        "(−1,3)",
+        "(−1, 3)"
+      ],
+      "explanation": "Matrix multiplication gives (−1,3), a 90° anticlockwise rotation.",
+      "tags": [
+        "matrix transformations",
+        "rotation",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.9",
+      "seedId": "ai-ahl-3-9-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "An iterated-function fractal repeatedly applies contraction transformations. Select all plausible consequences.",
+      "choices": [
+        "Smaller self-similar copies appear.",
+        "The same rules are applied repeatedly.",
+        "Every transformation must preserve area.",
+        "The limiting pattern can have fine detail at many scales."
+      ],
+      "answers": [
+        "Smaller self-similar copies appear.",
+        "The same rules are applied repeatedly.",
+        "The limiting pattern can have fine detail at many scales."
+      ],
+      "explanation": "Contractions and repeated rules create self-similarity; area need not be preserved.",
+      "tags": [
+        "fractals",
+        "iteration",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.9",
+      "seedId": "ai-ahl-3-9-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "short_answer",
+      "prompt": "Find the vector from A(−1,4) to B(5,−2).",
+      "answer": "(6,−6)",
+      "acceptedAnswers": [
+        "(6,-6)",
+        "(6,−6)",
+        "(6, −6)"
+      ],
+      "explanation": "B−A=(5−(−1),−2−4)=(6,−6).",
+      "tags": [
+        "vectors",
+        "displacement",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.10",
+      "seedId": "ai-ahl-3-10-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Find the magnitude of the vector (−2,3,6).",
+      "answer": 7,
+      "tolerance": 0,
+      "explanation": "Magnitude=√(4+9+36)=7.",
+      "tags": [
+        "vectors",
+        "magnitude",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.10",
+      "seedId": "ai-ahl-3-10-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Let a=(2,−1) and b=(3,4). Select all true statements.",
+      "choices": [
+        "a+b=(5,3)",
+        "2a=(4,−2)",
+        "b−a=(1,5)",
+        "a·b=(6,−4)"
+      ],
+      "answers": [
+        "a+b=(5,3)",
+        "2a=(4,−2)",
+        "b−a=(1,5)"
+      ],
+      "explanation": "Vector addition and scalar multiplication are component-wise; a dot product is a scalar.",
+      "tags": [
+        "vector arithmetic",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.10",
+      "seedId": "ai-ahl-3-10-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which vector equation describes the line through (2,−1,3) parallel to (4,0,−2)?",
+      "choices": [
+        "r=(2,−1,3)+λ(4,0,−2)",
+        "r=(4,0,−2)+λ(2,−1,3)",
+        "r=λ(6,−1,1)",
+        "r=(2,−1,3)·(4,0,−2)"
+      ],
+      "answer": "r=(2,−1,3)+λ(4,0,−2)",
+      "explanation": "A line is a point position vector plus a scalar multiple of a direction vector.",
+      "tags": [
+        "vector lines",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.11",
+      "seedId": "ai-ahl-3-11-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "On r=(1,5)+t(3,−2), find the y-coordinate when t=4.",
+      "answer": -3,
+      "tolerance": 0,
+      "explanation": "y=5−2(4)=−3.",
+      "tags": [
+        "parametric lines",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.11",
+      "seedId": "ai-ahl-3-11-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "Replacing a line’s direction vector d by −3d changes its geometric line.",
+      "answer": false,
+      "explanation": "Any non-zero scalar multiple gives the same direction and hence the same line through the fixed point.",
+      "tags": [
+        "vector lines",
+        "direction",
+        "misconception"
+      ],
+      "syllabusCode": "AHL 3.11",
+      "seedId": "ai-ahl-3-11-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A particle has position r(t)=(2t, t²). Find the x-component of its velocity at t=3.",
+      "answer": 2,
+      "tolerance": 0,
+      "explanation": "v(t)=r′(t)=(2,2t), so the x-component is always 2.",
+      "tags": [
+        "vector kinematics",
+        "velocity",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.12",
+      "seedId": "ai-ahl-3-12-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "application",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "A particle starts at (1,−2) with constant velocity (3,4). Give its position after 5 seconds.",
+      "answer": "(16,18)",
+      "acceptedAnswers": [
+        "(16,18)",
+        "(16, 18)"
+      ],
+      "explanation": "r=(1,−2)+5(3,4)=(16,18).",
+      "tags": [
+        "vector kinematics",
+        "position",
+        "application"
+      ],
+      "syllabusCode": "AHL 3.12",
+      "seedId": "ai-ahl-3-12-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "For a particle moving with constant velocity vector v, select all true statements.",
+      "choices": [
+        "Its path is a straight line.",
+        "Its acceleration is zero.",
+        "Equal time intervals give equal displacement vectors.",
+        "Its speed must increase."
+      ],
+      "answers": [
+        "Its path is a straight line.",
+        "Its acceleration is zero.",
+        "Equal time intervals give equal displacement vectors."
+      ],
+      "explanation": "Constant velocity has fixed magnitude and direction, so acceleration is zero.",
+      "tags": [
+        "vector motion",
+        "constant velocity",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.12",
+      "seedId": "ai-ahl-3-12-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Find (1,−2,3)·(4,5,−1).",
+      "answer": -9,
+      "tolerance": 0,
+      "explanation": "The dot product is 1(4)+(−2)(5)+3(−1)=−9.",
+      "tags": [
+        "scalar product",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.13",
+      "seedId": "ai-ahl-3-13-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Find the magnitude of (1,0,0)×(0,5,0).",
+      "answer": 5,
+      "tolerance": 0,
+      "explanation": "The vectors are perpendicular, so |a×b|=|a||b|=5.",
+      "tags": [
+        "vector product",
+        "area",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.13",
+      "seedId": "ai-ahl-3-13-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements about non-zero vectors a and b.",
+      "choices": [
+        "a·b=0 implies they are perpendicular.",
+        "a×b is perpendicular to both vectors.",
+        "|a×b| gives the parallelogram area.",
+        "a×b=b×a."
+      ],
+      "answers": [
+        "a·b=0 implies they are perpendicular.",
+        "a×b is perpendicular to both vectors.",
+        "|a×b| gives the parallelogram area."
+      ],
+      "explanation": "The cross product is anti-commutative: b×a=−a×b.",
+      "tags": [
+        "dot product",
+        "cross product",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.13",
+      "seedId": "ai-ahl-3-13-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A simple graph has vertex degrees 2,2,3,3. How many edges does it have?",
+      "choices": [
+        "4",
+        "5",
+        "8",
+        "10"
+      ],
+      "answer": "5",
+      "explanation": "The degree sum is 10, which equals twice the number of edges.",
+      "tags": [
+        "graph theory",
+        "degree",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.14",
+      "seedId": "ai-ahl-3-14-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A connected graph has 8 vertices and 7 edges and contains no cycles. How many edges would its spanning tree have?",
+      "answer": 7,
+      "tolerance": 0,
+      "explanation": "A tree with n vertices has n−1 edges, so 8 vertices require 7 edges.",
+      "tags": [
+        "trees",
+        "graph theory",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.14",
+      "seedId": "ai-ahl-3-14-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements about a complete graph K₅.",
+      "choices": [
+        "Every pair of vertices is adjacent.",
+        "Each vertex has degree 4.",
+        "It has 10 edges.",
+        "It is a tree."
+      ],
+      "answers": [
+        "Every pair of vertices is adjacent.",
+        "Each vertex has degree 4.",
+        "It has 10 edges."
+      ],
+      "explanation": "K₅ has 5·4/2=10 edges and contains many cycles, so it is not a tree.",
+      "tags": [
+        "complete graphs",
+        "degree",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.14",
+      "seedId": "ai-ahl-3-14-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "In an undirected simple graph, what does a 1 in position (i,j) of the adjacency matrix mean?",
+      "choices": [
+        "Vertex i has degree 1",
+        "Vertices i and j are adjacent",
+        "There is exactly one vertex",
+        "The graph is complete"
+      ],
+      "answer": "Vertices i and j are adjacent",
+      "explanation": "Adjacency-matrix entries record whether the corresponding vertices share an edge.",
+      "tags": [
+        "adjacency matrices",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.15",
+      "seedId": "ai-ahl-3-15-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "For adjacency matrix A, the entry (A²)₁₃ is 4. How many walks of length 2 go from vertex 1 to vertex 3?",
+      "answer": 4,
+      "tolerance": 0,
+      "explanation": "The (i,j) entry of Aⁿ counts walks of length n from i to j.",
+      "tags": [
+        "matrix powers",
+        "walks",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.15",
+      "seedId": "ai-ahl-3-15-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all properties of the adjacency matrix of a simple undirected graph.",
+      "choices": [
+        "It is symmetric.",
+        "Its diagonal entries are zero.",
+        "The sum of row i is the degree of vertex i.",
+        "Every entry must be 1."
+      ],
+      "answers": [
+        "It is symmetric.",
+        "Its diagonal entries are zero.",
+        "The sum of row i is the degree of vertex i."
+      ],
+      "explanation": "Undirected adjacency is symmetric, and a simple graph has no loops on the diagonal.",
+      "tags": [
+        "adjacency matrices",
+        "graph properties",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.15",
+      "seedId": "ai-ahl-3-15-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which algorithm constructs a minimum spanning tree by repeatedly adding the cheapest edge that does not create a cycle?",
+      "choices": [
+        "Kruskal’s algorithm",
+        "Nearest-neighbour algorithm",
+        "Euler’s algorithm",
+        "Dijkstra’s rule"
+      ],
+      "answer": "Kruskal’s algorithm",
+      "explanation": "Kruskal orders edges by weight and rejects any edge that would form a cycle.",
+      "tags": [
+        "Kruskal algorithm",
+        "minimum spanning tree",
+        "recall"
+      ],
+      "syllabusCode": "AHL 3.16",
+      "seedId": "ai-ahl-3-16-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "ordering",
+      "prompt": "Order the main steps of Prim’s algorithm.",
+      "items": [
+        "Add the cheapest edge joining the tree to a new vertex",
+        "Choose a starting vertex",
+        "Repeat until every vertex is included",
+        "Compare eligible boundary edges"
+      ],
+      "correctOrder": [
+        "Choose a starting vertex",
+        "Compare eligible boundary edges",
+        "Add the cheapest edge joining the tree to a new vertex",
+        "Repeat until every vertex is included"
+      ],
+      "explanation": "Prim grows one connected tree by adding the cheapest eligible boundary edge.",
+      "tags": [
+        "Prim algorithm",
+        "minimum spanning tree",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 3.16",
+      "seedId": "ai-ahl-3-16-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all graphs that have an Eulerian circuit.",
+      "choices": [
+        "A connected graph with every vertex of even degree",
+        "A connected graph with exactly two odd-degree vertices",
+        "A cycle graph C₆",
+        "A disconnected graph whose components are cycles"
+      ],
+      "answers": [
+        "A connected graph with every vertex of even degree",
+        "A cycle graph C₆"
+      ],
+      "explanation": "An Eulerian circuit requires connectedness and even degree at every vertex.",
+      "tags": [
+        "Eulerian circuit",
+        "graph algorithms",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 3.16",
+      "seedId": "ai-ahl-3-16-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A school wants a sample containing students from every year group in proportion to year-group size. Which method is best?",
+      "choices": [
+        "Convenience sampling",
+        "Stratified sampling",
+        "Voluntary response",
+        "Systematic sampling without strata"
+      ],
+      "answer": "Stratified sampling",
+      "explanation": "Stratification preserves representation from each relevant subgroup.",
+      "tags": [
+        "sampling",
+        "stratified sampling",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.1",
+      "seedId": "ai-sl-4-1-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all quantitative variables.",
+      "choices": [
+        "Journey time",
+        "Number of messages sent",
+        "Favourite app",
+        "Type of transport"
+      ],
+      "answers": [
+        "Journey time",
+        "Number of messages sent"
+      ],
+      "explanation": "Times and counts are numerical; favourite app and transport type are categorical.",
+      "tags": [
+        "data types",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.1",
+      "seedId": "ai-sl-4-1-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "A very large convenience sample is guaranteed to be unbiased.",
+      "answer": false,
+      "explanation": "A larger sample reduces random sampling variation but does not remove selection bias.",
+      "tags": [
+        "sampling bias",
+        "misconception"
+      ],
+      "syllabusCode": "SL 4.1",
+      "seedId": "ai-sl-4-1-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A box plot has lower quartile 17 and upper quartile 29. Find the interquartile range.",
+      "answer": 12,
+      "tolerance": 0,
+      "explanation": "IQR=Q₃−Q₁=29−17=12.",
+      "tags": [
+        "box plots",
+        "interquartile range",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.2",
+      "seedId": "ai-sl-4-2-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Which display is most suitable for comparing the medians and spreads of three groups?",
+      "choices": [
+        "Pie charts",
+        "Side-by-side box plots",
+        "A scatter plot",
+        "A tree diagram"
+      ],
+      "answer": "Side-by-side box plots",
+      "explanation": "Box plots display median, quartiles and spread compactly for comparison.",
+      "tags": [
+        "data presentation",
+        "box plots",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.2",
+      "seedId": "ai-sl-4-2-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "For unequal-width histogram classes, bar height should be frequency density so that area represents frequency.",
+      "answer": true,
+      "explanation": "Frequency density corrects for different class widths.",
+      "tags": [
+        "histograms",
+        "frequency density",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 4.2",
+      "seedId": "ai-sl-4-2-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Find the mean of 5, 7, 8, 8, 12.",
+      "answer": 8,
+      "tolerance": 0,
+      "explanation": "The sum is 40, so the mean is 40/5=8.",
+      "tags": [
+        "mean",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.3",
+      "seedId": "ai-sl-4-3-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A dataset has standard deviation 4. Every value is multiplied by 3. Find the new standard deviation.",
+      "answer": 12,
+      "tolerance": 0,
+      "explanation": "Multiplying every value by 3 multiplies standard deviation by |3|.",
+      "tags": [
+        "standard deviation",
+        "transformations",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.3",
+      "seedId": "ai-sl-4-3-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all measures that are resistant to one extreme outlier.",
+      "choices": [
+        "Median",
+        "Mean",
+        "Interquartile range",
+        "Range"
+      ],
+      "answers": [
+        "Median",
+        "Interquartile range"
+      ],
+      "explanation": "Median and IQR depend mainly on order and central positions rather than extreme magnitudes.",
+      "tags": [
+        "outliers",
+        "summary statistics",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 4.3",
+      "seedId": "ai-sl-4-3-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Pearson’s correlation coefficient is r=−0.87. What does this indicate?",
+      "choices": [
+        "Strong positive linear association",
+        "Strong negative linear association",
+        "Weak negative association",
+        "No association"
+      ],
+      "answer": "Strong negative linear association",
+      "explanation": "The magnitude is close to 1 and the sign is negative.",
+      "tags": [
+        "Pearson correlation",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.4",
+      "seedId": "ai-sl-4-4-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A regression model is y=2.4x+7. Predict y when x=15.",
+      "answer": 43,
+      "tolerance": 0,
+      "explanation": "y=2.4(15)+7=43.",
+      "tags": [
+        "regression",
+        "prediction",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.4",
+      "seedId": "ai-sl-4-4-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all justified statements about correlation and regression.",
+      "choices": [
+        "Correlation does not prove causation.",
+        "Extrapolation far beyond the data range can be unreliable.",
+        "An outlier can strongly affect Pearson’s r.",
+        "r=0 proves there is no relationship of any kind."
+      ],
+      "answers": [
+        "Correlation does not prove causation.",
+        "Extrapolation far beyond the data range can be unreliable.",
+        "An outlier can strongly affect Pearson’s r."
+      ],
+      "explanation": "Pearson’s r measures linear association; a nonlinear relationship can have r near zero.",
+      "tags": [
+        "correlation",
+        "interpretation",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 4.4",
+      "seedId": "ai-sl-4-4-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A fair six-sided die is rolled 90 times. Find the expected number of rolls greater than 4.",
+      "answer": 30,
+      "tolerance": 0,
+      "explanation": "P(roll>4)=2/6=1/3, so the expected count is 90/3=30.",
+      "tags": [
+        "expected frequency",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.5",
+      "seedId": "ai-sl-4-5-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "If P(A)=0.28, find P(Aᶜ).",
+      "choices": [
+        "0.28",
+        "0.72",
+        "1.28",
+        "Cannot be found"
+      ],
+      "answer": "0.72",
+      "explanation": "Complementary probabilities sum to 1.",
+      "tags": [
+        "probability",
+        "complement",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.5",
+      "seedId": "ai-sl-4-5-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "matching",
+      "prompt": "Match each experiment to the number of equally likely outcomes.",
+      "pairs": [
+        {
+          "left": "One coin toss",
+          "right": "2"
+        },
+        {
+          "left": "Two coin tosses",
+          "right": "4"
+        },
+        {
+          "left": "One die roll and one coin toss",
+          "right": "12"
+        }
+      ],
+      "explanation": "Multiply the number of choices at independent stages.",
+      "tags": [
+        "sample spaces",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 4.5",
+      "seedId": "ai-sl-4-5-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Events A and B satisfy P(A)=0.55, P(B)=0.40 and P(A∩B)=0.15. Find P(A∪B).",
+      "choices": [
+        "0.15",
+        "0.65",
+        "0.80",
+        "1.10"
+      ],
+      "answer": "0.80",
+      "explanation": "P(A∪B)=0.55+0.40−0.15=0.80.",
+      "tags": [
+        "probability rules",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.6",
+      "seedId": "ai-sl-4-6-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Given P(A∩B)=0.24 and P(B)=0.60, find P(A|B).",
+      "answer": 0.4,
+      "tolerance": 0,
+      "explanation": "P(A|B)=0.24/0.60=0.4.",
+      "tags": [
+        "conditional probability",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.6",
+      "seedId": "ai-sl-4-6-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "P(A)=0.3, P(B)=0.5 and P(A∩B)=0.15. Select all true statements.",
+      "choices": [
+        "A and B are independent.",
+        "A and B are mutually exclusive.",
+        "P(A∪B)=0.65.",
+        "P(A|B)=0.3."
+      ],
+      "answers": [
+        "A and B are independent.",
+        "P(A∪B)=0.65.",
+        "P(A|B)=0.3."
+      ],
+      "explanation": "P(A)P(B)=0.15, the union is 0.65, and P(A|B)=0.15/0.5=0.3.",
+      "tags": [
+        "independence",
+        "conditional probability",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 4.6",
+      "seedId": "ai-sl-4-6-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A random variable X has P(X=0)=0.25, P(X=1)=0.50 and P(X=4)=0.25. Find E(X).",
+      "answer": 1.5,
+      "tolerance": 0,
+      "explanation": "E(X)=0(0.25)+1(0.50)+4(0.25)=1.5.",
+      "tags": [
+        "discrete random variables",
+        "expectation",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.7",
+      "seedId": "ai-sl-4-7-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A probability distribution has probabilities 0.12, 0.31, k and 0.27. Find k.",
+      "choices": [
+        "0.20",
+        "0.30",
+        "0.43",
+        "0.70"
+      ],
+      "answer": "0.30",
+      "explanation": "Probabilities sum to 1, so k=1−0.70=0.30.",
+      "tags": [
+        "probability distributions",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.7",
+      "seedId": "ai-sl-4-7-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "The expected value of a discrete random variable must be a value that can occur in a single trial.",
+      "answer": false,
+      "explanation": "Expectation is a long-run weighted mean and need not be an attainable outcome.",
+      "tags": [
+        "expected value",
+        "misconception"
+      ],
+      "syllabusCode": "SL 4.7",
+      "seedId": "ai-sl-4-7-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which scenario can be modelled by a binomial distribution?",
+      "choices": [
+        "The number of sixes in 20 independent die rolls",
+        "The time until a bus arrives",
+        "Heights of 20 students",
+        "Sampling without replacement from 4 objects until empty"
+      ],
+      "answer": "The number of sixes in 20 independent die rolls",
+      "explanation": "There are fixed independent trials, two outcomes per trial and constant success probability.",
+      "tags": [
+        "binomial distribution",
+        "conditions",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.8",
+      "seedId": "ai-sl-4-8-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "For X~B(30,0.2), find E(X).",
+      "answer": 6,
+      "tolerance": 0,
+      "explanation": "The binomial mean is np=30(0.2)=6.",
+      "tags": [
+        "binomial mean",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.8",
+      "seedId": "ai-sl-4-8-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "For X~B(15,0.4), find Var(X).",
+      "answer": 3.6,
+      "tolerance": 0,
+      "explanation": "Variance=np(1−p)=15(0.4)(0.6)=3.6.",
+      "tags": [
+        "binomial variance",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 4.8",
+      "seedId": "ai-sl-4-8-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "For a normal distribution, approximately what proportion lies within two standard deviations of the mean?",
+      "choices": [
+        "0.50",
+        "0.68",
+        "0.95",
+        "0.997"
+      ],
+      "answer": "0.95",
+      "explanation": "The empirical rule gives about 95% within two standard deviations.",
+      "tags": [
+        "normal distribution",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.9",
+      "seedId": "ai-sl-4-9-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "For X~N(70,8²), find the z-score corresponding to X=86.",
+      "answer": 2,
+      "tolerance": 0,
+      "explanation": "z=(86−70)/8=2.",
+      "tags": [
+        "normal distribution",
+        "standardization",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.9",
+      "seedId": "ai-sl-4-9-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "A normal distribution is symmetric, so its mean and median are equal.",
+      "answer": true,
+      "explanation": "Symmetry about the centre makes the mean and median coincide.",
+      "tags": [
+        "normal distribution",
+        "symmetry",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 4.9",
+      "seedId": "ai-sl-4-9-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "When is Spearman’s rank correlation generally more suitable than Pearson’s correlation?",
+      "choices": [
+        "When the association is monotonic but not necessarily linear",
+        "Only when both variables are categorical",
+        "When there are no paired observations",
+        "Only when the sample size is exactly 10"
+      ],
+      "answer": "When the association is monotonic but not necessarily linear",
+      "explanation": "Spearman uses ranks and measures monotonic association.",
+      "tags": [
+        "Spearman rank",
+        "method selection",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.10",
+      "seedId": "ai-sl-4-10-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Six paired observations have Σd²=14. Find Spearman’s rank coefficient using rₛ=1−6Σd²/[n(n²−1)], correct to three decimals.",
+      "answer": 0.6,
+      "tolerance": 0.001,
+      "explanation": "rₛ=1−84/[6(35)]=1−0.4=0.6.",
+      "tags": [
+        "Spearman rank",
+        "calculation",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.10",
+      "seedId": "ai-sl-4-10-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements about Spearman’s rank coefficient.",
+      "choices": [
+        "It is based on ranks.",
+        "Values near −1 indicate strong negative monotonic association.",
+        "It is usually less sensitive to extreme raw values than Pearson’s r.",
+        "It proves causation when |rₛ| is large."
+      ],
+      "answers": [
+        "It is based on ranks.",
+        "Values near −1 indicate strong negative monotonic association.",
+        "It is usually less sensitive to extreme raw values than Pearson’s r."
+      ],
+      "explanation": "Ranking reduces the impact of raw magnitudes, but no correlation coefficient proves causation.",
+      "tags": [
+        "Spearman rank",
+        "interpretation",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 4.10",
+      "seedId": "ai-sl-4-10-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A test uses significance level 5% and gives p=0.032. What decision is made?",
+      "choices": [
+        "Reject H₀",
+        "Fail to reject H₀",
+        "Accept H₀ as certainly true",
+        "Increase p to 0.05"
+      ],
+      "answer": "Reject H₀",
+      "explanation": "Since p<0.05, the result is statistically significant at the 5% level.",
+      "tags": [
+        "hypothesis testing",
+        "p-value",
+        "recall"
+      ],
+      "syllabusCode": "SL 4.11",
+      "seedId": "ai-sl-4-11-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Which test is appropriate for checking whether observed category frequencies fit a stated distribution?",
+      "choices": [
+        "Chi-square goodness-of-fit test",
+        "Pearson correlation",
+        "Two-sample t-test",
+        "Normal inverse calculation"
+      ],
+      "answer": "Chi-square goodness-of-fit test",
+      "explanation": "A goodness-of-fit test compares observed and expected categorical frequencies.",
+      "tags": [
+        "chi-square",
+        "test selection",
+        "procedural"
+      ],
+      "syllabusCode": "SL 4.11",
+      "seedId": "ai-sl-4-11-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all valid interpretations of a p-value of 0.08.",
+      "choices": [
+        "At the 5% level, fail to reject H₀.",
+        "At the 10% level, reject H₀.",
+        "The probability that H₀ is true is exactly 0.08.",
+        "The result depends on the chosen significance level."
+      ],
+      "answers": [
+        "At the 5% level, fail to reject H₀.",
+        "At the 10% level, reject H₀.",
+        "The result depends on the chosen significance level."
+      ],
+      "explanation": "Compare p with α; a p-value is not the probability that the null hypothesis is true.",
+      "tags": [
+        "p-value",
+        "significance",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 4.11",
+      "seedId": "ai-sl-4-11-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which design best tests whether a new teaching method causes improved scores?",
+      "choices": [
+        "Randomly assign similar students to new and standard methods",
+        "Survey only volunteers using the new method",
+        "Compare this year with a different school last year",
+        "Ask students which method they prefer"
+      ],
+      "answer": "Randomly assign similar students to new and standard methods",
+      "explanation": "Random assignment helps balance confounders and supports causal inference.",
+      "tags": [
+        "experimental design",
+        "randomization",
+        "recall"
+      ],
+      "syllabusCode": "AHL 4.12",
+      "seedId": "ai-ahl-4-12-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all features that improve a questionnaire study.",
+      "choices": [
+        "Use neutral wording.",
+        "Pilot the questionnaire.",
+        "Use a representative sampling frame.",
+        "Ask two ideas in every question."
+      ],
+      "answers": [
+        "Use neutral wording.",
+        "Pilot the questionnaire.",
+        "Use a representative sampling frame."
+      ],
+      "explanation": "Double-barrelled questions reduce clarity; neutral tested questions and representative sampling improve validity.",
+      "tags": [
+        "questionnaires",
+        "data collection",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 4.12",
+      "seedId": "ai-ahl-4-12-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "In an observational study, an association can be affected by confounding variables.",
+      "answer": true,
+      "explanation": "Without controlled assignment, other variables may explain the observed association.",
+      "tags": [
+        "observational studies",
+        "confounding",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 4.12",
+      "seedId": "ai-ahl-4-12-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A residual plot shows a clear curved pattern. What does this suggest?",
+      "choices": [
+        "The chosen regression form is inadequate",
+        "The model is certainly perfect",
+        "All residuals are zero",
+        "The response variable is categorical"
+      ],
+      "answer": "The chosen regression form is inadequate",
+      "explanation": "A systematic residual pattern indicates structure not captured by the model.",
+      "tags": [
+        "residuals",
+        "model fit",
+        "recall"
+      ],
+      "syllabusCode": "AHL 4.13",
+      "seedId": "ai-ahl-4-13-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A model has total sum of squares 250 and residual sum of squares 40. Find R².",
+      "answer": 0.84,
+      "tolerance": 0.001,
+      "explanation": "R²=1−40/250=0.84.",
+      "tags": [
+        "coefficient of determination",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 4.13",
+      "seedId": "ai-ahl-4-13-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all signs of a useful regression model.",
+      "choices": [
+        "Residuals are randomly scattered around zero.",
+        "R² is high for the modelling context.",
+        "Predictions are used within a reasonable domain.",
+        "Every residual has the same positive sign."
+      ],
+      "answers": [
+        "Residuals are randomly scattered around zero.",
+        "R² is high for the modelling context.",
+        "Predictions are used within a reasonable domain."
+      ],
+      "explanation": "Same-sign residuals indicate systematic bias rather than a well-centred fit.",
+      "tags": [
+        "regression diagnostics",
+        "residuals",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 4.13",
+      "seedId": "ai-ahl-4-13-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "If E(X)=12, find E(3X−5).",
+      "answer": 31,
+      "tolerance": 0,
+      "explanation": "E(3X−5)=3E(X)−5=36−5=31.",
+      "tags": [
+        "random variables",
+        "expectation",
+        "recall"
+      ],
+      "syllabusCode": "AHL 4.14",
+      "seedId": "ai-ahl-4-14-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "If Var(X)=7, find Var(4X+2).",
+      "answer": 112,
+      "tolerance": 0,
+      "explanation": "Var(4X+2)=4²Var(X)=16(7)=112.",
+      "tags": [
+        "variance",
+        "linear transformations",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 4.14",
+      "seedId": "ai-ahl-4-14-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "Adding a constant c to every value of a random variable increases its variance by c.",
+      "answer": false,
+      "explanation": "A shift changes the mean but not the spread, so variance is unchanged.",
+      "tags": [
+        "variance",
+        "transformations",
+        "misconception"
+      ],
+      "syllabusCode": "AHL 4.14",
+      "seedId": "ai-ahl-4-14-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Independent normal variables X and Y have variances 9 and 16. Find Var(X+Y).",
+      "answer": 25,
+      "tolerance": 0,
+      "explanation": "For independent variables, variances add: 9+16=25.",
+      "tags": [
+        "linear combinations",
+        "variance",
+        "recall"
+      ],
+      "syllabusCode": "AHL 4.15",
+      "seedId": "ai-ahl-4-15-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "The central limit theorem is most useful for which statement?",
+      "choices": [
+        "The sample mean is approximately normal for sufficiently large samples under broad conditions",
+        "Every population is exactly normal",
+        "Sample variance is always zero",
+        "All observations become independent"
+      ],
+      "answer": "The sample mean is approximately normal for sufficiently large samples under broad conditions",
+      "explanation": "The theorem concerns the distribution of sample means.",
+      "tags": [
+        "central limit theorem",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 4.15",
+      "seedId": "ai-ahl-4-15-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Let X and Y be independent. Select all true statements.",
+      "choices": [
+        "E(X+Y)=E(X)+E(Y).",
+        "Var(X−Y)=Var(X)+Var(Y).",
+        "SD(X+Y)=SD(X)+SD(Y) in every case.",
+        "A linear combination of normal variables is normal."
+      ],
+      "answers": [
+        "E(X+Y)=E(X)+E(Y).",
+        "Var(X−Y)=Var(X)+Var(Y).",
+        "A linear combination of normal variables is normal."
+      ],
+      "explanation": "Independent variances add, but standard deviations do not generally add.",
+      "tags": [
+        "linear combinations",
+        "normal variables",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 4.15",
+      "seedId": "ai-ahl-4-15-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A 95% confidence interval for a mean is (42.1,47.9). Which interpretation is appropriate?",
+      "choices": [
+        "The method captures the true mean in about 95% of repeated samples",
+        "95% of individual observations lie in this interval",
+        "The true mean changes between 42.1 and 47.9",
+        "There is a 95% chance every future value lies in the interval"
+      ],
+      "answer": "The method captures the true mean in about 95% of repeated samples",
+      "explanation": "Confidence refers to the long-run performance of the interval procedure.",
+      "tags": [
+        "confidence intervals",
+        "interpretation",
+        "recall"
+      ],
+      "syllabusCode": "AHL 4.16",
+      "seedId": "ai-ahl-4-16-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A confidence interval is written 18.4±2.1. Find its upper endpoint.",
+      "answer": 20.5,
+      "tolerance": 0,
+      "explanation": "Upper endpoint=18.4+2.1=20.5.",
+      "tags": [
+        "confidence intervals",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 4.16",
+      "seedId": "ai-ahl-4-16-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all changes that generally make a confidence interval for a mean narrower.",
+      "choices": [
+        "Increase the sample size.",
+        "Use a lower confidence level.",
+        "Reduce population variability.",
+        "Use a smaller sample size."
+      ],
+      "answers": [
+        "Increase the sample size.",
+        "Use a lower confidence level.",
+        "Reduce population variability."
+      ],
+      "explanation": "More information and less variability reduce margin of error; higher confidence makes intervals wider.",
+      "tags": [
+        "confidence intervals",
+        "precision",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 4.16",
+      "seedId": "ai-ahl-4-16-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Which situation is suitable for a Poisson model?",
+      "choices": [
+        "Number of calls arriving in one minute at a stable average rate",
+        "Heights of adults",
+        "Number of heads in exactly 10 coin tosses",
+        "Time taken by one runner"
+      ],
+      "answer": "Number of calls arriving in one minute at a stable average rate",
+      "explanation": "Poisson models counts of independent events in a fixed interval at a constant mean rate.",
+      "tags": [
+        "Poisson distribution",
+        "conditions",
+        "recall"
+      ],
+      "syllabusCode": "AHL 4.17",
+      "seedId": "ai-ahl-4-17-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "If X~Po(4.5), find E(X).",
+      "answer": 4.5,
+      "tolerance": 0,
+      "explanation": "For a Poisson variable, the mean is λ=4.5.",
+      "tags": [
+        "Poisson mean",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 4.17",
+      "seedId": "ai-ahl-4-17-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "For X~Po(λ), select all true statements.",
+      "choices": [
+        "E(X)=λ.",
+        "Var(X)=λ.",
+        "X can take non-negative integer values.",
+        "The maximum possible value is λ."
+      ],
+      "answers": [
+        "E(X)=λ.",
+        "Var(X)=λ.",
+        "X can take non-negative integer values."
+      ],
+      "explanation": "Poisson counts are unbounded non-negative integers, with mean and variance λ.",
+      "tags": [
+        "Poisson distribution",
+        "properties",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 4.17",
+      "seedId": "ai-ahl-4-17-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Rejecting a true null hypothesis is which error?",
+      "choices": [
+        "Type I error",
+        "Type II error",
+        "Sampling frame error",
+        "Regression error"
+      ],
+      "answer": "Type I error",
+      "explanation": "A Type I error is a false positive: rejecting H₀ when it is true.",
+      "tags": [
+        "hypothesis testing",
+        "Type I error",
+        "recall"
+      ],
+      "syllabusCode": "AHL 4.18",
+      "seedId": "ai-ahl-4-18-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A paired t-test is most appropriate for which data?",
+      "choices": [
+        "Before-and-after scores for the same students",
+        "Scores from two unrelated schools",
+        "Counts in categories",
+        "Two independent proportions"
+      ],
+      "answer": "Before-and-after scores for the same students",
+      "explanation": "Each before score is naturally paired with the same student’s after score.",
+      "tags": [
+        "t-test",
+        "paired data",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 4.18",
+      "seedId": "ai-ahl-4-18-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements about statistical power.",
+      "choices": [
+        "Higher power means a lower chance of Type II error.",
+        "Larger samples often increase power.",
+        "A very small effect can be harder to detect.",
+        "Power is the probability that H₀ is true."
+      ],
+      "answers": [
+        "Higher power means a lower chance of Type II error.",
+        "Larger samples often increase power.",
+        "A very small effect can be harder to detect."
+      ],
+      "explanation": "Power is the probability of rejecting a false null hypothesis.",
+      "tags": [
+        "power",
+        "Type II error",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 4.18",
+      "seedId": "ai-ahl-4-18-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A column-stochastic transition matrix is applied to a state vector. What should the entries of the new state vector sum to?",
+      "choices": [
+        "0",
+        "1",
+        "The number of states",
+        "The largest transition probability"
+      ],
+      "answer": "1",
+      "explanation": "Transition probabilities preserve total probability.",
+      "tags": [
+        "Markov chains",
+        "state vectors",
+        "recall"
+      ],
+      "syllabusCode": "AHL 4.19",
+      "seedId": "ai-ahl-4-19-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A two-state system has transition matrix [[0.8,0.3],[0.2,0.7]] acting on column state (0.6,0.4). Find the first component of the next state.",
+      "answer": 0.6,
+      "tolerance": 0.001,
+      "explanation": "The first component is 0.8(0.6)+0.3(0.4)=0.60.",
+      "tags": [
+        "transition matrices",
+        "state vectors",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 4.19",
+      "seedId": "ai-ahl-4-19-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements about a steady-state vector v.",
+      "choices": [
+        "Pv=v.",
+        "Its entries are probabilities that sum to 1.",
+        "Applying the transition again leaves it unchanged.",
+        "It must have all entries equal."
+      ],
+      "answers": [
+        "Pv=v.",
+        "Its entries are probabilities that sum to 1.",
+        "Applying the transition again leaves it unchanged."
+      ],
+      "explanation": "A steady state is invariant under the transition but need not be uniform.",
+      "tags": [
+        "Markov chains",
+        "steady state",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 4.19",
+      "seedId": "ai-ahl-4-19-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Evaluate lim(x→3) (x²−9)/(x−3).",
+      "answer": 6,
+      "tolerance": 0,
+      "explanation": "For x≠3 the expression simplifies to x+3, whose limit at 3 is 6.",
+      "tags": [
+        "limits",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.1",
+      "seedId": "ai-sl-5-1-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "What does f′(8)=−2 mean in context?",
+      "choices": [
+        "f is decreasing at 2 units per input unit when x=8",
+        "f(8)=−2",
+        "The area under f is −2",
+        "f has a minimum at x=8"
+      ],
+      "answer": "f is decreasing at 2 units per input unit when x=8",
+      "explanation": "The derivative is the instantaneous rate of change; its negative sign indicates decrease.",
+      "tags": [
+        "derivative",
+        "rate of change",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.1",
+      "seedId": "ai-sl-5-1-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "A function may have a finite limit at x=a even when f(a) is undefined.",
+      "answer": true,
+      "explanation": "A removable discontinuity can have matching one-sided limits without a defined function value.",
+      "tags": [
+        "limits",
+        "discontinuity",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 5.1",
+      "seedId": "ai-sl-5-1-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "If f′(x)<0 on 2<x<7, what is f doing on that interval?",
+      "choices": [
+        "Increasing",
+        "Decreasing",
+        "Constant",
+        "Undefined"
+      ],
+      "answer": "Decreasing",
+      "explanation": "A negative derivative means the graph has negative local gradient.",
+      "tags": [
+        "derivative sign",
+        "decreasing",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.2",
+      "seedId": "ai-sl-5-2-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "The graph of f′ changes from negative to positive at x=4. Select all valid conclusions.",
+      "choices": [
+        "f has a local minimum at x=4.",
+        "f decreases just before x=4.",
+        "f increases just after x=4.",
+        "f has a local maximum at x=4."
+      ],
+      "answers": [
+        "f has a local minimum at x=4.",
+        "f decreases just before x=4.",
+        "f increases just after x=4."
+      ],
+      "explanation": "The sign change from − to + means f falls and then rises.",
+      "tags": [
+        "derivative graph",
+        "stationary points",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.2",
+      "seedId": "ai-sl-5-2-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "If f′(a)=0, then f must have a maximum or minimum at x=a.",
+      "answer": false,
+      "explanation": "A stationary point can be an inflexion, such as x³ at x=0.",
+      "tags": [
+        "stationary points",
+        "misconception"
+      ],
+      "syllabusCode": "SL 5.2",
+      "seedId": "ai-sl-5-2-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "fill_blank",
+      "prompt": "If f(x)=4x⁵−7x²+3, then f′(x)=___.",
+      "answer": "20x⁴−14x",
+      "acceptedAnswers": [
+        "20x^4-14x",
+        "20x⁴−14x",
+        "20x⁴ - 14x"
+      ],
+      "explanation": "Differentiate term by term using the power rule.",
+      "tags": [
+        "power rule",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.3",
+      "seedId": "ai-sl-5-3-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Differentiate y=3x⁻²+5x.",
+      "answer": "−6x⁻³+5",
+      "acceptedAnswers": [
+        "-6x^-3+5",
+        "−6x⁻³+5",
+        "5-6x^-3"
+      ],
+      "explanation": "The power rule gives 3(−2)x⁻³+5.",
+      "tags": [
+        "power rule",
+        "negative exponents",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.3",
+      "seedId": "ai-sl-5-3-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Which derivative is correct?",
+      "choices": [
+        "d(x⁴)/dx=4x³",
+        "d(x⁴)/dx=x³",
+        "d(x⁻¹)/dx=x⁻²",
+        "d(7)/dx=7"
+      ],
+      "answer": "d(x⁴)/dx=4x³",
+      "explanation": "The power rule gives nxⁿ⁻¹, and constants differentiate to zero.",
+      "tags": [
+        "differentiation",
+        "misconceptions",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 5.3",
+      "seedId": "ai-sl-5-3-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "For f(x)=x²−3x, find the tangent gradient at x=4.",
+      "answer": 5,
+      "tolerance": 0,
+      "explanation": "f′(x)=2x−3, so f′(4)=5.",
+      "tags": [
+        "tangents",
+        "gradient",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.4",
+      "seedId": "ai-sl-5-4-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Find the tangent to y=x² at x=2.",
+      "answer": "y=4x−4",
+      "acceptedAnswers": [
+        "y=4x-4",
+        "y = 4x − 4",
+        "4x-y=4"
+      ],
+      "explanation": "The point is (2,4), the gradient is 4, and y−4=4(x−2).",
+      "tags": [
+        "tangent equations",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.4",
+      "seedId": "ai-sl-5-4-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "The tangent gradient at a point is 1/3. What is the normal gradient?",
+      "choices": [
+        "3",
+        "−3",
+        "−1/3",
+        "1/3"
+      ],
+      "answer": "−3",
+      "explanation": "Perpendicular non-vertical gradients multiply to −1.",
+      "tags": [
+        "normals",
+        "perpendicular gradients",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 5.4",
+      "seedId": "ai-sl-5-4-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "fill_blank",
+      "prompt": "Complete the antiderivative: ∫8x³ dx=___+C.",
+      "answer": "2x⁴",
+      "acceptedAnswers": [
+        "2x^4",
+        "2x⁴"
+      ],
+      "explanation": "Increase the power to 4 and divide by 4.",
+      "tags": [
+        "antidifferentiation",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.5",
+      "seedId": "ai-sl-5-5-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Evaluate ∫₀³2x dx.",
+      "answer": 9,
+      "tolerance": 0,
+      "explanation": "An antiderivative is x², so the value is 3²−0²=9.",
+      "tags": [
+        "definite integrals",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.5",
+      "seedId": "ai-sl-5-5-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "If F′(x)=f(x), then F(x)+7 is also an antiderivative of f.",
+      "answer": true,
+      "explanation": "Adding a constant does not change the derivative.",
+      "tags": [
+        "constant of integration",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 5.5",
+      "seedId": "ai-sl-5-5-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A graphing tool gives f′(x)=3(x−2)(x+1). Which x-values are stationary points of f?",
+      "choices": [
+        "−1 and 2",
+        "1 and −2",
+        "−3 and 2",
+        "0 and 3"
+      ],
+      "answer": "−1 and 2",
+      "explanation": "Stationary points occur where f′(x)=0.",
+      "tags": [
+        "stationary points",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.6",
+      "seedId": "ai-sl-5-6-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "For f(x)=x³−3x², find the positive stationary x-value.",
+      "answer": 2,
+      "tolerance": 0,
+      "explanation": "f′(x)=3x²−6x=3x(x−2), giving x=0 and x=2.",
+      "tags": [
+        "stationary points",
+        "differentiation",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.6",
+      "seedId": "ai-sl-5-6-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements.",
+      "choices": [
+        "A local maximum need not be the greatest value on the whole domain.",
+        "A stationary point has f′(x)=0.",
+        "Every stationary point is a local extremum.",
+        "Technology can help solve f′(x)=0."
+      ],
+      "answers": [
+        "A local maximum need not be the greatest value on the whole domain.",
+        "A stationary point has f′(x)=0.",
+        "Technology can help solve f′(x)=0."
+      ],
+      "explanation": "Stationary inflexion points show that not every stationary point is an extremum.",
+      "tags": [
+        "stationary points",
+        "interpretation",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 5.6",
+      "seedId": "ai-sl-5-6-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "application",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A rectangular pen uses 40 m of fencing for all four sides. Which dimensions maximize its area?",
+      "choices": [
+        "5 m by 15 m",
+        "8 m by 12 m",
+        "10 m by 10 m",
+        "4 m by 16 m"
+      ],
+      "answer": "10 m by 10 m",
+      "explanation": "For a fixed perimeter, a rectangle has maximum area when it is a square.",
+      "tags": [
+        "optimization",
+        "area",
+        "application"
+      ],
+      "syllabusCode": "SL 5.7",
+      "seedId": "ai-sl-5-7-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "application",
+      "calculator": "allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "A profit model is P(x)=−2x²+80x−300. Find the x-value that maximizes profit.",
+      "answer": 20,
+      "tolerance": 0,
+      "explanation": "The vertex occurs at x=−b/(2a)=−80/[2(−2)]=20.",
+      "tags": [
+        "optimization",
+        "profit",
+        "application"
+      ],
+      "syllabusCode": "SL 5.7",
+      "seedId": "ai-sl-5-7-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "procedural",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "ordering",
+      "prompt": "Order the main steps of a contextual optimization problem.",
+      "items": [
+        "Solve for critical values",
+        "Define the objective function",
+        "Check endpoints and context",
+        "Differentiate the objective"
+      ],
+      "correctOrder": [
+        "Define the objective function",
+        "Differentiate the objective",
+        "Solve for critical values",
+        "Check endpoints and context"
+      ],
+      "explanation": "A complete solution models, differentiates, solves, then checks the feasible context.",
+      "tags": [
+        "optimization",
+        "method",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.7",
+      "seedId": "ai-sl-5-7-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Use one trapezoid to estimate the area under y=x² from x=0 to x=2.",
+      "answer": 4,
+      "tolerance": 0,
+      "explanation": "Area≈(2/2)[f(0)+f(2)]=1(0+4)=4.",
+      "tags": [
+        "trapezoidal rule",
+        "recall"
+      ],
+      "syllabusCode": "SL 5.8",
+      "seedId": "ai-sl-5-8-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Values of f at x=0,1,2,3 are 2,5,6,10. Use the trapezoidal rule with width 1 to estimate ∫₀³f(x)dx.",
+      "answer": 17,
+      "tolerance": 0,
+      "explanation": "Estimate=(1/2)[2+2(5+6)+10]=17.",
+      "tags": [
+        "trapezoidal rule",
+        "table",
+        "procedural"
+      ],
+      "syllabusCode": "SL 5.8",
+      "seedId": "ai-sl-5-8-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements about the trapezoidal rule.",
+      "choices": [
+        "It approximates a curve by straight-line segments.",
+        "Equal-width data can be used directly.",
+        "More subintervals often improve accuracy for a smooth curve.",
+        "It always gives the exact area."
+      ],
+      "answers": [
+        "It approximates a curve by straight-line segments.",
+        "Equal-width data can be used directly.",
+        "More subintervals often improve accuracy for a smooth curve."
+      ],
+      "explanation": "The method is approximate unless the graph is linear on every subinterval.",
+      "tags": [
+        "trapezoidal rule",
+        "accuracy",
+        "conceptual"
+      ],
+      "syllabusCode": "SL 5.8",
+      "seedId": "ai-sl-5-8-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "SL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "Differentiate y=e^(3x).",
+      "choices": [
+        "e^(3x)",
+        "3e^(3x)",
+        "e^(x³)",
+        "3xe^(3x)"
+      ],
+      "answer": "3e^(3x)",
+      "explanation": "The chain rule multiplies by the inner derivative 3.",
+      "tags": [
+        "chain rule",
+        "exponential derivative",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.9",
+      "seedId": "ai-ahl-5-9-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Differentiate y=x²lnx.",
+      "answer": "2xlnx+x",
+      "acceptedAnswers": [
+        "2x ln x + x",
+        "2xln(x)+x",
+        "x(2lnx+1)"
+      ],
+      "explanation": "The product rule gives 2xlnx+x²(1/x)=2xlnx+x.",
+      "tags": [
+        "product rule",
+        "logarithmic derivative",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.9",
+      "seedId": "ai-ahl-5-9-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "application",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A sphere’s radius increases at 0.4 cm/s. Which expression gives dV/dt when V=(4/3)πr³?",
+      "choices": [
+        "4πr²(0.4)",
+        "(4/3)πr²",
+        "4πr(0.4)",
+        "πr²(0.4)"
+      ],
+      "answer": "4πr²(0.4)",
+      "explanation": "Differentiate with respect to time: dV/dt=4πr²dr/dt.",
+      "tags": [
+        "related rates",
+        "application"
+      ],
+      "syllabusCode": "AHL 5.9",
+      "seedId": "ai-ahl-5-9-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "At x=a, f′(a)=0 and f″(a)<0. What is indicated?",
+      "choices": [
+        "Local minimum",
+        "Local maximum",
+        "No stationary point",
+        "Vertical asymptote"
+      ],
+      "answer": "Local maximum",
+      "explanation": "The graph is concave down at the stationary point.",
+      "tags": [
+        "second derivative test",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.10",
+      "seedId": "ai-ahl-5-10-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "On an interval f′(x)>0 and f″(x)<0. Select all true statements.",
+      "choices": [
+        "f is increasing.",
+        "f is concave down.",
+        "The gradient is decreasing.",
+        "f is decreasing."
+      ],
+      "answers": [
+        "f is increasing.",
+        "f is concave down.",
+        "The gradient is decreasing."
+      ],
+      "explanation": "Positive first derivative means increasing; negative second derivative means slopes decrease.",
+      "tags": [
+        "concavity",
+        "derivative signs",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.10",
+      "seedId": "ai-ahl-5-10-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "misconception",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "The condition f″(a)=0 alone proves that x=a is a point of inflexion.",
+      "answer": false,
+      "explanation": "Concavity must change sign; f″(a)=0 is not sufficient.",
+      "tags": [
+        "points of inflexion",
+        "misconception"
+      ],
+      "syllabusCode": "AHL 5.10",
+      "seedId": "ai-ahl-5-10-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "fill_blank",
+      "prompt": "Complete: ∫e^(4x)dx=___+C.",
+      "answer": "(1/4)e^(4x)",
+      "acceptedAnswers": [
+        "e^(4x)/4",
+        "(1/4)e^(4x)",
+        "0.25e^(4x)"
+      ],
+      "explanation": "Reverse the chain rule by dividing by the inner derivative 4.",
+      "tags": [
+        "integration",
+        "exponential functions",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.11",
+      "seedId": "ai-ahl-5-11-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Evaluate ∫2x(x²+3)⁵dx.",
+      "answer": "(x²+3)⁶/6+C",
+      "acceptedAnswers": [
+        "(x^2+3)^6/6+C",
+        "(x²+3)⁶/6 + C"
+      ],
+      "explanation": "Let u=x²+3, so du=2x dx and integrate u⁵.",
+      "tags": [
+        "substitution",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.11",
+      "seedId": "ai-ahl-5-11-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "Which antiderivative differentiates to sec²(5x)?",
+      "choices": [
+        "tan(5x)",
+        "5tan(5x)",
+        "(1/5)tan(5x)",
+        "−(1/5)tan(5x)"
+      ],
+      "answer": "(1/5)tan(5x)",
+      "explanation": "Differentiating (1/5)tan(5x) gives sec²(5x).",
+      "tags": [
+        "integration",
+        "trigonometric functions",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 5.11",
+      "seedId": "ai-ahl-5-11-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Find the area between y=x and the x-axis from x=−2 to x=2.",
+      "answer": 4,
+      "tolerance": 0,
+      "explanation": "Geometric area is two congruent triangles, each of area 2, giving 4.",
+      "tags": [
+        "area",
+        "signed integrals",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.12",
+      "seedId": "ai-ahl-5-12-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "application",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "The region under y=x from x=0 to x=3 is revolved about the x-axis. Find the volume as a coefficient of π.",
+      "answer": 9,
+      "tolerance": 0,
+      "explanation": "V=π∫₀³x²dx=π[x³/3]₀³=9π.",
+      "tags": [
+        "volume of revolution",
+        "application"
+      ],
+      "syllabusCode": "AHL 5.12",
+      "seedId": "ai-ahl-5-12-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all correct setup statements.",
+      "choices": [
+        "About the x-axis, a disc radius is a y-value.",
+        "About the y-axis with x=g(y), use π∫x²dy.",
+        "Negative definite integrals represent negative signed area.",
+        "Geometric area is always the raw definite integral."
+      ],
+      "answers": [
+        "About the x-axis, a disc radius is a y-value.",
+        "About the y-axis with x=g(y), use π∫x²dy.",
+        "Negative definite integrals represent negative signed area."
+      ],
+      "explanation": "Geometric area requires absolute/partitioned areas when a curve crosses an axis.",
+      "tags": [
+        "areas",
+        "volumes",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 5.12",
+      "seedId": "ai-ahl-5-12-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "A particle has displacement s(t)=2t³−9t²+12t. Find its acceleration at t=2.",
+      "answer": 6,
+      "tolerance": 0,
+      "explanation": "v=6t²−18t+12 and a=12t−18, so a(2)=6.",
+      "tags": [
+        "kinematics",
+        "acceleration",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.13",
+      "seedId": "ai-ahl-5-13-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multiple_choice",
+      "prompt": "A particle has negative velocity and negative acceleration. What happens to its speed at that instant?",
+      "choices": [
+        "It increases",
+        "It decreases",
+        "It is zero",
+        "It cannot be determined"
+      ],
+      "answer": "It increases",
+      "explanation": "Velocity and acceleration have the same sign, so the magnitude of velocity increases.",
+      "tags": [
+        "kinematics",
+        "sign interpretation",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.13",
+      "seedId": "ai-ahl-5-13-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "true_false",
+      "prompt": "Total distance over an interval is ∫|v(t)|dt, not the magnitude of ∫v(t)dt when direction changes.",
+      "answer": true,
+      "explanation": "Absolute velocity accumulates every travelled segment, while the signed integral gives displacement.",
+      "tags": [
+        "distance",
+        "displacement",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 5.13",
+      "seedId": "ai-ahl-5-13-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A population grows at a rate proportional to its size P. Which differential equation models this?",
+      "choices": [
+        "dP/dt=kP",
+        "dP/dt=k/P",
+        "dP/dt=P+k",
+        "dP/dt=kt"
+      ],
+      "answer": "dP/dt=kP",
+      "explanation": "Proportional growth means the rate is a constant multiple of the current population.",
+      "tags": [
+        "differential equation models",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.14",
+      "seedId": "ai-ahl-5-14-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "short_answer",
+      "prompt": "Solve dy/dx=2y by separation, given y(0)=3.",
+      "answer": "y=3e^(2x)",
+      "acceptedAnswers": [
+        "3e^(2x)",
+        "y=3e^(2x)",
+        "3e^{2x}"
+      ],
+      "explanation": "Separating gives lny=2x+C; the initial condition gives C=ln3.",
+      "tags": [
+        "separation of variables",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.14",
+      "seedId": "ai-ahl-5-14-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all contexts that can be modelled by dy/dt=−ky with k>0.",
+      "choices": [
+        "Radioactive decay",
+        "Newton-style cooling difference under fixed conditions",
+        "Unrestricted exponential growth",
+        "Drug elimination at a rate proportional to amount"
+      ],
+      "answers": [
+        "Radioactive decay",
+        "Newton-style cooling difference under fixed conditions",
+        "Drug elimination at a rate proportional to amount"
+      ],
+      "explanation": "The negative proportional rate creates exponential decay.",
+      "tags": [
+        "differential equations",
+        "decay models",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 5.14",
+      "seedId": "ai-ahl-5-14-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "For dy/dx=x−y, what is the slope at the point (2,−1)?",
+      "choices": [
+        "−3",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": "3",
+      "explanation": "Substitute x=2 and y=−1: slope=2−(−1)=3.",
+      "tags": [
+        "slope fields",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.15",
+      "seedId": "ai-ahl-5-15-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "matching",
+      "prompt": "Match each differential equation to its slope-field feature.",
+      "pairs": [
+        {
+          "left": "dy/dx=0",
+          "right": "All segments horizontal"
+        },
+        {
+          "left": "dy/dx=x",
+          "right": "Slope depends only on horizontal position"
+        },
+        {
+          "left": "dy/dx=y",
+          "right": "Slope is zero on the x-axis"
+        }
+      ],
+      "explanation": "A slope field records the derivative value at each point.",
+      "tags": [
+        "slope fields",
+        "interpretation",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.15",
+      "seedId": "ai-ahl-5-15-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements about a solution curve drawn on a slope field.",
+      "choices": [
+        "It is tangent to local direction segments.",
+        "It follows the indicated derivative at each point.",
+        "Two distinct solutions through the same point are always required.",
+        "Horizontal segments indicate zero derivative."
+      ],
+      "answers": [
+        "It is tangent to local direction segments.",
+        "It follows the indicated derivative at each point.",
+        "Horizontal segments indicate zero derivative."
+      ],
+      "explanation": "A solution curve follows the local slopes; under standard uniqueness conditions one solution passes through a given point.",
+      "tags": [
+        "slope fields",
+        "solution curves",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 5.15",
+      "seedId": "ai-ahl-5-15-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "numeric_answer",
+      "prompt": "Use one Euler step for dy/dx=x+y from (0,1) with step size h=0.2. Find the new y-value.",
+      "answer": 1.2,
+      "tolerance": 0,
+      "explanation": "y₁=1+0.2(0+1)=1.2.",
+      "tags": [
+        "Euler method",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.16",
+      "seedId": "ai-ahl-5-16-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "Euler’s method uses h=0.1 for dy/dx=2y with y(0)=3. Find y(0.2) after two steps.",
+      "answer": 4.32,
+      "tolerance": 0,
+      "explanation": "First y₁=3+0.1(6)=3.6; then y₂=3.6+0.1(7.2)=4.32.",
+      "tags": [
+        "Euler method",
+        "iteration",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.16",
+      "seedId": "ai-ahl-5-16-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "procedural",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "ordering",
+      "prompt": "Order the operations in one Euler step.",
+      "items": [
+        "Evaluate f(xₙ,yₙ)",
+        "Advance x by h",
+        "Add h f(xₙ,yₙ) to yₙ",
+        "Read the current point (xₙ,yₙ)"
+      ],
+      "correctOrder": [
+        "Read the current point (xₙ,yₙ)",
+        "Evaluate f(xₙ,yₙ)",
+        "Add h f(xₙ,yₙ) to yₙ",
+        "Advance x by h"
+      ],
+      "explanation": "Euler follows the current tangent slope for one horizontal step.",
+      "tags": [
+        "Euler method",
+        "algorithm",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.16",
+      "seedId": "ai-ahl-5-16-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "A linear system has two real eigenvalues of opposite signs. What type of equilibrium is the origin?",
+      "choices": [
+        "Stable node",
+        "Unstable node",
+        "Saddle point",
+        "Centre"
+      ],
+      "answer": "Saddle point",
+      "explanation": "Opposite-sign eigenvalues produce attraction along one eigendirection and repulsion along the other.",
+      "tags": [
+        "phase portraits",
+        "stability",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.17",
+      "seedId": "ai-ahl-5-17-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements about eigenvalues and phase portraits.",
+      "choices": [
+        "Negative real parts indicate motion toward the origin.",
+        "Positive real parts indicate motion away from the origin.",
+        "Pure imaginary eigenvalues can produce closed curves.",
+        "Every complex eigenvalue gives a saddle."
+      ],
+      "answers": [
+        "Negative real parts indicate motion toward the origin.",
+        "Positive real parts indicate motion away from the origin.",
+        "Pure imaginary eigenvalues can produce closed curves."
+      ],
+      "explanation": "Complex eigenvalues produce spirals when their real part is non-zero, not saddles.",
+      "tags": [
+        "phase portraits",
+        "eigenvalues",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.17",
+      "seedId": "ai-ahl-5-17-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "matching",
+      "prompt": "Match each eigenvalue pattern to the qualitative phase portrait.",
+      "pairs": [
+        {
+          "left": "Both real and negative",
+          "right": "Stable node"
+        },
+        {
+          "left": "Real with opposite signs",
+          "right": "Saddle point"
+        },
+        {
+          "left": "Complex with positive real part",
+          "right": "Outward spiral"
+        }
+      ],
+      "explanation": "Eigenvalue signs and real parts determine local stability and trajectory shape.",
+      "tags": [
+        "phase portraits",
+        "classification",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 5.17",
+      "seedId": "ai-ahl-5-17-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "foundation",
+      "questionStyle": "recall",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 35,
+      "marksEstimate": 1,
+      "type": "multiple_choice",
+      "prompt": "To rewrite x″+3x′+2x=0 as a first-order system using y=x′, which equation is correct?",
+      "choices": [
+        "y′=−3y−2x",
+        "y′=3y+2x",
+        "y′=−3x−2y",
+        "y′=x"
+      ],
+      "answer": "y′=−3y−2x",
+      "explanation": "Since x″=y′ and x′=y, the equation gives y′+3y+2x=0.",
+      "tags": [
+        "second-order differential equations",
+        "recall"
+      ],
+      "syllabusCode": "AHL 5.18",
+      "seedId": "ai-ahl-5-18-recall",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "standard",
+      "questionStyle": "procedural",
+      "calculator": "not_allowed",
+      "estimatedTimeSeconds": 60,
+      "marksEstimate": 2,
+      "type": "numeric_answer",
+      "prompt": "For x″=−4x, let y=x′. At a point where x=3 and y=−2, find y′.",
+      "answer": -12,
+      "tolerance": 0,
+      "explanation": "The coupled system is x′=y and y′=−4x, so y′=−12.",
+      "tags": [
+        "coupled systems",
+        "second-order equations",
+        "procedural"
+      ],
+      "syllabusCode": "AHL 5.18",
+      "seedId": "ai-ahl-5-18-procedure",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    },
+    {
+      "difficulty": "extension",
+      "questionStyle": "conceptual",
+      "calculator": "neutral",
+      "estimatedTimeSeconds": 75,
+      "marksEstimate": 2,
+      "type": "multi_select",
+      "prompt": "Select all true statements about converting x″=f(x,x′,t) to a first-order system.",
+      "choices": [
+        "Set y=x′.",
+        "Then x′=y.",
+        "Then y′=f(x,y,t).",
+        "The second-order equation is discarded."
+      ],
+      "answers": [
+        "Set y=x′.",
+        "Then x′=y.",
+        "Then y′=f(x,y,t)."
+      ],
+      "explanation": "The substitution represents the same second-order dynamics as two coupled first-order equations.",
+      "tags": [
+        "second-order equations",
+        "coupled systems",
+        "conceptual"
+      ],
+      "syllabusCode": "AHL 5.18",
+      "seedId": "ai-ahl-5-18-concept",
+      "courseFamily": "applications_interpretation",
+      "courseLevel": "HL"
+    }
+  ]
+}
