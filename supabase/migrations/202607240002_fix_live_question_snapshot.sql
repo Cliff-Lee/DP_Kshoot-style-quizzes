@@ -14,6 +14,7 @@ declare
   selected_quiz public.quizzes;
   current_item public.quiz_questions;
   player public.session_participants;
+  current_player_response public.live_responses;
   player_valid boolean := false;
   question_ids jsonb := '[]'::jsonb;
   question_count integer := 0;
@@ -65,17 +66,45 @@ begin
     limit 1;
   end if;
 
+  if player_valid and current_item.id is not null then
+    select * into current_player_response
+    from public.live_responses response
+    where response.session_id=target.id
+      and response.participant_id=player.id
+      and response.question_id=current_item.question_id
+    limit 1;
+  end if;
+
   select coalesce(jsonb_agg(jsonb_build_object(
     'id',participant.id,
     'nickname',participant.nickname,
-    'score',participant.score,
-    'currentStreak',participant.current_streak,
-    'bestStreak',participant.best_streak,
+    'score',participant.score-case
+      when target.revealed_question_index=target.current_question_index then 0
+      else coalesce(current_response.awarded_points,0)
+    end,
+    'currentStreak',case
+      when target.revealed_question_index=target.current_question_index then participant.current_streak
+      when current_response.id is not null then coalesce((current_response.score_detail->>'streakBefore')::integer,0)
+      else participant.current_streak
+    end,
+    'bestStreak',case
+      when target.revealed_question_index=target.current_question_index then participant.best_streak
+      when current_response.id is not null then coalesce((current_response.score_detail->>'bestStreakBefore')::integer,0)
+      else participant.best_streak
+    end,
     'powerups',participant.powerups,
     'badges',participant.badges
   ) order by participant.score desc,participant.joined_at),'[]'::jsonb)
   into participants
   from public.session_participants participant
+  left join lateral (
+    select response.id,response.awarded_points,response.score_detail
+    from public.live_responses response
+    where response.session_id=target.id
+      and response.participant_id=participant.id
+      and response.question_id=current_item.question_id
+    limit 1
+  ) current_response on true
   where participant.session_id=target.id;
 
   if current_item.id is not null then
@@ -150,12 +179,24 @@ begin
   if player_valid then
     select coalesce(jsonb_object_agg(response.question_id::text,jsonb_build_object(
       'answer',response.submitted_answer,
-      'correct',response.is_correct,
+      'correct',case
+        when target.revealed_question_index=target.current_question_index then response.is_correct
+        else null
+      end,
       'responseTimeMs',response.response_time_ms,
-      'awardedPoints',response.awarded_points,
-      'streakAfter',coalesce((response.score_detail->>'streakAfter')::integer,player.current_streak),
+      'awardedPoints',case
+        when target.revealed_question_index=target.current_question_index then response.awarded_points
+        else 0
+      end,
+      'streakAfter',case
+        when target.revealed_question_index=target.current_question_index then coalesce((response.score_detail->>'streakAfter')::integer,player.current_streak)
+        else coalesce((response.score_detail->>'streakBefore')::integer,0)
+      end,
       'powerupUsed',response.powerup_type,
-      'scoreDetail',response.score_detail
+      'scoreDetail',case
+        when target.revealed_question_index=target.current_question_index then response.score_detail
+        else '{}'::jsonb
+      end
     )),'{}'::jsonb)
     into player_answers
     from public.live_responses response
@@ -217,9 +258,20 @@ begin
     'player',case when player_valid then jsonb_build_object(
       'id',player.id,
       'nickname',player.nickname,
-      'score',player.score,
-      'currentStreak',player.current_streak,
-      'bestStreak',player.best_streak,
+      'score',player.score-case
+        when target.revealed_question_index=target.current_question_index then 0
+        else coalesce(current_player_response.awarded_points,0)
+      end,
+      'currentStreak',case
+        when target.revealed_question_index=target.current_question_index then player.current_streak
+        when current_player_response.id is not null then coalesce((current_player_response.score_detail->>'streakBefore')::integer,0)
+        else player.current_streak
+      end,
+      'bestStreak',case
+        when target.revealed_question_index=target.current_question_index then player.best_streak
+        when current_player_response.id is not null then coalesce((current_player_response.score_detail->>'bestStreakBefore')::integer,0)
+        else player.best_streak
+      end,
       'powerups',player.powerups,
       'badges',player.badges,
       'activePowerup',active_powerup,
@@ -230,3 +282,74 @@ end $$;
 
 revoke execute on function public.get_live_game_snapshot(text,uuid,uuid) from public;
 grant execute on function public.get_live_game_snapshot(text,uuid,uuid) to anon,authenticated;
+
+-- Keep scoring server-side during the answering phase. The internal scorer
+-- records the real result, while the public RPC returns only the score that was
+-- visible before this question. Snapshot results remain masked until reveal.
+alter function public.submit_live_response(uuid,uuid,uuid,uuid,jsonb,integer)
+  rename to submit_live_response_scored;
+
+revoke all on function public.submit_live_response_scored(uuid,uuid,uuid,uuid,jsonb,integer)
+  from public,anon,authenticated;
+
+create or replace function public.submit_live_response(
+  p_session_id uuid,
+  p_participant_id uuid,
+  p_client_token uuid,
+  p_question_id uuid,
+  p_answer jsonb,
+  p_response_time_ms integer
+) returns table(correct boolean, awarded integer, total_score integer)
+language plpgsql security definer set search_path=public as $$
+declare
+  previous_score integer;
+  previous_streak integer;
+  previous_best_streak integer;
+  active_index integer;
+  revealed_index integer;
+begin
+  select
+    participant.score,
+    participant.current_streak,
+    participant.best_streak,
+    session.current_question_index,
+    session.revealed_question_index
+  into
+    previous_score,
+    previous_streak,
+    previous_best_streak,
+    active_index,
+    revealed_index
+  from public.session_participants participant
+  join public.quiz_sessions session on session.id=participant.session_id
+  where participant.id=p_participant_id
+    and participant.session_id=p_session_id
+    and participant.client_token=p_client_token;
+
+  if previous_score is null then raise exception 'Invalid participant token'; end if;
+  if active_index>=0 and revealed_index=active_index then raise exception 'Question is no longer accepting answers'; end if;
+
+  perform *
+  from public.submit_live_response_scored(
+    p_session_id,
+    p_participant_id,
+    p_client_token,
+    p_question_id,
+    p_answer,
+    p_response_time_ms
+  );
+
+  update public.live_responses response
+  set score_detail=response.score_detail||jsonb_build_object(
+    'streakBefore',previous_streak,
+    'bestStreakBefore',previous_best_streak
+  )
+  where response.session_id=p_session_id
+    and response.participant_id=p_participant_id
+    and response.question_id=p_question_id;
+
+  return query select null::boolean,0,previous_score;
+end $$;
+
+revoke execute on function public.submit_live_response(uuid,uuid,uuid,uuid,jsonb,integer) from public;
+grant execute on function public.submit_live_response(uuid,uuid,uuid,uuid,jsonb,integer) to anon,authenticated;
