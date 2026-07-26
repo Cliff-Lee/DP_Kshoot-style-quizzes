@@ -3,7 +3,7 @@ import { aaQuestionSeed } from '../data/aaQuestionSeed'
 import { aiQuestionSeed } from '../data/aiQuestionSeed'
 import { COURSE_IDS, courses } from '../data/courses'
 import { syllabusForCourse } from '../data/syllabus'
-import { filterQuestionBank, questionsForCourse, quickBuildPool, reconcileSelectedPointIds } from './courseQuestionBank'
+import { filterQuestionBank, mergeQuestionBankRecords, questionsForCourse, quickBuildPool, reconcileSelectedPointIds } from './courseQuestionBank'
 
 const bank=[...aaQuestionSeed,...aiQuestionSeed]
 
@@ -36,5 +36,15 @@ describe('course-aware question bank',()=>{
     expect(manual.length).toBeGreaterThan(0)
     expect(manual.every(question=>question.courseId===COURSE_IDS.aaSl)).toBe(true)
     expect(questionsForCourse(bank,COURSE_IDS.aiSl).every(question=>question.id.startsWith('ai-'))).toBe(true)
+  })
+
+  it('uses bundled AA/AI questions only for local mode',()=>{
+    const cloudAa=aaQuestionSeed[0]
+    const teacherQuestion={...cloudAa,id:'teacher-question',createdBy:'teacher-1',source:'manual' as const}
+    expect(mergeQuestionBankRecords([cloudAa,teacherQuestion],bank,false).map(question=>question.id)).toEqual([cloudAa.id,teacherQuestion.id])
+    const local=mergeQuestionBankRecords([teacherQuestion],bank,true)
+    expect(local).toHaveLength(bank.length+1)
+    expect(local.some(question=>question.id.startsWith('aa-'))).toBe(true)
+    expect(local.some(question=>question.id.startsWith('ai-'))).toBe(true)
   })
 })
