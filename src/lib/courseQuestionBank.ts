@@ -2,6 +2,12 @@ import { courseIdsInScope } from '../data/courses'
 import { syllabusById, syllabusForCourse } from '../data/syllabus'
 import type { CalculatorMode, Difficulty, Question, QuestionType } from '../types'
 
+export function mergeQuestionBankRecords(inputQuestions:Question[],bundledQuestions:Question[],includeBundledQuestions:boolean){
+  if(!includeBundledQuestions)return [...inputQuestions]
+  const bundledIds=new Set(bundledQuestions.map(question=>question.id))
+  return [...bundledQuestions,...inputQuestions.filter(question=>!bundledIds.has(question.id))]
+}
+
 export function questionBelongsToCourse(question:Question,courseId:string){
   return courseIdsInScope(courseId).includes(question.courseId)
 }
