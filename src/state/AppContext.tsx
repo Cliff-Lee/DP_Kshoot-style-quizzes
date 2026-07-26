@@ -6,6 +6,7 @@ import { courseById, defaultCourseId } from '../data/courses'
 import { syllabusById, syllabusPoints } from '../data/syllabus'
 import { cloudCreateClass, cloudCreateQuiz, cloudCreateSession, cloudPatchQuestion, cloudPatchSession, cloudRecordUsage, cloudSaveImportBatch, cloudSaveQuestions, loadCloudWorkspace } from '../lib/cloudRepository'
 import { awardBadge, calculateScore, checkAnswer, DEFAULT_POWERUPS, initialParticipant, normalizeQuizSettings } from '../lib/gameLogic'
+import { mergeQuestionBankRecords } from '../lib/courseQuestionBank'
 import { joinCloudLiveGame, submitCloudLiveAnswer, useCloudLivePowerup, type LiveJoinCredentials } from '../lib/liveGameRepository'
 import { isSupabaseConfigured, supabase } from '../lib/supabase'
 import type { AppState, ClassRoom, ImportBatch, LiveParticipant, PowerupType, Question, Quiz, QuizSession, Role, UserProfile } from '../types'
@@ -21,9 +22,9 @@ interface AppActions {
   setActiveCourse:(courseId:string)=>void
   createClass: (name: string,courseId?:string) => ClassRoom
   joinClass: (code: string, name: string, email?: string) => ClassRoom
-  addQuestions: (questions: Question[]) => void
-  updateQuestion: (question: Question) => void
-  duplicateQuestion: (id: string) => void
+  addQuestions: (questions: Question[]) => Promise<void>
+  updateQuestion: (question: Question) => Promise<void>
+  duplicateQuestion: (id: string) => Promise<void>
   archiveQuestion: (id: string) => void
   submitQuestion: (id: string) => void
   createQuiz: (input: CreateQuizInput) => Promise<Quiz>
@@ -52,7 +53,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const hydrateCloud = useCallback(async (profile: UserProfile) => {
     const cloud = await loadCloudWorkspace()
     setState(current=>{
-      const next:AppState=normalizeState({...cloud,user:profile,activeCourseId:current.activeCourseId})
+      const next:AppState=normalizeState({...cloud,user:profile,activeCourseId:current.activeCourseId},true)
       localStorage.setItem(STORAGE_KEY,JSON.stringify(next))
       return next
     })
@@ -68,13 +69,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
   }, [])
 
   useEffect(() => {
-    setHydrated(true)
+    if(!supabase)setHydrated(true)
     let channel: BroadcastChannel | undefined
     try {
       channel = new BroadcastChannel(CHANNEL)
-      channel.onmessage = event => { if (event.data?.type === 'state') setState(normalizeState(event.data.state as AppState)) }
+      channel.onmessage = event => { if (event.data?.type === 'state') setState(normalizeState(event.data.state as AppState,isSupabaseConfigured)) }
     } catch { /* BroadcastChannel is an enhancement */ }
-    const onStorage = (event: StorageEvent) => { if (event.key === STORAGE_KEY && event.newValue) setState(normalizeState(JSON.parse(event.newValue))) }
+    const onStorage = (event: StorageEvent) => { if (event.key === STORAGE_KEY && event.newValue) setState(normalizeState(JSON.parse(event.newValue),isSupabaseConfigured)) }
     window.addEventListener('storage', onStorage)
     return () => { channel?.close(); window.removeEventListener('storage', onStorage) }
   }, [])
@@ -82,11 +83,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const client=supabase
     if (!client) return
-    client.auth.getSession().then(async ({ data }) => {
+    let active=true
+    void client.auth.getSession().then(async ({ data }) => {
       if (!data.session) return
       const { data: profile } = await client.from('profiles').select('*').eq('id', data.session.user.id).single()
       if (profile) { const mapped={ id:profile.id, email:profile.email, displayName:profile.display_name, role:profile.role, schoolId:profile.school_id ?? undefined } as UserProfile; mutate(current => ({ ...current, user:mapped })); await hydrateCloud(mapped) }
-    })
+    }).finally(()=>{if(active)setHydrated(true)})
+    return()=>{active=false}
   }, [mutate,hydrateCloud])
 
   const actions: AppActions = useMemo(() => ({
@@ -117,14 +120,28 @@ export function AppProvider({ children }: { children: ReactNode }) {
       const member = { id:state.user?.role === 'student' ? state.user.id : crypto.randomUUID(), displayName:name, email, joinedAt:new Date().toISOString() }
       mutate(current => ({ ...current, classes:current.classes.map(item => item.id === found.id ? {...item, members:item.members.some(m=>m.id===member.id) ? item.members : [...item.members,member]} : item) })); return found
     },
-    addQuestions(questions) { mutate(current => ({ ...current, questions:[...questions,...current.questions] })); void cloudSaveQuestions(questions) },
-    updateQuestion(question) { mutate(current => ({ ...current, questions:current.questions.map(item => item.id === question.id ? {...question,updatedAt:new Date().toISOString()} : item) })); void cloudSaveQuestions([question]) },
-    duplicateQuestion(id) { const source=state.questions.find(q=>q.id===id); if(!source)return; const copy={...source,id:crypto.randomUUID(),prompt:`${source.prompt} (copy)`,visibility:'private' as const,status:'draft' as const,createdBy:state.user?.id??source.createdBy,createdAt:new Date().toISOString(),updatedAt:new Date().toISOString(),options:source.options?.map(o=>({...o,id:crypto.randomUUID()}))}; mutate(current=>({...current,questions:[copy,...current.questions]})); void cloudSaveQuestions([copy]) },
+    async addQuestions(questions) {
+      if(isSupabaseConfigured)await cloudSaveQuestions(questions)
+      mutate(current => ({ ...current, questions:[...questions,...current.questions] }))
+    },
+    async updateQuestion(question) {
+      const updated={...question,updatedAt:new Date().toISOString()}
+      if(isSupabaseConfigured)await cloudSaveQuestions([updated])
+      mutate(current => ({ ...current, questions:current.questions.map(item => item.id === question.id ? updated : item) }))
+    },
+    async duplicateQuestion(id) {
+      const source=state.questions.find(q=>q.id===id)
+      if(!source)return
+      const copy:Question={...source,id:crypto.randomUUID(),prompt:`${source.prompt} (copy)`,visibility:'private',status:'draft',createdBy:state.user?.id??source.createdBy,source:'manual',importBatchId:undefined,duplicateConfirmed:false,createdAt:new Date().toISOString(),updatedAt:new Date().toISOString(),options:source.options?.map(o=>({...o,id:crypto.randomUUID()}))}
+      if(isSupabaseConfigured)await cloudSaveQuestions([copy])
+      mutate(current=>({...current,questions:[copy,...current.questions]}))
+    },
     archiveQuestion(id) { mutate(current => ({ ...current, questions:current.questions.map(item => item.id===id ? {...item,status:'archived'} : item) })); void cloudPatchQuestion(id,{status:'archived'}) },
     submitQuestion(id) { mutate(current => ({ ...current, questions:current.questions.map(item => item.id===id ? {...item,visibility:'public',status:'pending_review'} : item) })); void cloudPatchQuestion(id,{visibility:'public',status:'pending_review'}) },
     async createQuiz(input) {
       const quiz:Quiz={id:crypto.randomUUID(),teacherId:state.user?.id ?? 'teacher-demo',createdAt:new Date().toISOString(),...input,settings:normalizeQuizSettings(input.settings)}
-      if(isSupabaseConfigured)await cloudCreateQuiz(quiz)
+      const selectedQuestions=input.questionIds.map(id=>state.questions.find(question=>question.id===id)).filter(Boolean) as Question[]
+      if(isSupabaseConfigured)await cloudCreateQuiz(quiz,selectedQuestions)
       mutate(current=>({...current,quizzes:[quiz,...current.quizzes]}))
       return quiz
     },
@@ -135,7 +152,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
       // Repair and verify older quizzes that may have been saved before their
       // quiz_questions links completed. A live PIN is not created until the
       // ordered question sequence is confirmed in Supabase.
-      if(isSupabaseConfigured)await cloudCreateQuiz(quiz)
+      const selectedQuestions=quiz.questionIds.map(id=>state.questions.find(question=>question.id===id)).filter(Boolean) as Question[]
+      if(isSupabaseConfigured)await cloudCreateQuiz(quiz,selectedQuestions)
       let session:QuizSession|undefined
       for(let attempt=0;attempt<5;attempt+=1){
         const candidate:QuizSession={id:crypto.randomUUID(),quizId,teacherId:state.user?.id ?? 'teacher-demo',classId,pin:String(Math.floor(100000+Math.random()*900000)),status:'waiting',currentQuestionIndex:-1,revealedQuestionIndex:-1,participants:[]}
@@ -157,7 +175,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
         if(patch.status==='live'&&patch.currentQuestionIndex!==undefined&&target){
           const quiz=state.quizzes.find(item=>item.id===target.quizId)
           if(!quiz)throw new Error('The live session quiz is no longer available.')
-          await cloudCreateQuiz(quiz)
+          const selectedQuestions=quiz.questionIds.map(questionId=>state.questions.find(question=>question.id===questionId)).filter(Boolean) as Question[]
+          await cloudCreateQuiz(quiz,selectedQuestions)
         }
         await cloudPatchSession(id,patch)
       }
@@ -228,12 +247,18 @@ export function useApp() { const value=useContext(AppContext); if(!value) throw 
 
 function makeCode() { const alphabet='ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; return Array.from({length:6},()=>alphabet[Math.floor(Math.random()*alphabet.length)]).join('') }
 
-function normalizeState(input:AppState):AppState {
-  const seededQuestions=[...aaQuestionSeed,...aiQuestionSeed]
-  const currentSeeds=new Map(seededQuestions.map(question=>[question.id,question]))
-  const preservedQuestions=(input.questions??[]).filter(question=>!currentSeeds.has(question.id))
-  const localClasses=isSupabaseConfigured?(input.classes??[]):[...(input.classes??[]),...initialState.classes.filter(seed=>!(input.classes??[]).some(item=>item.id===seed.id))]
-  const localQuizzes=isSupabaseConfigured?(input.quizzes??[]):[...(input.quizzes??[]),...initialState.quizzes.filter(seed=>!(input.quizzes??[]).some(item=>item.id===seed.id))]
+function normalizeState(input:AppState,cloudHydrated=false):AppState {
+  const bundledQuestions=[...aaQuestionSeed,...aiQuestionSeed]
+  const inputQuestions=input.questions??[]
+  const normalizedQuestions=isSupabaseConfigured
+    ?cloudHydrated?inputQuestions:[]
+    :mergeQuestionBankRecords(inputQuestions,bundledQuestions,true)
+  const localClasses=isSupabaseConfigured
+    ?cloudHydrated?(input.classes??[]):[]
+    :[...(input.classes??[]),...initialState.classes.filter(seed=>!(input.classes??[]).some(item=>item.id===seed.id))]
+  const localQuizzes=isSupabaseConfigured
+    ?cloudHydrated?(input.quizzes??[]):[]
+    :[...(input.quizzes??[]),...initialState.quizzes.filter(seed=>!(input.quizzes??[]).some(item=>item.id===seed.id))]
   const normalizeQuestion=(question:Question):Question=>{
     const point=syllabusById.get(question.syllabusPointId)
     return {...question,courseId:point?.courseId??(courseById.has(question.courseId)?question.courseId:defaultCourseId)}
@@ -244,7 +269,7 @@ function normalizeState(input:AppState):AppState {
     sessions:(input.sessions??[]).map(session=>({...session,revealedQuestionIndex:session.revealedQuestionIndex??-1,participants:(session.participants??[]).map(participant=>({...initialParticipant(participant.id,participant.nickname),...participant,powerups:{...DEFAULT_POWERUPS,...(participant.powerups??{})},badges:participant.badges??[],powerupEvents:participant.powerupEvents??[],currentStreak:participant.currentStreak??0,bestStreak:participant.bestStreak??0,answers:participant.answers??{}}))})),
     importBatches:input.importBatches??[],usageEvents:input.usageEvents??[],attempts:input.attempts??[],
     classes:localClasses.map(item=>({...item,courseId:courseById.has(item.courseId)?item.courseId:defaultCourseId})),
-    questions:[...seededQuestions,...preservedQuestions.map(normalizeQuestion)],
+    questions:normalizedQuestions.map(normalizeQuestion),
   }
 }
 
