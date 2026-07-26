@@ -15,7 +15,75 @@ export interface LiveGameSnapshot {
   snapshotError?:'quiz_has_no_question_at_index'
 }
 
+export type LiveQuestionPhase='waiting'|'answering'|'revealed'
+
 const emptyScoreDetail:ScoreBreakdown={basePoints:0,speedBonus:0,streakBonus:0,multiplier:1,total:0,effectiveResponseTimeMs:0,shieldUsed:false}
+
+export function liveQuestionPhase(session:Pick<QuizSession,'currentQuestionIndex'|'revealedQuestionIndex'>|null|undefined):LiveQuestionPhase{
+  if(!session||session.currentQuestionIndex<0)return 'waiting'
+  return session.revealedQuestionIndex===session.currentQuestionIndex?'revealed':'answering'
+}
+
+export function isLiveQuestionRevealed(session:Pick<QuizSession,'currentQuestionIndex'|'revealedQuestionIndex'>|null|undefined):boolean{
+  return liveQuestionPhase(session)==='revealed'
+}
+
+export function liveCorrectAnswerLabel(question:Question):string{
+  const data=question.answerData
+  if(question.type==='matching')return ((data.pairs??[]) as Array<{left:string;right:string}>).map(pair=>`${pair.left} → ${pair.right}`).join(' · ')
+  if(question.type==='drag_drop')return ((data.items??[]) as Array<{text:string;correctZone:string}>).map(item=>`${item.text} → ${item.correctZone}`).join(' · ')
+  if(question.type==='ordering')return ((data.correctOrder??data.items??[]) as string[]).join(' → ')
+  if(question.type==='multi_select')return ((data.answers??[]) as string[]).join(' + ')
+  if(question.type==='true_false')return data.answer?'True':'False'
+  return String(data.answer??'Teacher-reviewed response')
+}
+
+export function hideLiveQuestionAnswers(question:Question):Question{
+  const data=question.answerData
+  let answerData:Record<string,unknown>={}
+  if(question.type==='matching'){
+    answerData={
+      leftItems:Array.isArray(data.leftItems)?data.leftItems:[],
+      choices:Array.isArray(data.choices)?data.choices:[],
+    }
+  }else if(question.type==='drag_drop'){
+    answerData={
+      zones:Array.isArray(data.zones)?data.zones:[],
+      items:Array.isArray(data.items)?data.items.map(item=>{
+        const record=(item&&typeof item==='object'?item:{}) as Record<string,unknown>
+        return {text:String(record.text??'')}
+      }):[],
+    }
+  }else if(question.type==='ordering'){
+    answerData={items:Array.isArray(data.items)?data.items:[]}
+  }else if(Array.isArray(data.hiddenOptionIds)){
+    answerData={hiddenOptionIds:data.hiddenOptionIds.map(String)}
+  }
+  return {
+    ...question,
+    answerData,
+    explanation:'',
+    options:question.options?.map(option=>({...option,isCorrect:false})),
+  }
+}
+
+export function hideLiveParticipantResult(participant:LiveParticipant,questionId:string|undefined):LiveParticipant{
+  if(!questionId||!participant.answers[questionId])return participant
+  const current=participant.answers[questionId]
+  return {
+    ...participant,
+    answers:{
+      ...participant.answers,
+      [questionId]:{
+        ...current,
+        correct:false,
+        awardedPoints:0,
+        streakAfter:participant.currentStreak,
+        scoreDetail:{...emptyScoreDetail,effectiveResponseTimeMs:current.responseTimeMs},
+      },
+    },
+  }
+}
 
 export function normalizeGamePin(value:string):string {
   return value.trim().replace(/[^a-z0-9]/gi,'').toUpperCase().slice(0,6)
@@ -62,6 +130,7 @@ export async function submitCloudLiveAnswer(credentials:LiveJoinCredentials,ques
   })
   if(error){
     if(error.message.includes('Question is not active'))throw new Error('This question is no longer active')
+    if(error.message.includes('no longer accepting answers'))throw new Error('The answer has already been revealed')
     throw reportSupabaseFailure('live-session:answer',error,{sessionId:credentials.sessionId,participantId:credentials.participantId,questionId})
   }
 }
@@ -86,8 +155,16 @@ export function mapLiveSnapshot(value:unknown):LiveGameSnapshot{
   const state=(['not_found','waiting','live','paused','ended'].includes(raw.state)?raw.state:'not_found') as LiveSnapshotState
   if(!raw.session||!raw.quiz)return {state,questions:[]}
 
-  const publicParticipants:LiveParticipant[]=(raw.session.participants??[]).map(mapParticipant)
-  const own=raw.player?mapParticipant(raw.player):undefined
+  const currentQuestionId=raw.currentQuestionId?String(raw.currentQuestionId):raw.session.currentQuestionId?String(raw.session.currentQuestionId):undefined
+  const rawPhase=liveQuestionPhase({
+    currentQuestionIndex:Number(raw.session.currentQuestionIndex??-1),
+    revealedQuestionIndex:Number(raw.session.revealedQuestionIndex??-1),
+  })
+  const publicParticipants:LiveParticipant[]=(raw.session.participants??[]).map(mapParticipant).map((participant:LiveParticipant)=>
+    rawPhase==='revealed'?participant:hideLiveParticipantResult(participant,currentQuestionId)
+  )
+  const mappedOwn=raw.player?mapParticipant(raw.player):undefined
+  const own=mappedOwn&&rawPhase!=='revealed'?hideLiveParticipantResult(mappedOwn,currentQuestionId):mappedOwn
   const participants=own?[...publicParticipants.filter(item=>item.id!==own.id),own]:publicParticipants
   const session:QuizSession={
     id:String(raw.session.id),quizId:String(raw.session.quizId),teacherId:String(raw.session.teacherId??''),
@@ -101,13 +178,14 @@ export function mapLiveSnapshot(value:unknown):LiveGameSnapshot{
     courseId:String(raw.quiz.courseId??''),mode:raw.quiz.mode??'live',settings:normalizeQuizSettings(raw.quiz.settings??{}),
     createdAt:String(raw.quiz.createdAt??new Date(0).toISOString()),questionIds:(raw.quiz.questionIds??[]).map(String),
   }
-  const questions=raw.question?[mapQuestion(raw.question)]:[]
+  const mappedQuestion=raw.question?mapQuestion(raw.question):undefined
+  const questions=mappedQuestion?[isLiveQuestionRevealed(session)?mappedQuestion:hideLiveQuestionAnswers(mappedQuestion)]:[]
   return {
     state,
     session,
     quiz,
     questions,
-    currentQuestionId:raw.currentQuestionId?String(raw.currentQuestionId):raw.session.currentQuestionId?String(raw.session.currentQuestionId):undefined,
+    currentQuestionId,
     questionCount:Number(raw.questionCount??quiz.questionIds.length),
     snapshotError:raw.snapshotError==='quiz_has_no_question_at_index'?'quiz_has_no_question_at_index':undefined,
   }
