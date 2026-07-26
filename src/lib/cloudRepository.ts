@@ -6,6 +6,81 @@ import { reportSupabaseFailure } from './supabaseErrors'
 
 const warn = (scope: string, error: unknown) => { if (error) console.warn(`[MathPulse:${scope}]`, error) }
 
+export interface QuizQuestionPersistenceDiagnostic {
+  quizId:string
+  selectedQuestionIds:string[]
+  questionsFoundInSupabase:string[]
+  missingQuestionIds:string[]
+  questionSources:Array<{id:string;source:Question['source']|'unknown';foundInSupabase:boolean}>
+}
+
+interface PersistedQuestionIdentity {
+  id:string
+  course_id:string
+  source?:Question['source']
+}
+
+export function buildQuizQuestionPersistenceDiagnostic(
+  quizId:string,
+  selectedQuestions:Array<Pick<Question,'id'|'source'>>,
+  selectedQuestionIds:string[],
+  persistedQuestions:PersistedQuestionIdentity[],
+):QuizQuestionPersistenceDiagnostic{
+  const localById=new Map(selectedQuestions.map(question=>[question.id,question]))
+  const persistedById=new Map(persistedQuestions.map(question=>[String(question.id),question]))
+  const questionsFoundInSupabase=selectedQuestionIds.filter(id=>persistedById.has(id))
+  return {
+    quizId,
+    selectedQuestionIds:[...selectedQuestionIds],
+    questionsFoundInSupabase,
+    missingQuestionIds:selectedQuestionIds.filter(id=>!persistedById.has(id)),
+    questionSources:selectedQuestionIds.map(id=>({
+      id,
+      source:localById.get(id)?.source??persistedById.get(id)?.source??'unknown',
+      foundInSupabase:persistedById.has(id),
+    })),
+  }
+}
+
+export function orderedQuizLinksMatch(
+  links:Array<{question_id:unknown;sort_order:unknown}>,
+  expectedQuestionIds:string[],
+):boolean{
+  return links.length===expectedQuestionIds.length&&links.every((link,index)=>
+    String(link.question_id)===expectedQuestionIds[index]&&Number(link.sort_order)===index
+  )
+}
+
+export function questionsToUploadBeforeQuiz(
+  diagnostic:QuizQuestionPersistenceDiagnostic,
+  selectedQuestions:Question[],
+):Question[]{
+  const selectedById=new Map(selectedQuestions.map(question=>[question.id,question]))
+  return diagnostic.missingQuestionIds
+    .map(id=>selectedById.get(id))
+    .filter((question):question is Question=>Boolean(question&&question.source!=='platform_seed'))
+}
+
+export async function diagnoseQuizQuestionPersistence(
+  quizId:string,
+  selectedQuestionIds:string[],
+  selectedQuestions:Question[],
+):Promise<{diagnostic:QuizQuestionPersistenceDiagnostic;persistedQuestions:PersistedQuestionIdentity[]}>{
+  if(!supabase){
+    const diagnostic=buildQuizQuestionPersistenceDiagnostic(quizId,selectedQuestions,selectedQuestionIds,[])
+    console.info('[MathPulse:quiz-question-persistence]',diagnostic)
+    return {diagnostic,persistedQuestions:[]}
+  }
+  const response=selectedQuestionIds.length
+    ?await supabase.from('questions').select('id,course_id,source').in('id',selectedQuestionIds)
+    :{data:[],error:null}
+  if(response.error)throw reportSupabaseFailure('quiz:questions-diagnostic',response.error,{quizId,selectedQuestionIds})
+  const persistedQuestions=(response.data??[]) as PersistedQuestionIdentity[]
+  const diagnostic=buildQuizQuestionPersistenceDiagnostic(quizId,selectedQuestions,selectedQuestionIds,persistedQuestions)
+  console.info('[MathPulse:quiz-question-persistence]',diagnostic)
+  return {diagnostic,persistedQuestions}
+}
+
 export async function loadCloudWorkspace(): Promise<Omit<AppState,'user'|'activeCourseId'>> {
   if (!supabase) return {questions:[],classes:[],quizzes:[],sessions:[],attempts:[],importBatches:[],usageEvents:[]}
   const [questionsRes,classesRes,quizzesRes,sessionsRes,responsesRes,attemptsRes,batchesRes,usageRes] = await Promise.all([
@@ -41,21 +116,47 @@ export async function cloudSaveQuestions(items:Question[]){
   for(const item of items){
     if(item.importBatchId){
       const batchPlaceholder=await supabase.from('question_import_batches').upsert({id:item.importBatchId,teacher_id:item.createdBy,raw_json:{},status:'validated'},{onConflict:'id',ignoreDuplicates:true})
-      warn('prepare-import-batch',batchPlaceholder.error)
+      if(batchPlaceholder.error)throw reportSupabaseFailure('question:prepare-import-batch',batchPlaceholder.error,{questionId:item.id,importBatchId:item.importBatchId})
     }
     const {error}=await supabase.from('questions').upsert({id:item.id,created_by:item.createdBy,owner_type:'teacher',owner_id:item.createdBy,visibility:item.visibility,status:item.status,course_id:item.courseId,syllabus_point_id:item.syllabusPointId,type:item.type,prompt:item.prompt,answer_data:item.answerData,explanation:item.explanation,difficulty:item.difficulty,question_style:item.questionStyle??'conceptual',calculator:item.calculator??'neutral',estimated_time_seconds:item.estimatedTimeSeconds??60,marks_estimate:item.marksEstimate??1,tags:item.tags,source:item.source,import_batch_id:item.importBatchId??null,duplicate_confirmed:item.duplicateConfirmed??false})
-    warn('save-question',error)
-    if(item.options){
-      await supabase.from('question_options').delete().eq('question_id',item.id)
+    if(error)throw reportSupabaseFailure('question:save',error,{questionId:item.id,source:item.source})
+    const removedOptions=await supabase.from('question_options').delete().eq('question_id',item.id)
+    if(removedOptions.error)throw reportSupabaseFailure('question:options-reset',removedOptions.error,{questionId:item.id,source:item.source})
+    if(item.options?.length){
       const optionRes=await supabase.from('question_options').insert(item.options.map(o=>({id:o.id,question_id:item.id,label:o.label,text:o.text,is_correct:o.isCorrect,sort_order:o.sortOrder})))
-      warn('save-options',optionRes.error)
+      if(optionRes.error)throw reportSupabaseFailure('question:options-save',optionRes.error,{questionId:item.id,source:item.source})
     }
   }
 }
 export async function cloudPatchQuestion(id:string,patch:Record<string,unknown>){if(!supabase)return;const {error}=await supabase.from('questions').update(patch).eq('id',id);warn('patch-question',error)}
-export async function cloudCreateQuiz(item:Quiz){
+export async function cloudCreateQuiz(item:Quiz,selectedQuestions:Question[]=[]){
   if(!supabase)return
   if(!item.questionIds.length)throw new Error('Add at least one question before saving this quiz.')
+  if(new Set(item.questionIds).size!==item.questionIds.length){
+    throw reportSupabaseFailure('quiz:questions-validate',new Error('Quiz contains the same question more than once'),{quizId:item.id,selectedQuestionIds:item.questionIds})
+  }
+
+  let persistence=await diagnoseQuizQuestionPersistence(item.id,item.questionIds,selectedQuestions)
+  const uploadableMissing=questionsToUploadBeforeQuiz(persistence.diagnostic,selectedQuestions)
+  if(uploadableMissing.length){
+    await cloudSaveQuestions(uploadableMissing)
+    persistence=await diagnoseQuizQuestionPersistence(item.id,item.questionIds,selectedQuestions)
+  }
+  if(persistence.diagnostic.missingQuestionIds.length){
+    throw reportSupabaseFailure('quiz:questions-validate',new Error('Selected questions are not persisted in Supabase'),{
+      ...persistence.diagnostic,
+    })
+  }
+
+  const persistedById=new Map(persistence.persistedQuestions.map(question=>[String(question.id),String(question.course_id)]))
+  const courseScope=new Set(courseIdsInScope(item.courseId))
+  const wrongCourse=item.questionIds.filter(questionId=>!courseScope.has(persistedById.get(questionId)??''))
+  if(wrongCourse.length){
+    throw reportSupabaseFailure('quiz:questions-validate',new Error('Quiz contains questions from another course'),{
+      quizId:item.id,
+      wrongCourseQuestionIds:wrongCourse,
+    })
+  }
 
   const {data:quizRow,error:quizError}=await supabase.from('quizzes').upsert({
     id:item.id,
@@ -70,22 +171,8 @@ export async function cloudCreateQuiz(item:Quiz){
 
   const existing=await supabase.from('quiz_questions').select('question_id,sort_order').eq('quiz_id',item.id).order('sort_order',{ascending:true})
   if(existing.error)throw reportSupabaseFailure('quiz:links-read',existing.error,{quizId:item.id})
-  const existingIds=(existing.data??[]).map(link=>String(link.question_id))
-  const linksMatch=existingIds.length===item.questionIds.length&&existingIds.every((id,index)=>id===item.questionIds[index])
+  const linksMatch=orderedQuizLinksMatch(existing.data??[],item.questionIds)
   if(!linksMatch){
-    const available=await supabase.from('questions').select('id,course_id').in('id',item.questionIds)
-    if(available.error)throw reportSupabaseFailure('quiz:questions-read',available.error,{quizId:item.id})
-    const availableById=new Map((available.data??[]).map(question=>[String(question.id),String(question.course_id)]))
-    const missing=item.questionIds.filter(questionId=>!availableById.has(questionId))
-    const courseScope=new Set(courseIdsInScope(item.courseId))
-    const wrongCourse=item.questionIds.filter(questionId=>!courseScope.has(availableById.get(questionId)??''))
-    if(missing.length||wrongCourse.length){
-      throw reportSupabaseFailure('quiz:questions-validate',new Error('Quiz contains missing questions or questions from another course'),{
-        quizId:item.id,
-        missingQuestionIds:missing,
-        wrongCourseQuestionIds:wrongCourse,
-      })
-    }
     const removed=await supabase.from('quiz_questions').delete().eq('quiz_id',item.id)
     if(removed.error)throw reportSupabaseFailure('quiz:links-reset',removed.error,{quizId:item.id})
     const inserted=await supabase.from('quiz_questions').insert(item.questionIds.map((questionId,index)=>({
@@ -100,12 +187,11 @@ export async function cloudCreateQuiz(item:Quiz){
 
   const verified=await supabase.from('quiz_questions').select('question_id,sort_order').eq('quiz_id',item.id).order('sort_order',{ascending:true})
   if(verified.error)throw reportSupabaseFailure('quiz:links-verify',verified.error,{quizId:item.id})
-  const verifiedIds=(verified.data??[]).map(link=>String(link.question_id))
-  if(verifiedIds.length!==item.questionIds.length||verifiedIds.some((id,index)=>id!==item.questionIds[index])){
+  if(!orderedQuizLinksMatch(verified.data??[],item.questionIds)){
     throw reportSupabaseFailure('quiz:links-verify',new Error('Quiz questions were not persisted in playable order'),{
       quizId:item.id,
       expectedQuestionIds:item.questionIds,
-      actualQuestionIds:verifiedIds,
+      actualLinks:verified.data??[],
     })
   }
 }
